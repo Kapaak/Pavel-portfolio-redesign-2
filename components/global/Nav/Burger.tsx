@@ -1,9 +1,21 @@
 //libs
+import { useCallback } from "react";
 import styled from "styled-components";
 
-const Burger = () => {
+interface Props {
+	open: boolean;
+	setOpen: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+const Burger = ({ open, setOpen }: Props) => {
+	console.log("burger");
+
+	const handleOpen = useCallback(() => {
+		setOpen(!open);
+	}, [open]);
+
 	return (
-		<StyledBurger>
+		<StyledBurger onClick={handleOpen}>
 			<p></p>
 			<p></p>
 			<p></p>
@@ -19,8 +31,8 @@ const StyledBurger = styled.div`
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	margin: 1rem var(--horizontal-gap) 1rem auto;
-	z-index: 10;
+	margin: var(--horizontal-gap) var(--horizontal-gap) var(--horizontal-gap) auto;
+	z-index: 11;
 
 	p {
 		height: 0.4rem;

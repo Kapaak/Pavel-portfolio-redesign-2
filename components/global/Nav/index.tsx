@@ -1,4 +1,5 @@
 //libs
+import { useState } from "react";
 import styled from "styled-components";
 //components
 import Burger from "./Burger";
@@ -7,12 +8,12 @@ import Logo from "./Logo";
 //styles
 
 const index = () => {
+	const [open, setOpen] = useState(false);
 	return (
 		<StyledNav>
 			<Logo />
-			{/*todo breakpoints*/}
-			<ListItems />
-			<Burger />
+			<ListItems open={open} setOpen={setOpen} />
+			<Burger open={open} setOpen={setOpen} />
 		</StyledNav>
 	);
 };
@@ -25,4 +26,5 @@ const StyledNav = styled.nav`
 	align-items: center;
 	position: fixed;
 	width: 100%;
+	z-index: 10;
 `;

@@ -10,4 +10,5 @@ export default Logo;
 const StyledLogo = styled.div`
 	font-size: var(--fosi-nav);
 	margin-left: var(--horizontal-gap);
+	z-index: 10;
 `;

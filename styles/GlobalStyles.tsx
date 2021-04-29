@@ -3,9 +3,6 @@ import { createGlobalStyle } from "styled-components";
 import styled from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
-
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
-
     *,*::before,*::after{
         margin:0;
         padding:0;

@@ -5,6 +5,7 @@ import TextContainer from "./TextContainer";
 import ImageContainer from "./ImageContainer";
 //interfaces
 import { PortfolioObject } from "../global/Interfaces";
+import Button from "../global/Button";
 
 interface Props {
 	data: PortfolioObject;
@@ -18,6 +19,7 @@ const Wrapper = ({ data }: Props) => {
 			<div>
 				<ImageContainer image={image} />
 				<TextContainer data={rest} />
+				<Button>Visit web</Button>
 			</div>
 		</StyledWrapper>
 	);
@@ -32,5 +34,6 @@ const StyledWrapper = styled.div`
 	& > div {
 		display: flex;
 		flex-direction: column;
+		align-items: flex-start;
 	}
 `;

@@ -27,6 +27,7 @@ const StyledButtonWithoutUndersore = styled.button`
 	position: relative;
 	border: none;
 	padding: 1rem 0;
+	margin-bottom: var(--text-mb);
 	font-size: var(--fosi-button);
 	background-color: transparent;
 	cursor: pointer;

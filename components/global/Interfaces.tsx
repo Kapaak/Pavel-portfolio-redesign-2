@@ -5,3 +5,8 @@ export interface PortfolioObject {
 	colors: Array<string>;
 	image: string;
 }
+
+export interface FooterObject {
+	icon: string;
+	link: string;
+}

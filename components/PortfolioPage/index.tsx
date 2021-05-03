@@ -4,6 +4,7 @@ import styled from "styled-components";
 import Wrapper from "./Wrapper";
 //interfaces
 import { PortfolioObject } from "../global/Interfaces";
+import { Underscore } from "../../styles/GlobalStyles";
 
 interface Props {
 	data: Array<PortfolioObject>;
@@ -17,6 +18,7 @@ const index = ({ data }: Props) => {
 			{data.map((dataEl, index) => (
 				<Wrapper key={index} data={dataEl} />
 			))}
+			<Underscore>load more projects...</Underscore>
 		</StyledPortfolioPage>
 	);
 };

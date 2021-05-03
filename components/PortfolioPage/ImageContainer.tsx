@@ -1,5 +1,6 @@
 //libs
 import styled from "styled-components";
+import Image from "next/image";
 
 interface Props {
 	image: string;
@@ -8,7 +9,7 @@ interface Props {
 const ImageContainer = ({ image }: Props) => {
 	return (
 		<StyledImageContainer>
-			<div></div>
+			<Image src={image} alt="" width={750} height={1718} objectFit="cover" />
 		</StyledImageContainer>
 	);
 };
@@ -16,6 +17,7 @@ const ImageContainer = ({ image }: Props) => {
 export default ImageContainer;
 
 const StyledImageContainer = styled.div`
+	position: relative;
 	margin-bottom: var(--text-mb);
 	div {
 		width: 17rem;

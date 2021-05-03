@@ -1,7 +1,7 @@
 //libs
 import styled from "styled-components";
 //styles
-import { Breakpoints } from "../../../styles/GlobalStyles";
+import { Breakpoints } from "../../global/Breakpoints";
 
 interface Props {
 	open: boolean;

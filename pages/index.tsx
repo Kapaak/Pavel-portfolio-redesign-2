@@ -2,13 +2,19 @@
 import styled from "styled-components";
 //components
 import Nav from "../components/global/Nav";
-import FirstPage from "../components/firstPage";
+import HomePage from "../components/HomePage";
+import AboutPage from "../components/AboutPage";
+import PortfolioPage from "../components/PortfolioPage";
+//data
+import data from "../data";
 
 export default function Home() {
 	return (
 		<div>
 			<Nav />
-			<FirstPage />
+			<HomePage />
+			<AboutPage />
+			<PortfolioPage data={data()} />
 		</div>
 	);
 }

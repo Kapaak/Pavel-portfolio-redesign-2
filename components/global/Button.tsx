@@ -4,11 +4,18 @@ import styled from "styled-components";
 interface Props {
 	children: React.ReactNode;
 	noUnderscore?: boolean;
+	onClick?: () => void;
 }
 
-const Button = ({ children, noUnderscore }: Props) => {
+const Button = ({ children, noUnderscore, onClick }: Props) => {
+	const handleClick = () => {
+		if (onClick) onClick();
+	};
+
 	return noUnderscore ? (
-		<StyledButtonWithoutUndersore>{children}</StyledButtonWithoutUndersore>
+		<StyledButtonWithoutUndersore onClick={handleClick}>
+			{children}
+		</StyledButtonWithoutUndersore>
 	) : (
 		<StyledButton>{children}</StyledButton>
 	);
@@ -22,6 +29,7 @@ const StyledButtonWithoutUndersore = styled.button`
 	padding: 1rem 0;
 	font-size: var(--fosi-button);
 	background-color: transparent;
+	cursor: pointer;
 	z-index: 1;
 
 	&:first-child {

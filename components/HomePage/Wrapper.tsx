@@ -15,4 +15,7 @@ export default Wrapper;
 
 const StyledWrapper = styled.div`
 	display: flex;
+	width: 100%;
+	max-width: 144rem;
+	margin: 0 auto;
 `;

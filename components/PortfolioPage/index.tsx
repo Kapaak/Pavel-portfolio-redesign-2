@@ -13,14 +13,16 @@ interface Props {
 
 const index = ({ data }: Props) => {
 	return (
-		<StyledPortfolioPage>
-			<h1>Portfolio</h1>
-			<h2>some of my latest projects</h2>
-			{data.map((dataEl, index) => (
-				<Wrapper key={index} data={dataEl} />
-			))}
-			<FlexUnderscore>load more projects...</FlexUnderscore>
-		</StyledPortfolioPage>
+		<StyledPortfolioPageOutter>
+			<StyledPortfolioPage>
+				<h1>Portfolio</h1>
+				<h2>some of my latest projects</h2>
+				{data.map((dataEl, index) => (
+					<Wrapper key={index} data={dataEl} />
+				))}
+				<FlexUnderscore>load more projects...</FlexUnderscore>
+			</StyledPortfolioPage>
+		</StyledPortfolioPageOutter>
 	);
 };
 
@@ -31,8 +33,15 @@ const StyledPortfolioPage = styled.div`
 	flex-direction: column;
 	align-items: flex-start;
 	justify-content: center;
-	background-color: var(--fourth-col);
+	max-width: 144rem;
+	margin: 0 auto;
+	@media ${Breakpoints.tablet} {
+		padding: 0 var(--horizontal-gap);
+	}
+`;
+const StyledPortfolioPageOutter = styled.div`
 	padding: var(--vertical-gap) var(--horizontal-gap);
+	background-color: var(--fourth-col);
 `;
 
 const FlexUnderscore = styled(Underscore)`

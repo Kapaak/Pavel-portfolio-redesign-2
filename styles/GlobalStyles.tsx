@@ -36,7 +36,7 @@ const GlobalStyles = createGlobalStyle`
         --headline-mb:2.5rem;
         --text-mb: 1.5rem;
 
-        --br-main:2rem;
+        --br-main:1.5rem;
 
         --box-width:19rem;
         --box-height:calc(var(--box-width)*1.4);
@@ -72,6 +72,12 @@ const GlobalStyles = createGlobalStyle`
             --fosi-text: calc(1.5rem / var(--xd-recalc));
             --box-width:30rem;
 		}
+    }
+
+    @media ${Breakpoints.desktop}{
+        :root{
+            --xd-recalc:.86;
+        }
     }
     
 

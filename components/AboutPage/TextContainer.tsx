@@ -75,7 +75,8 @@ const StyledTextContainer = styled.div`
 
 	@media ${Breakpoints.desktop} {
 		margin-bottom: 0;
-		padding-right: var(--horizontal-gap);
+		padding-right: 11vw;
+		/* padding-right: var(--horizontal-gap); */
 	}
 `;
 

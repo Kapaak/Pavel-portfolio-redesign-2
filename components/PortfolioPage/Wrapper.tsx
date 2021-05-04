@@ -29,11 +29,12 @@ export default Wrapper;
 
 const StyledWrapper = styled.div`
 	width: 100%;
+	margin-bottom: var(--horizontal-gap);
 	& > div {
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
-		max-width: 90rem;
+		max-width: 73rem;
 		margin: 0 auto;
 
 		@media ${Breakpoints.tablet} {

@@ -49,6 +49,6 @@ const StyledTextContainer = styled.div`
 	}
 
 	@media ${Breakpoints.tablet} {
-		margin: var(--horizontal-gap) 0 0 var(--horizontal-gap);
+		margin: var(--horizontal-gap) 0 0 5vw;
 	}
 `;

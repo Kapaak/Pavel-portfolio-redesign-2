@@ -10,7 +10,7 @@ const ImageContainer = () => {
 				alt="picture of myself"
 				width={384}
 				height={512}
-				layout="responsive"
+				// layout="responsive"
 				objectFit="contain"
 				//tady muzu nastavit nejaky intrinsic nebo neco takovyho
 				//a to udela, ze se to muze dostat do max vysky a dal ne
@@ -24,5 +24,6 @@ export default ImageContainer;
 
 const StyledContainer = styled.div`
 	position: relative;
-	padding: var(--horizontal-gap);
+	padding: var(--text-mb) var(--horizontal-gap);
+	text-align: center;
 `;

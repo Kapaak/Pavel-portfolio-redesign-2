@@ -2,12 +2,12 @@
 import InnerContainer from "./InnerContainer";
 //styles
 import styled from "styled-components";
+import Breakpoints from "../global/Breakpoints";
 
 const Wrapper = () => {
 	return (
 		<StyledWrapper>
 			<InnerContainer />
-			<StyledPlaceholder />
 		</StyledWrapper>
 	);
 };
@@ -15,16 +15,18 @@ const Wrapper = () => {
 export default Wrapper;
 
 const StyledWrapper = styled.div`
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	width: 100%;
+
 	& > div {
 		display: flex;
-		width: 100%;
+		z-index: 2;
+		@media ${Breakpoints.tablet} {
+			border-radius: var(--br-main);
+			margin: 0 var(--horizontal-gap);
+			text-align: center;
+		}
 	}
-`;
-
-const StyledPlaceholder = styled.div`
-	/* flex: 1 1 25%; az bude vetsi breakpoint, pak tohle bude real*/
-	background-color: yellow;
 `;

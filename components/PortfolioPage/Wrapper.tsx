@@ -5,7 +5,8 @@ import TextContainer from "./TextContainer";
 import ImageContainer from "./ImageContainer";
 //interfaces
 import { PortfolioObject } from "../global/Interfaces";
-import Button from "../global/Button";
+//breakpoints
+import Breakpoints from "../global/Breakpoints";
 
 interface Props {
 	data: PortfolioObject;
@@ -19,7 +20,6 @@ const Wrapper = ({ data }: Props) => {
 			<div>
 				<ImageContainer image={image} />
 				<TextContainer data={rest} />
-				<Button>Visit web</Button>
 			</div>
 		</StyledWrapper>
 	);
@@ -35,5 +35,9 @@ const StyledWrapper = styled.div`
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
+
+		@media ${Breakpoints.tablet} {
+			flex-direction: row;
+		}
 	}
 `;

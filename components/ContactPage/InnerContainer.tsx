@@ -31,5 +31,6 @@ const StyledTextWrapper = styled.div`
 
 	p {
 		margin-bottom: var(--text-mb);
+		font-size: var(--fosi-text);
 	}
 `;

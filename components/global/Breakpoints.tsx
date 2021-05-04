@@ -9,7 +9,8 @@ const convertToEm = (number: number) => {
 // };
 
 const devices = {
-	tablet: convertToEm(425),
+	// tablet: convertToEm(425),
+	tablet: convertToEm(768),
 	desktop: convertToEm(1024),
 };
 

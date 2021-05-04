@@ -61,7 +61,7 @@ const TextContainer = () => {
 export default TextContainer;
 
 const StyledTextContainer = styled.div`
-	padding: var(--vertical-gap) var(--horizontal-gap) var(--horizontal-gap);
+	padding: var(--vertical-gap) var(--horizontal-gap) var(--text-mb);
 
 	& > p {
 		margin-bottom: var(--text-mb);

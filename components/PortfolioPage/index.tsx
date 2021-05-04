@@ -5,6 +5,7 @@ import Wrapper from "./Wrapper";
 //interfaces
 import { PortfolioObject } from "../global/Interfaces";
 import { Underscore } from "../../styles/GlobalStyles";
+import Breakpoints from "../global/Breakpoints";
 
 interface Props {
 	data: Array<PortfolioObject>;
@@ -18,7 +19,7 @@ const index = ({ data }: Props) => {
 			{data.map((dataEl, index) => (
 				<Wrapper key={index} data={dataEl} />
 			))}
-			<Underscore>load more projects...</Underscore>
+			<FlexUnderscore>load more projects...</FlexUnderscore>
 		</StyledPortfolioPage>
 	);
 };
@@ -26,6 +27,16 @@ const index = ({ data }: Props) => {
 export default index;
 
 const StyledPortfolioPage = styled.div`
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
 	background-color: var(--fourth-col);
 	padding: var(--vertical-gap) var(--horizontal-gap);
+`;
+
+const FlexUnderscore = styled(Underscore)`
+	@media ${Breakpoints.tablet} {
+		align-self: center;
+	}
 `;

@@ -2,6 +2,9 @@
 import styled from "styled-components";
 //components
 import ColorsContainer from "./ColorsContainer";
+import Button from "../global/Button";
+//breakpoints
+import Breakpoints from "../global/Breakpoints";
 
 interface ObjectType {
 	title: string;
@@ -20,6 +23,7 @@ const TextContainer = ({ data }: Props) => {
 			<h2>{title}</h2>
 			<p>{description}</p>
 			<ColorsContainer colors={colors} />
+			<Button>Visit web</Button>
 		</StyledTextContainer>
 	);
 };
@@ -33,5 +37,10 @@ const StyledTextContainer = styled.div`
 	}
 	p {
 		margin-bottom: var(--text-mb);
+		font-size: var(--fosi-text);
+	}
+
+	@media ${Breakpoints.tablet} {
+		margin: var(--horizontal-gap) 0 0 var(--horizontal-gap);
 	}
 `;

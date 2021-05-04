@@ -2,6 +2,8 @@
 import styled from "styled-components";
 //components
 import InnerContainer from "./InnerContainer";
+//breakpoints
+import Breakpoints from "../global/Breakpoints";
 
 const Wrapper = () => {
 	return (
@@ -18,4 +20,8 @@ const StyledWrapper = styled.div`
 	width: 100%;
 	max-width: 144rem;
 	margin: 0 auto;
+
+	@media ${Breakpoints.tablet} {
+		justify-content: center;
+	}
 `;

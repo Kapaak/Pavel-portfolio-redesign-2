@@ -4,6 +4,7 @@ import IconsContainer from "./IconsContainer";
 import styled from "styled-components";
 //interfaces
 import { FooterObject } from "../global/Interfaces";
+import Breakpoints from "../global/Breakpoints";
 
 interface Props {
 	data: Array<FooterObject>;
@@ -26,11 +27,21 @@ const StyledFooter = styled.div`
 	background-color: var(--first-col);
 	display: flex;
 	flex-direction: column;
+	align-content: center;
 	padding: var(--horizontal-gap);
 	color: var(--fourth-col);
 
 	p {
 		font-size: var(--fosi-text);
 		margin-bottom: 0.6rem;
+	}
+
+	@media ${Breakpoints.tablet} {
+		flex-direction: row;
+		justify-content: center;
+
+		p {
+			margin: 0 var(--horizontal-gap) 0 0;
+		}
 	}
 `;

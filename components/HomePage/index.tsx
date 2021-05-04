@@ -20,7 +20,7 @@ const StyledHomePage = styled.div`
 	min-height: 100vh;
 	background: rgb(232, 231, 231);
 	background: linear-gradient(
-		90deg,
+		1deg,
 		rgba(232, 231, 231, 1) 0%,
 		rgba(246, 246, 246, 1) 100%
 	);

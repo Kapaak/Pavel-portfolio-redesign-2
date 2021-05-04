@@ -15,16 +15,15 @@ const Wrapper = () => {
 export default Wrapper;
 
 const StyledWrapper = styled.div`
-	display: flex;
-	flex-direction: column;
-	width: 100%;
-	& > div {
-		display: flex;
-		width: 100%;
-	}
+	position: relative;
+	z-index: 2;
 `;
 
 const StyledPlaceholder = styled.div`
-	flex: 1 1 25%;
-	background-color: yellow;
+	position: absolute;
+	height: 50%;
+	width: 100%;
+	bottom: 0;
+	background-color: var(--fourth-col);
+	z-index: 1;
 `;

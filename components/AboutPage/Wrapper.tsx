@@ -16,6 +16,7 @@ export default Wrapper;
 
 const StyledWrapper = styled.div`
 	position: relative;
+	width: 100%;
 	z-index: 2;
 `;
 

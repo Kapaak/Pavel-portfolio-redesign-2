@@ -24,6 +24,8 @@ export default ImageContainer;
 
 const StyledContainer = styled.div`
 	position: relative;
-	padding: var(--text-mb) var(--horizontal-gap);
+	align-self: center;
 	text-align: center;
+	flex: 1 1 30%;
+	max-width: 33rem;
 `;

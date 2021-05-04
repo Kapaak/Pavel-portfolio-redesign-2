@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Image from "next/image";
 //styles
 import { Underscore } from "../../styles/GlobalStyles";
+import Breakpoints from "../global/Breakpoints";
 
 const TextContainer = () => {
 	return (
@@ -61,7 +62,8 @@ const TextContainer = () => {
 export default TextContainer;
 
 const StyledTextContainer = styled.div`
-	padding: var(--vertical-gap) var(--horizontal-gap) var(--text-mb);
+	flex: 1 1 70%;
+	margin-bottom: var(--horizontal-gap);
 
 	& > p {
 		margin-bottom: var(--text-mb);
@@ -69,6 +71,11 @@ const StyledTextContainer = styled.div`
 
 	p {
 		font-size: var(--fosi-text);
+	}
+
+	@media ${Breakpoints.desktop} {
+		margin-bottom: 0;
+		padding-right: var(--horizontal-gap);
 	}
 `;
 

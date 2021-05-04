@@ -36,6 +36,7 @@ const StyledPortfolioPage = styled.div`
 `;
 
 const FlexUnderscore = styled(Underscore)`
+	font-size: var(--fosi-subheadline);
 	@media ${Breakpoints.tablet} {
 		align-self: center;
 	}

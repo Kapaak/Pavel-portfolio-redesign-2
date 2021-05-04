@@ -17,7 +17,7 @@ const data = (): Array<PortfolioObject> => [
 		Jednotlivé stránky ordinace jsou sladěny do barev ordiance, stejně jako převzaté logo.
 		Stránky jsou přehledné, s jasnou strukturou a čistou grafikou. `,
 		colors: ["#FE6246", "#E5568F", "#F6C64E"],
-		url: "https://barboranovakova.vercel.app/",
+		url: "https://ambroz-dent.vercel.app/",
 		image: "/images/projects/Ambroz-web.png",
 	},
 	{
@@ -27,7 +27,7 @@ const data = (): Array<PortfolioObject> => [
         jednoduchými animacemi a sjednocenou grafikou. Na webu jsou zdůrazněny
         oblíbené barvy mladé architektky.`,
 		colors: ["#0ca52d", "#aa3c3c", "#ababab"],
-		url: "https://barboranovakova.vercel.app/",
+		url: "https://rick-and-morty-dbs.vercel.app/",
 		image: "/images/projects/RickAndMorty-app.png",
 	},
 ];

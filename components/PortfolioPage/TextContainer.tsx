@@ -3,6 +3,7 @@ import styled from "styled-components";
 //components
 import ColorsContainer from "./ColorsContainer";
 import Button from "../global/Button";
+import Link from "next/link";
 //breakpoints
 import Breakpoints from "../global/Breakpoints";
 
@@ -10,20 +11,27 @@ interface ObjectType {
 	title: string;
 	description: string;
 	colors: Array<string>;
+	url: string;
 }
 
 interface Props {
 	data: ObjectType;
 }
 const TextContainer = ({ data }: Props) => {
-	const { colors, description, title } = data;
+	console.log(data, "ddaa");
+
+	const { colors, description, title, url } = data;
 
 	return (
 		<StyledTextContainer>
 			<h2>{title}</h2>
 			<p>{description}</p>
 			<ColorsContainer colors={colors} />
-			<Button>Visit web</Button>
+			<Link href={url} passHref={true}>
+				<a>
+					<Button>Visit web</Button>
+				</a>
+			</Link>
 		</StyledTextContainer>
 	);
 };

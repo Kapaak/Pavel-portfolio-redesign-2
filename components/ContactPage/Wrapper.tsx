@@ -22,11 +22,13 @@ const StyledWrapper = styled.div`
 
 	& > div {
 		display: flex;
+		max-width: 74rem;
+		margin: 0 auto;
 		z-index: 2;
 		@media ${Breakpoints.tablet} {
 			border-radius: var(--br-main);
-			margin: 0 var(--horizontal-gap);
 			text-align: center;
+			padding: 6rem 10rem;
 		}
 	}
 `;

@@ -28,13 +28,13 @@ const Wrapper = ({ data }: Props) => {
 export default Wrapper;
 
 const StyledWrapper = styled.div`
-	max-width: 144rem;
-	margin: 0 auto;
-
+	width: 100%;
 	& > div {
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
+		max-width: 90rem;
+		margin: 0 auto;
 
 		@media ${Breakpoints.tablet} {
 			flex-direction: row;

@@ -28,7 +28,7 @@ const StyledFooter = styled.div`
 	display: flex;
 	flex-direction: column;
 	align-content: center;
-	padding: var(--horizontal-gap);
+	padding: 1.2rem;
 	color: var(--fourth-col);
 
 	p {

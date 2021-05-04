@@ -1,7 +1,7 @@
 //libs
 import styled from "styled-components";
 //components
-import Nav from "../components/global/Nav";
+import Nav from "../components/Nav";
 import HomePage from "../components/HomePage";
 import AboutPage from "../components/AboutPage";
 import PortfolioPage from "../components/PortfolioPage";

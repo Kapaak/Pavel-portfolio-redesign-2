@@ -32,6 +32,7 @@ const StyledBurger = styled.div`
 	flex-direction: column;
 	justify-content: space-between;
 	margin: var(--horizontal-gap) var(--horizontal-gap) var(--horizontal-gap) auto;
+	cursor: pointer;
 	z-index: 11;
 
 	p {

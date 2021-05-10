@@ -32,6 +32,8 @@ const StyledButtonWithoutUndersore = styled.button`
 	background-color: transparent;
 	cursor: pointer;
 	z-index: 1;
+	letter-spacing: var(--letter-spacing);
+	line-height: var(--line-height);
 
 	&:first-child {
 		margin-right: 2rem;

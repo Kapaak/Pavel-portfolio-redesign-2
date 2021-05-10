@@ -35,6 +35,8 @@ const GlobalStyles = createGlobalStyle`
 
         --headline-mb:2.5rem;
         --text-mb: 1.5rem;
+        --letter-spacing:.1rem;
+        --line-height:1.6;
 
         --br-main:1.5rem;
 
@@ -49,17 +51,23 @@ const GlobalStyles = createGlobalStyle`
     body{
         font-size:1.6rem;
         font-family: 'Noto Sans', sans-serif;
+        letter-spacing:var(--letter-spacing);
 
         h1{
             font-size: var(--fosi-headline);
 		    font-weight: var(--fowe-reg);
             margin-bottom: var(--headline-mb);
+            
 	}
 
         h2{
             font-size: var(--fosi-subheadline);
 		    font-weight: var(--fowe-reg);
-            margin-bottom: var(--text-mb);
+            margin-bottom: var(--text-mb);   
+        }
+
+        p{
+            line-height:var(--line-height);
         }
     }
 
@@ -79,7 +87,15 @@ const GlobalStyles = createGlobalStyle`
             --xd-recalc:.86;
         }
     }
+    @media ${Breakpoints.desktopB}{
+        :root{
+            --xd-recalc:.75;
+            /* --horizontal-gap:8rem;*/
+            --vertical-gap:8rem;
+        }
+    }
     
+  
 
 `;
 

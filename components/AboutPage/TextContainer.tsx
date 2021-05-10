@@ -74,9 +74,13 @@ const StyledTextContainer = styled.div`
 	}
 
 	@media ${Breakpoints.desktop} {
-		margin-bottom: 0;
+		/* margin-bottom: 0; */
+		margin: auto 0;
 		padding-right: 11vw;
-		/* padding-right: var(--horizontal-gap); */
+	}
+
+	@media ${Breakpoints.desktopB} {
+		flex: 1 1 60%;
 	}
 `;
 
@@ -95,5 +99,19 @@ const NotReallySlider = styled.div`
 
 	div + div {
 		margin-left: var(--text-mb);
+	}
+
+	@media ${Breakpoints.tablet} {
+		div + div {
+			margin-left: 2rem;
+		}
+		& > div {
+			flex-direction: row;
+
+			p {
+				margin-left: 1rem;
+				margin-bottom: 0;
+			}
+		}
 	}
 `;

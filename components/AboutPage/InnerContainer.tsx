@@ -9,10 +9,12 @@ import Breakpoints from "../global/Breakpoints";
 const InnerContainer = () => {
 	return (
 		<StyledInnerContainer>
-			<StyledTextWrapper>
-				<TextContainer />
-				<ImageContainer />
-			</StyledTextWrapper>
+			<StyledTextOutterWrapper>
+				<StyledTextWrapper>
+					<TextContainer />
+					<ImageContainer />
+				</StyledTextWrapper>
+			</StyledTextOutterWrapper>
 		</StyledInnerContainer>
 	);
 };
@@ -25,21 +27,31 @@ const StyledInnerContainer = styled.div`
 	justify-content: center;
 	background: rgba(232, 231, 231, 1);
 `;
-
-const StyledTextWrapper = styled.div`
+const StyledTextOutterWrapper = styled.div`
 	position: relative;
-	display: flex;
-	flex-direction: column;
+
 	padding: var(--vertical-gap) var(--horizontal-gap) var(--horizontal-gap);
 	background-color: var(--third-col);
-	max-width: 144rem;
+	max-width: 165rem;
+	width: 100%;
 	z-index: 3;
 
 	@media ${Breakpoints.tablet} {
 		margin: 0 var(--horizontal-gap);
 		border-radius: var(--br-main);
 	}
+`;
+
+const StyledTextWrapper = styled.div`
+	display: flex;
+	flex-direction: column;
+
 	@media ${Breakpoints.desktop} {
 		flex-direction: row;
+	}
+
+	@media ${Breakpoints.desktopB} {
+		max-width: 140rem;
+		margin: 0 auto;
 	}
 `;

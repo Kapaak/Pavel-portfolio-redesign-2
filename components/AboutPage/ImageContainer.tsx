@@ -1,6 +1,7 @@
 //libs
 import styled from "styled-components";
 import Image from "next/image";
+import Breakpoints from "../global/Breakpoints";
 
 const ImageContainer = () => {
 	return (
@@ -28,4 +29,13 @@ const StyledContainer = styled.div`
 	text-align: center;
 	flex: 1 1 30%;
 	max-width: 33rem;
+
+	img {
+		transform: scale(1.2) translate(-30px, -40px);
+	}
+
+	@media ${Breakpoints.desktopB} {
+		flex: 1 1 40%;
+		max-width: 40rem;
+	}
 `;

@@ -2,9 +2,9 @@
 import styled from "styled-components";
 //components
 import Wrapper from "./Wrapper";
+import Button from "../global/Button";
 //interfaces
 import { PortfolioObject } from "../global/Interfaces";
-import { Underscore } from "../../styles/GlobalStyles";
 import Breakpoints from "../global/Breakpoints";
 
 interface Props {
@@ -20,7 +20,7 @@ const index = ({ data }: Props) => {
 				{data.map((dataEl, index) => (
 					<Wrapper key={index} data={dataEl} index={index} />
 				))}
-				<FlexUnderscore>load more projects...</FlexUnderscore>
+				<Button>load more projects...</Button>
 			</StyledPortfolioPage>
 		</StyledPortfolioPageOutter>
 	);
@@ -35,10 +35,18 @@ const StyledPortfolioPage = styled.div`
 	justify-content: center;
 	max-width: 144rem;
 	margin: 0 auto;
+
+	& > button {
+		font-size: var(--fosi-subheadline);
+	}
 	@media ${Breakpoints.tablet} {
 		padding: 0 var(--horizontal-gap);
 		& > h2 {
 			margin-bottom: 8rem;
+		}
+
+		& > button {
+			align-self: center;
 		}
 	}
 	@media ${Breakpoints.desktop} {
@@ -50,11 +58,4 @@ const StyledPortfolioPage = styled.div`
 const StyledPortfolioPageOutter = styled.div`
 	padding: var(--vertical-gap) var(--horizontal-gap);
 	background-color: var(--fourth-col);
-`;
-
-const FlexUnderscore = styled(Underscore)`
-	font-size: var(--fosi-subheadline);
-	@media ${Breakpoints.tablet} {
-		align-self: center;
-	}
 `;

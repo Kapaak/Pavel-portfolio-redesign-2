@@ -1,5 +1,5 @@
 //libs
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import Breakpoints from "./Breakpoints";
 
 interface Props {
@@ -35,6 +35,7 @@ const StyledButtonWithoutUndersore = styled.button`
 	z-index: 1;
 	letter-spacing: var(--letter-spacing);
 	line-height: var(--line-height);
+	overflow: hidden;
 
 	&:first-child {
 		margin-right: 2rem;

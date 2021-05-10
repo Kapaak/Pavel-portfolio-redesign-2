@@ -41,12 +41,6 @@ const Wrapper = ({ data, index }: Props) => {
 			)}
 		</>
 	);
-	// <StyledWrapper>
-	// 	<div>
-	// 		<ImageContainer image={image} />
-	// 		<TextContainer data={rest} margin="var(--horizontal-gap) 0 0 5vw;" />
-	// 	</div>
-	// </StyledWrapper>
 };
 
 export default Wrapper;

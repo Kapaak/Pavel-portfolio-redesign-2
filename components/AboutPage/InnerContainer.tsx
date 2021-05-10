@@ -39,6 +39,7 @@ const StyledTextOutterWrapper = styled.div`
 	@media ${Breakpoints.tablet} {
 		margin: 0 var(--horizontal-gap);
 		border-radius: var(--br-main);
+		padding: var(--vertical-gap) var(--horizontal-gap);
 	}
 `;
 

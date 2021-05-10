@@ -39,6 +39,7 @@ const TextContainer = ({ data }: Props) => {
 export default TextContainer;
 
 const StyledTextContainer = styled.div`
+	align-self: flex-end;
 	h2 {
 		font-weight: var(--fowe-bold);
 		text-transform: uppercase;

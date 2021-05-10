@@ -28,4 +28,8 @@ const StyledImageContainer = styled.div`
 		border-radius: 1rem;
 		box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.15);
 	}
+
+	@media ${Breakpoints.tablet} {
+		magin-bottom: 0;
+	}
 `;

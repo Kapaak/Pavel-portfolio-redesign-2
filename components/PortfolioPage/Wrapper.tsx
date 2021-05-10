@@ -34,11 +34,14 @@ const StyledWrapper = styled.div`
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
-		max-width: 73rem;
+		max-width: 79rem;
 		margin: 0 auto;
 
 		@media ${Breakpoints.tablet} {
 			flex-direction: row;
+		}
+		@media ${Breakpoints.desktopB} {
+			max-width: 100rem;
 		}
 	}
 `;

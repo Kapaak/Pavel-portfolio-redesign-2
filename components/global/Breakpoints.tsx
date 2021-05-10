@@ -5,7 +5,7 @@ const convertToEm = (number: number) => {
 const devices = {
 	tablet: convertToEm(768),
 	desktop: convertToEm(1024),
-	desktopB: convertToEm(1300),
+	desktopB: convertToEm(1400),
 };
 
 const Breakpoints = {

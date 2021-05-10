@@ -74,13 +74,13 @@ const StyledTextContainer = styled.div`
 	}
 
 	@media ${Breakpoints.desktop} {
-		/* margin-bottom: 0; */
 		margin: auto 0;
-		padding-right: 11vw;
+		padding-right: 7vw;
 	}
 
 	@media ${Breakpoints.desktopB} {
 		flex: 1 1 60%;
+		padding-right: 11vw;
 	}
 `;
 

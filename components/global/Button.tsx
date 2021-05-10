@@ -1,5 +1,6 @@
 //libs
 import styled from "styled-components";
+import Breakpoints from "./Breakpoints";
 
 interface Props {
 	children: React.ReactNode;
@@ -37,6 +38,10 @@ const StyledButtonWithoutUndersore = styled.button`
 
 	&:first-child {
 		margin-right: 2rem;
+	}
+
+	@media ${Breakpoints.desktopB} {
+		margin-bottom: 6rem;
 	}
 `;
 

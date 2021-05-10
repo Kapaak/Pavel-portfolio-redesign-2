@@ -27,7 +27,7 @@ const StyledContainer = styled.div`
 	position: relative;
 	align-self: center;
 	text-align: center;
-	flex: 1 1 30%;
+	flex: 1 1 37%;
 	max-width: 33rem;
 
 	img {

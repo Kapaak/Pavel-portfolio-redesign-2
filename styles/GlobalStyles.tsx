@@ -40,8 +40,8 @@ const GlobalStyles = createGlobalStyle`
 
         --br-main:1.5rem;
 
-        --box-width:19rem;
-        --box-height:calc(var(--box-width)*1.4);
+        --box-width:22rem;
+        --box-height:calc(var(--box-width)*1.6);
     }
 
     html{

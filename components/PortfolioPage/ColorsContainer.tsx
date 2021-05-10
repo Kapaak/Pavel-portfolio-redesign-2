@@ -7,8 +7,6 @@ interface Props {
 	colors: Array<string>;
 }
 const ColorsContainer = ({ colors }: Props) => {
-	console.log(colors);
-
 	return (
 		<StyledColors>
 			{colors.map((color, index) => {

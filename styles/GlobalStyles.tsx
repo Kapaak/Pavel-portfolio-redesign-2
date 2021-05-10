@@ -94,8 +94,8 @@ const GlobalStyles = createGlobalStyle`
             --xd-recalc:.75;
             /* --horizontal-gap:8rem;*/
             --vertical-gap:8rem;
-            --box-width:44rem;
-            --box-height:calc(var(--box-width)*1.3);
+            --box-width:42rem;
+            --box-height:calc(var(--box-width)*1.4);
         }
     }
     

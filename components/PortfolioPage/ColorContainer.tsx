@@ -3,8 +3,6 @@ import styled from "styled-components";
 import Breakpoints from "../global/Breakpoints";
 
 const ColorContainer = ({ color }: { color: string }) => {
-	console.log("pep");
-
 	return <StyledColor color={color} />;
 };
 

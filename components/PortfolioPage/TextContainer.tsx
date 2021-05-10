@@ -16,14 +16,13 @@ interface ObjectType {
 
 interface Props {
 	data: ObjectType;
+	margin: string;
 }
-const TextContainer = ({ data }: Props) => {
-	console.log(data, "ddaa");
-
+const TextContainer = ({ data, margin }: Props) => {
 	const { colors, description, title, url } = data;
 
 	return (
-		<StyledTextContainer>
+		<StyledTextContainer margin={margin}>
 			<h2>{title}</h2>
 			<p>{description}</p>
 			<ColorsContainer colors={colors} />
@@ -38,7 +37,8 @@ const TextContainer = ({ data }: Props) => {
 
 export default TextContainer;
 
-const StyledTextContainer = styled.div`
+const StyledTextContainer = styled.div<{ margin: string }>`
+	flex: 1 1 50%;
 	align-self: flex-end;
 	h2 {
 		font-weight: var(--fowe-bold);
@@ -50,6 +50,7 @@ const StyledTextContainer = styled.div`
 	}
 
 	@media ${Breakpoints.tablet} {
-		margin: var(--horizontal-gap) 0 0 5vw;
+		margin: ${({ margin }) => margin};
+		/* margin: var(--horizontal-gap) 0 0 5vw; */
 	}
 `;

@@ -21,6 +21,7 @@ export default ImageContainer;
 const StyledImageContainer = styled.div`
 	position: relative;
 	margin-bottom: var(--text-mb);
+	flex: 1 1 50%;
 	div {
 		width: var(--box-width);
 		height: var(--box-height);
@@ -30,6 +31,6 @@ const StyledImageContainer = styled.div`
 	}
 
 	@media ${Breakpoints.tablet} {
-		magin-bottom: 0;
+		margin-bottom: 0;
 	}
 `;

@@ -14,13 +14,19 @@ interface Props {
 
 const Button = ({ children, noUnderscore, onClick }: Props) => {
 	const { underlineV, textV } = ButtonUnderscoreVariant;
-	const containerRef = useRef(null);
-	const [value, setValue] = useState<any>();
+	const containerRef = useRef<any>(1);
+	const [variant, setVariant] = useState(
+		underlineV(containerRef.current?.clientHeight / 2)
+	);
 	useEffect(() => {
-		setValue(containerRef.current);
-		window.addEventListener("resize", async () => {
-			await setValue(containerRef.current);
-			await console.log(value);
+		setVariant(underlineV(containerRef.current?.clientHeight / 2));
+		window.addEventListener("resize", () => {
+			setVariant(underlineV(containerRef.current?.clientHeight / 2));
+		});
+
+		return window.removeEventListener("resize", () => {
+			setVariant(underlineV(containerRef.current?.clientHeight / 2));
+			console.log(containerRef.current?.clientHeight);
 		});
 	}, []);
 
@@ -37,7 +43,7 @@ const Button = ({ children, noUnderscore, onClick }: Props) => {
 			<StyledP ref={containerRef} variants={textV}>
 				{children}
 			</StyledP>
-			<StyledUnderline variants={underlineV(value?.clientHeight / 2)} />
+			<StyledUnderline variants={variant} />
 		</StyledButton>
 	);
 };

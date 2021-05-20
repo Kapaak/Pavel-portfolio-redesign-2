@@ -1,6 +1,10 @@
 //libs
-import styled, { keyframes } from "styled-components";
+import React, { useState, useEffect, useRef } from "react";
+import styled from "styled-components";
 import Breakpoints from "./Breakpoints";
+import { motion } from "framer-motion";
+//variants
+import { ButtonUnderscoreVariant } from "../../animations/variants";
 
 interface Props {
 	children: React.ReactNode;
@@ -9,6 +13,17 @@ interface Props {
 }
 
 const Button = ({ children, noUnderscore, onClick }: Props) => {
+	const { underlineV, textV } = ButtonUnderscoreVariant;
+	const containerRef = useRef(null);
+	const [value, setValue] = useState<any>();
+	useEffect(() => {
+		setValue(containerRef.current);
+		window.addEventListener("resize", async () => {
+			await setValue(containerRef.current);
+			await console.log(value);
+		});
+	}, []);
+
 	const handleClick = () => {
 		if (onClick) onClick();
 	};
@@ -18,16 +33,23 @@ const Button = ({ children, noUnderscore, onClick }: Props) => {
 			{children}
 		</StyledButtonWithoutUndersore>
 	) : (
-		<StyledButton>{children}</StyledButton>
+		<StyledButton whileHover="visible">
+			<StyledP ref={containerRef} variants={textV}>
+				{children}
+			</StyledP>
+			<StyledUnderline variants={underlineV(value?.clientHeight / 2)} />
+		</StyledButton>
 	);
 };
 
 export default Button;
 
-const StyledButtonWithoutUndersore = styled.button`
+const StyledP = styled(motion.p)<{ variants: any }>``;
+
+const StyledButtonWithoutUndersore = styled(motion.button)`
 	position: relative;
 	border: none;
-	padding: 1rem 0;
+	padding: 1rem 1rem 1rem 0;
 	margin-bottom: var(--text-mb);
 	font-size: var(--fosi-button);
 	background-color: transparent;
@@ -46,13 +68,12 @@ const StyledButtonWithoutUndersore = styled.button`
 	}
 `;
 
-const StyledButton = styled(StyledButtonWithoutUndersore)`
-	&::before {
-		content: "";
-		position: absolute;
-		height: 0.3rem;
-		width: 100%;
-		bottom: 0;
-		background-color: var(--first-col);
-	}
+const StyledButton = styled(StyledButtonWithoutUndersore)``;
+
+const StyledUnderline = styled(motion.p)<{ variants: any }>`
+	position: absolute;
+	width: calc(100% - 1rem);
+	height: 0.3rem;
+	background-color: var(--first-col);
+	transform: translateY(-50%);
 `;

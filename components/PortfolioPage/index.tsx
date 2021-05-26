@@ -74,6 +74,7 @@ const StyledPortfolioPage = styled(motion.div)`
 	justify-content: center;
 	max-width: 144rem;
 	margin: 0 auto;
+	overflow: hidden;
 
 	& > button {
 		font-size: var(--fosi-subheadline);

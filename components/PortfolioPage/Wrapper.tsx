@@ -18,24 +18,28 @@ interface Props {
 const Wrapper = ({ data, index }: Props) => {
 	const { ref, inView } = useInView({
 		triggerOnce: true,
-		rootMargin: "-200px",
+		rootMargin: "0px 0px -300px 0px",
 	});
 	const { image, ...rest } = data;
 
 	const portfolioNodeLeft = {
 		inactive: {
 			x: -200,
+			transition: { duration: 0.6 },
 		},
 		active: {
 			x: 0,
+			transition: { duration: 0.6 },
 		},
 	};
 	const portfolioNodeRight = {
 		inactive: {
 			x: 200,
+			transition: { duration: 0.6 },
 		},
 		active: {
 			x: 0,
+			transition: { duration: 0.6 },
 		},
 	};
 

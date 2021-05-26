@@ -2,10 +2,13 @@
 import styled from "styled-components";
 import Image from "next/image";
 import Breakpoints from "../global/Breakpoints";
+import { motion } from "framer-motion";
 
 const ImageContainer = () => {
 	return (
-		<StyledContainer>
+		<StyledContainer
+		// initial={{ x: 80 }} animate={{ x: 0 }}
+		>
 			<Image
 				src="/images/me.JPG"
 				alt="picture of myself"
@@ -23,7 +26,7 @@ const ImageContainer = () => {
 
 export default ImageContainer;
 
-const StyledContainer = styled.div`
+const StyledContainer = styled(motion.div)`
 	position: relative;
 	align-self: center;
 	text-align: center;

@@ -1,20 +1,31 @@
 //libs
 import styled from "styled-components";
 import Image from "next/image";
+import { motion } from "framer-motion";
 //styles
-import { Underscore } from "../../styles/GlobalStyles";
 import Breakpoints from "../global/Breakpoints";
 
 const TextContainer = () => {
+	const AboutTextV = {
+		active: { x: 0, opacity: 1 },
+		inactive: { x: 20, opacity: 0 },
+	};
 	return (
 		<StyledTextContainer>
-			<h1>About</h1>
-			<p>
-				Hi, I'm <Underscore>Pavel Zapletal</Underscore> a self-taught JavaScript
-				programmer. I'm 26 yo, living in Brno. Creating websites is my bread and
-				butter. When I'm not at home I usually go outside to enjoy some nature.
-			</p>
-			<div>
+			<motion.h1 variants={AboutTextV}>About</motion.h1>
+			<motion.p variants={AboutTextV}>
+				Hi, I'm{" "}
+				<motion.span
+					style={{ display: "inline-block", position: "relative" }}
+					animate={{ color: "var(--second-col)" }}
+				>
+					Pavel Zapletal
+				</motion.span>{" "}
+				a self-taught JavaScript programmer. I'm 26 yo, living in Brno. Creating
+				websites is my bread and butter. When I'm not at home I usually go
+				outside to enjoy some nature.
+			</motion.p>
+			<motion.div variants={AboutTextV}>
 				<h2>What technologies do I like working with?</h2>
 				<NotReallySlider>
 					<div>
@@ -54,7 +65,7 @@ const TextContainer = () => {
 						<p>Typescript</p>
 					</div>
 				</NotReallySlider>
-			</div>
+			</motion.div>
 		</StyledTextContainer>
 	);
 };

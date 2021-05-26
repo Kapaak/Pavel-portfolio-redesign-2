@@ -1,19 +1,20 @@
 //libs
 import styled from "styled-components";
 import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
 //components
 import TextContainer from "./TextContainer";
 import ImageContainer from "./ImageContainer";
 import { AboutVariants } from "@/animations/variants";
 //breakpoints
 import Breakpoints from "../global/Breakpoints";
-import { motion } from "framer-motion";
 
 const InnerContainer = () => {
 	const { rootV, nodeV } = AboutVariants;
 	const { ref, inView } = useInView({
 		triggerOnce: true,
-		threshold: 0.4,
+		// threshold: 0.4,
+		rootMargin: "-200px",
 	});
 
 	return (

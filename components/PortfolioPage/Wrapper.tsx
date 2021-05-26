@@ -7,6 +7,8 @@ import ImageContainer from "./ImageContainer";
 import { PortfolioObject } from "../global/Interfaces";
 //breakpoints
 import Breakpoints from "../global/Breakpoints";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 interface Props {
 	data: PortfolioObject;
@@ -14,12 +16,38 @@ interface Props {
 }
 
 const Wrapper = ({ data, index }: Props) => {
+	const { ref, inView } = useInView({
+		triggerOnce: true,
+		rootMargin: "-200px",
+	});
 	const { image, ...rest } = data;
+
+	const portfolioNodeLeft = {
+		inactive: {
+			x: -200,
+		},
+		active: {
+			x: 0,
+		},
+	};
+	const portfolioNodeRight = {
+		inactive: {
+			x: 200,
+		},
+		active: {
+			x: 0,
+		},
+	};
 
 	return (
 		<>
 			{index % 2 === 0 ? (
-				<StyledWrapper index={index}>
+				<StyledWrapper
+					ref={ref}
+					animate={inView ? "active" : "inactive"}
+					variants={portfolioNodeLeft}
+					index={index}
+				>
 					<div>
 						<ImageContainer image={image} />
 						<TextContainer
@@ -29,7 +57,12 @@ const Wrapper = ({ data, index }: Props) => {
 					</div>
 				</StyledWrapper>
 			) : (
-				<StyledWrapper index={index}>
+				<StyledWrapper
+					ref={ref}
+					animate={inView ? "active" : "inactive"}
+					variants={portfolioNodeRight}
+					index={index}
+				>
 					<div>
 						<ImageContainer image={image} />
 						<TextContainer
@@ -45,7 +78,7 @@ const Wrapper = ({ data, index }: Props) => {
 
 export default Wrapper;
 
-const StyledWrapper = styled.div<{ index: number }>`
+const StyledWrapper = styled(motion.div)<{ index: number }>`
 	width: 100%;
 	margin-bottom: var(--horizontal-gap);
 	& > div {

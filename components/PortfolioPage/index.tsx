@@ -1,10 +1,13 @@
 // libs
 import styled from "styled-components";
+import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
 //components
 import Wrapper from "./Wrapper";
 import Button from "../global/Button";
 //interfaces
 import { PortfolioObject } from "../global/Interfaces";
+//breakpoints
 import Breakpoints from "../global/Breakpoints";
 
 interface Props {
@@ -12,11 +15,47 @@ interface Props {
 }
 
 const index = ({ data }: Props) => {
+	const { ref, inView } = useInView({
+		triggerOnce: true,
+		// threshold: 0.1,
+		rootMargin: "-200px",
+	});
+
+	const portfolioV = {
+		inactive: {
+			x: -20,
+			opacity: 0,
+		},
+		active: {
+			x: 0,
+			opacity: 1,
+		},
+	};
+
+	const rootV = {
+		active: {
+			// color: "red",
+			transition: {
+				duration: 0.5,
+				when: "beforeChildren",
+				staggerChildren: 0.3,
+			},
+		},
+		inactive: {
+			// color: "black",
+		},
+	};
+
 	return (
 		<StyledPortfolioPageOutter>
-			<StyledPortfolioPage>
-				<h1>Portfolio</h1>
-				<h2>some of my latest projects</h2>
+			<StyledPortfolioPage
+				ref={ref}
+				initial={false}
+				animate={inView ? "active" : "inactive"}
+				variants={rootV}
+			>
+				<motion.h1 variants={portfolioV}>Portfolio</motion.h1>
+				<motion.h2 variants={portfolioV}>some of my latest projects</motion.h2>
 				{data.map((dataEl, index) => (
 					<Wrapper key={index} data={dataEl} index={index} />
 				))}
@@ -28,7 +67,7 @@ const index = ({ data }: Props) => {
 
 export default index;
 
-const StyledPortfolioPage = styled.div`
+const StyledPortfolioPage = styled(motion.div)`
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;

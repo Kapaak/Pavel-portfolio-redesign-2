@@ -17,8 +17,7 @@ interface Props {
 const index = ({ data }: Props) => {
 	const { ref, inView } = useInView({
 		triggerOnce: true,
-		// threshold: 0.1,
-		rootMargin: "-200px",
+		rootMargin: "0px 0px -300px 0px",
 	});
 
 	const portfolioV = {

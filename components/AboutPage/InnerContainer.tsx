@@ -13,8 +13,8 @@ const InnerContainer = () => {
 	const { rootV, nodeV } = AboutVariants;
 	const { ref, inView } = useInView({
 		triggerOnce: true,
-		// threshold: 0.4,
-		rootMargin: " 0px  0px -300px  0px",
+		threshold: 0.4,
+		// rootMargin: " 0px  0px -300px  0px",
 	});
 
 	return (

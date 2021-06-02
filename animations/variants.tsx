@@ -1,11 +1,3 @@
-import React from "react";
-
-const variants = () => {
-	return <div></div>;
-};
-
-export default variants;
-
 export const ButtonUnderscoreVariant = {
 	buttonV: {
 		visible: {
@@ -69,5 +61,31 @@ export const AboutVariants = {
 		inactive: {
 			opacity: 0,
 		},
+	},
+};
+
+export const arcAnimationVariant = {
+	active: {
+		rotate: -90,
+		pathLength: 1,
+		opacity: 0,
+		transition: { duration: 2.5 },
+	},
+	inactive: {
+		rotate: 0,
+		pathLength: 0,
+		opacity: 1,
+	},
+};
+export const arcAnimationVariant2 = {
+	active: {
+		rotate: -45,
+		pathLength: 1,
+		transition: { duration: 3 },
+	},
+	inactive: {
+		rotate: -45,
+		pathLength: 0,
+		transition: { duration: 3 },
 	},
 };

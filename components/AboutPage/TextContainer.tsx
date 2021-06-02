@@ -4,15 +4,50 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 //styles
 import Breakpoints from "../global/Breakpoints";
+//icons
+import { ArcIcon } from "../../icons";
+import { arcAnimationVariant2 } from "@/animations/variants";
 
 const TextContainer = () => {
 	const AboutTextV = {
 		active: { x: 0, opacity: 1 },
 		inactive: { x: 20, opacity: 0 },
 	};
+
+	// const SunIcon = () => {
+	// 	return (
+	// 		<StyledIcon
+	// 			xmlns="http://www.w3.org/2000/svg"
+	// 			fill="none"
+	// 			viewBox="0 0 512 512"
+	// 		>
+	// 			<motion.path
+	// 				initial={{ rotate: -45, pathLength: 0 }}
+	// 				animate={{ rotate: 0, pathLength: 1 }}
+	// 				transition={{ duration: 2.5 }}
+	// 				stroke="var(--second-col)"
+	// 				strokeWidth={0.3}
+	// 				d="
+	// 				M 100, 100
+	// 				m -75, 0
+	// 				a 75,75 0 1,0 150,0
+	// 				a 75,75 0 1,0 -150,0
+	// 				"
+	// 			/>
+	// 		</StyledIcon>
+	// 	);
+	// };
 	return (
 		<StyledTextContainer>
-			<motion.h1 variants={AboutTextV}>About</motion.h1>
+			<div>
+				{/* <SunIcon /> */}
+				{/* <ArcIcon
+					StyledWrapper={StyledIcon}
+					stroke={{ width: 0.3, color: "var(--second-col)" }}
+					animationVariant={arcAnimationVariant2}
+				/> */}
+				<motion.h1 variants={AboutTextV}>About</motion.h1>
+			</div>
 			<motion.p variants={AboutTextV}>
 				Hi, I'm{" "}
 				<motion.span
@@ -75,6 +110,7 @@ export default TextContainer;
 const StyledTextContainer = styled.div`
 	flex: 1 1 70%;
 	margin-bottom: var(--horizontal-gap);
+	z-index: 2;
 
 	& > p {
 		margin-bottom: var(--text-mb);
@@ -125,4 +161,11 @@ const NotReallySlider = styled.div`
 			}
 		}
 	}
+`;
+
+const StyledIcon = styled(motion.svg)`
+	position: absolute;
+	left: 0;
+	top: 0;
+	opacity: 0.15;
 `;

@@ -1,13 +1,18 @@
+import { Fragment, useEffect } from "react";
 //libs
 import styled from "styled-components";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
+import Media from "react-media";
 //components
 import TextContainer from "./TextContainer";
 import ImageContainer from "./ImageContainer";
 import { AboutVariants } from "@/animations/variants";
+import { arcAnimationVariant } from "@/animations/variants";
 //breakpoints
 import Breakpoints from "../global/Breakpoints";
+//icons
+import { ArcIcon } from "../../icons";
 
 const InnerContainer = () => {
 	const { rootV, nodeV } = AboutVariants;
@@ -25,8 +30,24 @@ const InnerContainer = () => {
 				variants={rootV}
 			>
 				<StyledTextWrapper variants={nodeV}>
+					{/* <ArcIcon
+						StyledWrapper={StyledIcon}
+						stroke={{ width: 1, color: "var(--second-col)" }}
+						animationVariant={arcAnimationVariant}
+					/> */}
 					<TextContainer />
 					<ImageContainer />
+					<Media
+						query={Breakpoints.desktop}
+						defaultMatches={true}
+						render={() => (
+							<ArcIcon
+								StyledWrapper={StyledIcon}
+								stroke={{ width: 1, color: "var(--second-col)" }}
+								animationVariant={arcAnimationVariant}
+							/>
+						)}
+					/>
 				</StyledTextWrapper>
 			</StyledTextOutterWrapper>
 		</StyledInnerContainer>
@@ -48,6 +69,7 @@ const StyledTextOutterWrapper = styled(motion.div)`
 	max-width: 165rem;
 	width: 100%;
 	z-index: 3;
+
 	@media ${Breakpoints.tablet} {
 		margin: 0 var(--horizontal-gap);
 		border-radius: var(--br-main);
@@ -67,4 +89,10 @@ const StyledTextWrapper = styled(motion.div)`
 		max-width: 140rem;
 		margin: 0 auto;
 	}
+`;
+const StyledIcon = styled(motion.svg)`
+	position: absolute;
+	left: 0;
+	top: 0;
+	opacity: 0.3;
 `;

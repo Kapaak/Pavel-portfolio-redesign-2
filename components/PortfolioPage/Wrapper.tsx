@@ -1,5 +1,7 @@
 //libs
 import styled from "styled-components";
+import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
 //components
 import TextContainer from "./TextContainer";
 import ImageContainer from "./ImageContainer";
@@ -7,8 +9,8 @@ import ImageContainer from "./ImageContainer";
 import { PortfolioObject } from "../global/Interfaces";
 //breakpoints
 import Breakpoints from "../global/Breakpoints";
-import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+//variants
+import { portfolioVariants } from "@/animations/variants";
 
 interface Props {
 	data: PortfolioObject;
@@ -21,27 +23,7 @@ const Wrapper = ({ data, index }: Props) => {
 		rootMargin: "0px 0px -300px 0px",
 	});
 	const { image, ...rest } = data;
-
-	const portfolioNodeLeft = {
-		inactive: {
-			x: -200,
-			transition: { duration: 0.6 },
-		},
-		active: {
-			x: 0,
-			transition: { duration: 0.6 },
-		},
-	};
-	const portfolioNodeRight = {
-		inactive: {
-			x: 200,
-			transition: { duration: 0.6 },
-		},
-		active: {
-			x: 0,
-			transition: { duration: 0.6 },
-		},
-	};
+	const { portfolioNodeLeft, portfolioNodeRight } = portfolioVariants;
 
 	return (
 		<>

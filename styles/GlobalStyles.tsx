@@ -103,28 +103,9 @@ const GlobalStyles = createGlobalStyle`
 
 `;
 
-/* DELETE */
-export const Underscore = styled.span`
-	position: relative;
-	z-index: 1;
-	display: inline-block;
-	transition: all 0.5s ease;
-	font-size: var(--fosi-text);
-
-	&::before {
-		content: "";
-		position: absolute;
-		bottom: -0.2rem;
-		left: 0;
-		width: 100%;
-		background-color: var(--second-col);
-		height: 0.3rem;
-	}
-
-	&:hover {
-		transform: translateY(-0.5rem);
-		transition: all 0.5s ease;
-	}
+export const Highlight = styled.span`
+	color: var(--second-col);
+	font-weight: var(--fowe-bold);
 `;
 
 export default GlobalStyles;

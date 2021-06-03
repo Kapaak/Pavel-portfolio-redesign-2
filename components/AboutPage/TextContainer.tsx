@@ -4,9 +4,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 //styles
 import Breakpoints from "../global/Breakpoints";
-//icons
-import { ArcIcon } from "../../icons";
-import { arcAnimationVariant2 } from "@/animations/variants";
+import { Highlight } from "../../styles/GlobalStyles";
 
 const TextContainer = () => {
 	const AboutTextV = {
@@ -14,51 +12,13 @@ const TextContainer = () => {
 		inactive: { x: 20, opacity: 0 },
 	};
 
-	// const SunIcon = () => {
-	// 	return (
-	// 		<StyledIcon
-	// 			xmlns="http://www.w3.org/2000/svg"
-	// 			fill="none"
-	// 			viewBox="0 0 512 512"
-	// 		>
-	// 			<motion.path
-	// 				initial={{ rotate: -45, pathLength: 0 }}
-	// 				animate={{ rotate: 0, pathLength: 1 }}
-	// 				transition={{ duration: 2.5 }}
-	// 				stroke="var(--second-col)"
-	// 				strokeWidth={0.3}
-	// 				d="
-	// 				M 100, 100
-	// 				m -75, 0
-	// 				a 75,75 0 1,0 150,0
-	// 				a 75,75 0 1,0 -150,0
-	// 				"
-	// 			/>
-	// 		</StyledIcon>
-	// 	);
-	// };
 	return (
 		<StyledTextContainer>
-			<div>
-				{/* <SunIcon /> */}
-				{/* <ArcIcon
-					StyledWrapper={StyledIcon}
-					stroke={{ width: 0.3, color: "var(--second-col)" }}
-					animationVariant={arcAnimationVariant2}
-				/> */}
-				<motion.h1 variants={AboutTextV}>About</motion.h1>
-			</div>
+			<motion.h1 variants={AboutTextV}>About</motion.h1>
 			<motion.p variants={AboutTextV}>
-				Hi, I'm{" "}
-				<motion.span
-					style={{ display: "inline-block", position: "relative" }}
-					animate={{ color: "var(--second-col)" }}
-				>
-					Pavel Zapletal
-				</motion.span>{" "}
-				a self-taught JavaScript programmer. I'm 26 yo, living in Brno. Creating
-				websites is my bread and butter. When I'm not at home I usually go
-				outside to enjoy some nature.
+				Hi, I'm <Highlight>Pavel Zapletal</Highlight> a self-taught JavaScript
+				programmer. I'm 26 yo, living in Brno. Creating websites is my bread and
+				butter. When I'm not at home I usually go outside to enjoy some nature.
 			</motion.p>
 			<motion.div variants={AboutTextV}>
 				<h2>What technologies do I like working with?</h2>

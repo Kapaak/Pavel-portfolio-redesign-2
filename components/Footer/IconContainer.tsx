@@ -22,7 +22,18 @@ const IconContainer = ({ data }: Props) => {
 export default IconContainer;
 
 const StyledIconContainer = styled.a`
+	display: inline-flex;
+	position: relative;
+	padding: 0.65rem;
+	border-radius: 50%;
+	transition: all 0.3s;
+
 	& + & {
 		margin-left: 1rem;
+	}
+
+	&:hover {
+		background-color: var(--second-col);
+		transition: all 0.3s;
 	}
 `;

@@ -1,3 +1,5 @@
+//libs
+import styled from "styled-components";
 //components
 import IconContainer from "./IconContainer";
 //interfaces
@@ -9,12 +11,16 @@ interface Props {
 
 const IconsContainer = ({ data }: Props) => {
 	return (
-		<div>
+		<StyledIconsContainer>
 			{data.map((dataEl, index) => (
 				<IconContainer key={index} data={dataEl} />
 			))}
-		</div>
+		</StyledIconsContainer>
 	);
 };
 
+const StyledIconsContainer = styled.div`
+	display: flex;
+	align-items: center;
+`;
 export default IconsContainer;

@@ -1,4 +1,5 @@
 // libs
+import { useState } from "react";
 import styled from "styled-components";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
@@ -9,40 +10,23 @@ import Button from "../global/Button";
 import { PortfolioObject } from "../global/Interfaces";
 //breakpoints
 import Breakpoints from "../global/Breakpoints";
+//variants
+import { portfolioVariants } from "@/animations/variants";
 
 interface Props {
 	data: Array<PortfolioObject>;
 }
 
 const index = ({ data }: Props) => {
+	const [loadImages, setLoadImages] = useState(2);
 	const { ref, inView } = useInView({
 		triggerOnce: true,
 		rootMargin: "0px 0px -300px 0px",
 	});
+	const { rootV, nodeV } = portfolioVariants;
 
-	const portfolioV = {
-		inactive: {
-			x: -20,
-			opacity: 0,
-		},
-		active: {
-			x: 0,
-			opacity: 1,
-		},
-	};
-
-	const rootV = {
-		active: {
-			// color: "red",
-			transition: {
-				duration: 0.5,
-				when: "beforeChildren",
-				staggerChildren: 0.3,
-			},
-		},
-		inactive: {
-			// color: "black",
-		},
+	const handleClick = () => {
+		data.length > +loadImages ? setLoadImages(prev => prev + 2) : null;
 	};
 
 	return (
@@ -53,12 +37,29 @@ const index = ({ data }: Props) => {
 				animate={inView ? "active" : "inactive"}
 				variants={rootV}
 			>
-				<motion.h1 variants={portfolioV}>Portfolio</motion.h1>
-				<motion.h2 variants={portfolioV}>some of my latest projects</motion.h2>
-				{data.map((dataEl, index) => (
+				<motion.h1 variants={nodeV}>Portfolio</motion.h1>
+				<motion.h2 variants={nodeV}>some of my latest projects</motion.h2>
+				{data.map((dataEl, index) => {
+					if (+loadImages > +index)
+						return <Wrapper key={index} data={dataEl} index={index} />;
+				})}
+
+				{/* {data.map((dataEl, index) => (
 					<Wrapper key={index} data={dataEl} index={index} />
-				))}
-				<Button>load more projects...</Button>
+				))} */}
+				{+loadImages <= data.length ? (
+					<Button
+						// onClick={() => {
+						// 	if (data.length > +loadImages) {
+						// 		setLoadImages(prev => prev + 2);
+						// 		console.log(loadImages, "loadImages");
+						// 	}
+						// }}
+						onClick={handleClick}
+					>
+						load more projects...
+					</Button>
+				) : null}
 			</StyledPortfolioPage>
 		</StyledPortfolioPageOutter>
 	);

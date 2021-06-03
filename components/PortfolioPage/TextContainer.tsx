@@ -44,13 +44,12 @@ const StyledTextContainer = styled.div<{ margin: string }>`
 		font-weight: var(--fowe-bold);
 		text-transform: uppercase;
 	}
-	p {
+	& > p {
 		margin-bottom: var(--text-mb);
 		font-size: var(--fosi-text);
 	}
 
 	@media ${Breakpoints.tablet} {
 		margin: ${({ margin }) => margin};
-		/* margin: var(--horizontal-gap) 0 0 5vw; */
 	}
 `;

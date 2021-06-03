@@ -1,4 +1,4 @@
-export const ButtonUnderscoreVariant = {
+export const buttonUnderscoreVariant = {
 	buttonV: {
 		visible: {
 			opacity: 0.8,
@@ -37,7 +37,7 @@ export const ButtonUnderscoreVariant = {
 	},
 };
 
-export const AboutVariants = {
+export const aboutVariants = {
 	rootV: {
 		active: {
 			opacity: 1,
@@ -60,6 +60,49 @@ export const AboutVariants = {
 		},
 		inactive: {
 			opacity: 0,
+		},
+	},
+};
+
+export const portfolioVariants = {
+	rootV: {
+		active: {
+			transition: {
+				duration: 0.5,
+				when: "beforeChildren",
+				staggerChildren: 0.3,
+			},
+		},
+		inactive: {},
+	},
+	nodeV: {
+		inactive: {
+			x: -20,
+			opacity: 0,
+		},
+		active: {
+			x: 0,
+			opacity: 1,
+		},
+	},
+	portfolioNodeLeft: {
+		inactive: {
+			x: -200,
+			transition: { duration: 0.6 },
+		},
+		active: {
+			x: 0,
+			transition: { duration: 0.6 },
+		},
+	},
+	portfolioNodeRight: {
+		inactive: {
+			x: 200,
+			transition: { duration: 0.6 },
+		},
+		active: {
+			x: 0,
+			transition: { duration: 0.6 },
 		},
 	},
 };

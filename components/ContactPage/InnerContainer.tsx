@@ -1,6 +1,6 @@
 //libs
 import styled from "styled-components";
-import { Underscore } from "../../styles/GlobalStyles";
+import { Highlight } from "../../styles/GlobalStyles";
 
 const InnerContainer = () => {
 	return (
@@ -11,7 +11,7 @@ const InnerContainer = () => {
 					I am always open to new challenges. Want to create something great
 					together? Or just say hello? Feel free to ask me anything.
 				</p>
-				<Underscore>pavel.zaplet25@gmail.com</Underscore>
+				<Highlight>pavel.zaplet25@gmail.com</Highlight>
 			</StyledTextWrapper>
 		</StyledInnerContainer>
 	);

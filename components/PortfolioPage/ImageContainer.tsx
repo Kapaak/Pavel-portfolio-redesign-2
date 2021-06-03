@@ -11,7 +11,14 @@ interface Props {
 const ImageContainer = ({ image }: Props) => {
 	return (
 		<StyledImageContainer>
-			<Image src={image} alt="" width={750} height={1718} objectFit="cover" />
+			<Image
+				// priority
+				src={image}
+				alt=""
+				width={750}
+				height={1718}
+				objectFit="cover"
+			/>
 		</StyledImageContainer>
 	);
 };
@@ -25,7 +32,7 @@ const StyledImageContainer = styled.div`
 	div {
 		width: var(--box-width);
 		height: var(--box-height);
-		background-color: pink;
+		background-color: var(--third-col);
 		border-radius: 1rem;
 		box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.15);
 	}

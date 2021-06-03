@@ -4,7 +4,7 @@ import styled from "styled-components";
 import Breakpoints from "./Breakpoints";
 import { motion } from "framer-motion";
 //variants
-import { ButtonUnderscoreVariant } from "../../animations/variants";
+import { buttonUnderscoreVariant } from "../../animations/variants";
 
 interface Props {
 	children: React.ReactNode;
@@ -13,7 +13,7 @@ interface Props {
 }
 
 const Button = ({ children, noUnderscore, onClick }: Props) => {
-	const { underlineV, textV } = ButtonUnderscoreVariant;
+	const { underlineV, textV } = buttonUnderscoreVariant;
 	const containerRef = useRef<any>(1);
 	const [variant, setVariant] = useState(
 		underlineV(containerRef.current?.clientHeight / 2)
@@ -35,11 +35,11 @@ const Button = ({ children, noUnderscore, onClick }: Props) => {
 	};
 
 	return noUnderscore ? (
-		<StyledButtonWithoutUndersore onClick={handleClick}>
+		<StyledButtonWithoutUnderscore onClick={handleClick}>
 			{children}
-		</StyledButtonWithoutUndersore>
+		</StyledButtonWithoutUnderscore>
 	) : (
-		<StyledButton whileHover="visible">
+		<StyledButton whileHover="visible" onClick={handleClick}>
 			<StyledP ref={containerRef} variants={textV}>
 				{children}
 			</StyledP>
@@ -52,7 +52,7 @@ export default Button;
 
 const StyledP = styled(motion.p)<{ variants: any }>``;
 
-const StyledButtonWithoutUndersore = styled(motion.button)`
+const StyledButtonWithoutUnderscore = styled(motion.button)`
 	position: relative;
 	border: none;
 	padding: 1rem 1rem 1rem 0;
@@ -74,7 +74,7 @@ const StyledButtonWithoutUndersore = styled(motion.button)`
 	}
 `;
 
-const StyledButton = styled(StyledButtonWithoutUndersore)``;
+const StyledButton = styled(StyledButtonWithoutUnderscore)``;
 
 const StyledUnderline = styled(motion.p)<{ variants: any }>`
 	position: absolute;

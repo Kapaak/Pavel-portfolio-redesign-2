@@ -30,6 +30,101 @@ const data = (): Array<PortfolioObject> => [
 		url: "https://rick-and-morty-dbs.vercel.app/",
 		image: "/images/projects/RickAndMorty-app.png",
 	},
+	{
+		title: "Stomatologie Ambrožovi",
+		description: `Redesign webových stránek pro stomatologickou ordinaci MUDr. Zdeňka Ambrože a jeho tým. 
+		Jednotlivé stránky ordinace jsou sladěny do barev ordiance, stejně jako převzaté logo.
+		Stránky jsou přehledné, s jasnou strukturou a čistou grafikou. `,
+		colors: ["#FE6246", "#E5568F", "#F6C64E"],
+		url: "https://ambroz-dent.vercel.app/",
+		image: "/images/projects/Ambroz-web.png",
+	},
+	{
+		title: "Barbora Nováková",
+		description: `Vytvoření webové stránky, která má za cíl prezentovat tvorbu studentky
+        architektury. Stránky jsou vytvořeny s důrazem na minimalismus s
+        jednoduchými animacemi a sjednocenou grafikou. Na webu jsou zdůrazněny
+        oblíbené barvy mladé architektky.`,
+		colors: ["#0ca52d", "#aa3c3c", "#ababab"],
+		url: "https://rick-and-morty-dbs.vercel.app/",
+		image: "/images/projects/RickAndMorty-app.png",
+	},
+	{
+		title: "Stomatologie Ambrožovi",
+		description: `Redesign webových stránek pro stomatologickou ordinaci MUDr. Zdeňka Ambrože a jeho tým. 
+		Jednotlivé stránky ordinace jsou sladěny do barev ordiance, stejně jako převzaté logo.
+		Stránky jsou přehledné, s jasnou strukturou a čistou grafikou. `,
+		colors: ["#FE6246", "#E5568F", "#F6C64E"],
+		url: "https://ambroz-dent.vercel.app/",
+		image: "/images/projects/Ambroz-web.png",
+	},
+	{
+		title: "Barbora Nováková",
+		description: `Vytvoření webové stránky, která má za cíl prezentovat tvorbu studentky
+        architektury. Stránky jsou vytvořeny s důrazem na minimalismus s
+        jednoduchými animacemi a sjednocenou grafikou. Na webu jsou zdůrazněny
+        oblíbené barvy mladé architektky.`,
+		colors: ["#0ca52d", "#aa3c3c", "#ababab"],
+		url: "https://rick-and-morty-dbs.vercel.app/",
+		image: "/images/projects/RickAndMorty-app.png",
+	},
+	{
+		title: "Stomatologie Ambrožovi",
+		description: `Redesign webových stránek pro stomatologickou ordinaci MUDr. Zdeňka Ambrože a jeho tým. 
+		Jednotlivé stránky ordinace jsou sladěny do barev ordiance, stejně jako převzaté logo.
+		Stránky jsou přehledné, s jasnou strukturou a čistou grafikou. `,
+		colors: ["#FE6246", "#E5568F", "#F6C64E"],
+		url: "https://ambroz-dent.vercel.app/",
+		image: "/images/projects/Ambroz-web.png",
+	},
+	{
+		title: "Barbora Nováková",
+		description: `Vytvoření webové stránky, která má za cíl prezentovat tvorbu studentky
+        architektury. Stránky jsou vytvořeny s důrazem na minimalismus s
+        jednoduchými animacemi a sjednocenou grafikou. Na webu jsou zdůrazněny
+        oblíbené barvy mladé architektky.`,
+		colors: ["#0ca52d", "#aa3c3c", "#ababab"],
+		url: "https://rick-and-morty-dbs.vercel.app/",
+		image: "/images/projects/RickAndMorty-app.png",
+	},
+	{
+		title: "Stomatologie Ambrožovi",
+		description: `Redesign webových stránek pro stomatologickou ordinaci MUDr. Zdeňka Ambrože a jeho tým. 
+		Jednotlivé stránky ordinace jsou sladěny do barev ordiance, stejně jako převzaté logo.
+		Stránky jsou přehledné, s jasnou strukturou a čistou grafikou. `,
+		colors: ["#FE6246", "#E5568F", "#F6C64E"],
+		url: "https://ambroz-dent.vercel.app/",
+		image: "/images/projects/Ambroz-web.png",
+	},
+	{
+		title: "Barbora Nováková",
+		description: `Vytvoření webové stránky, která má za cíl prezentovat tvorbu studentky
+        architektury. Stránky jsou vytvořeny s důrazem na minimalismus s
+        jednoduchými animacemi a sjednocenou grafikou. Na webu jsou zdůrazněny
+        oblíbené barvy mladé architektky.`,
+		colors: ["#0ca52d", "#aa3c3c", "#ababab"],
+		url: "https://rick-and-morty-dbs.vercel.app/",
+		image: "/images/projects/RickAndMorty-app.png",
+	},
+	{
+		title: "Stomatologie Ambrožovi",
+		description: `Redesign webových stránek pro stomatologickou ordinaci MUDr. Zdeňka Ambrože a jeho tým. 
+		Jednotlivé stránky ordinace jsou sladěny do barev ordiance, stejně jako převzaté logo.
+		Stránky jsou přehledné, s jasnou strukturou a čistou grafikou. `,
+		colors: ["#FE6246", "#E5568F", "#F6C64E"],
+		url: "https://ambroz-dent.vercel.app/",
+		image: "/images/projects/Ambroz-web.png",
+	},
+	{
+		title: "Barbora Nováková",
+		description: `Vytvoření webové stránky, která má za cíl prezentovat tvorbu studentky
+        architektury. Stránky jsou vytvořeny s důrazem na minimalismus s
+        jednoduchými animacemi a sjednocenou grafikou. Na webu jsou zdůrazněny
+        oblíbené barvy mladé architektky.`,
+		colors: ["#0ca52d", "#aa3c3c", "#ababab"],
+		url: "https://rick-and-morty-dbs.vercel.app/",
+		image: "/images/projects/RickAndMorty-app.png",
+	},
 ];
 
 export const footerData = (): Array<FooterObject> => [

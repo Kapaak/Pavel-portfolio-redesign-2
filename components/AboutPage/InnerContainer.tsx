@@ -1,4 +1,3 @@
-import { Fragment, useEffect } from "react";
 //libs
 import styled from "styled-components";
 import { useInView } from "react-intersection-observer";
@@ -7,7 +6,7 @@ import Media from "react-media";
 //components
 import TextContainer from "./TextContainer";
 import ImageContainer from "./ImageContainer";
-import { AboutVariants } from "@/animations/variants";
+import { aboutVariants, arcAnimationVariant2 } from "@/animations/variants";
 import { arcAnimationVariant } from "@/animations/variants";
 //breakpoints
 import Breakpoints from "../global/Breakpoints";
@@ -15,7 +14,7 @@ import Breakpoints from "../global/Breakpoints";
 import { ArcIcon } from "../../icons";
 
 const InnerContainer = () => {
-	const { rootV, nodeV } = AboutVariants;
+	const { rootV, nodeV } = aboutVariants;
 	const { ref, inView } = useInView({
 		triggerOnce: true,
 		rootMargin: "0px 0px -300px 0px",
@@ -30,24 +29,26 @@ const InnerContainer = () => {
 				variants={rootV}
 			>
 				<StyledTextWrapper variants={nodeV}>
-					{/* <ArcIcon
-						StyledWrapper={StyledIcon}
-						stroke={{ width: 1, color: "var(--second-col)" }}
-						animationVariant={arcAnimationVariant}
-					/> */}
-					<TextContainer />
-					<ImageContainer />
 					<Media
 						query={Breakpoints.desktop}
 						defaultMatches={true}
 						render={() => (
-							<ArcIcon
-								StyledWrapper={StyledIcon}
-								stroke={{ width: 1, color: "var(--second-col)" }}
-								animationVariant={arcAnimationVariant}
-							/>
+							<>
+								<ArcIcon
+									StyledWrapper={StyledIcon}
+									stroke={{ width: 1, color: "var(--second-col)" }}
+									animationVariant={arcAnimationVariant}
+								/>
+								<ArcIcon
+									StyledWrapper={StyledIcon}
+									stroke={{ width: 0.3, color: "var(--second-col)" }}
+									animationVariant={arcAnimationVariant2}
+								/>
+							</>
 						)}
 					/>
+					<TextContainer />
+					<ImageContainer />
 				</StyledTextWrapper>
 			</StyledTextOutterWrapper>
 		</StyledInnerContainer>
@@ -79,7 +80,7 @@ const StyledTextOutterWrapper = styled(motion.div)`
 
 const StyledTextWrapper = styled(motion.div)`
 	display: flex;
-	flex-direction: column;
+	flex-direction: column-reverse;
 
 	@media ${Breakpoints.desktop} {
 		flex-direction: row;

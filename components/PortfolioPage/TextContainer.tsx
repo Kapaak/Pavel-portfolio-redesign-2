@@ -40,6 +40,7 @@ export default TextContainer;
 const StyledTextContainer = styled.div<{ margin: string }>`
 	flex: 1 1 50%;
 	align-self: flex-end;
+	z-index: 2;
 	h2 {
 		font-weight: var(--fowe-bold);
 		text-transform: uppercase;

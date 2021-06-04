@@ -29,6 +29,7 @@ const StyledImageContainer = styled.div`
 	position: relative;
 	margin-bottom: var(--text-mb);
 	flex: 1 1 50%;
+	z-index: 2;
 	div {
 		width: var(--box-width);
 		height: var(--box-height);

@@ -11,11 +11,17 @@ import { PortfolioObject } from "../global/Interfaces";
 import Breakpoints from "../global/Breakpoints";
 //variants
 import { portfolioVariants } from "@/animations/variants";
+//icons
+import { ArcIconStatic } from "icons";
 
 interface Props {
 	data: PortfolioObject;
 	index: number;
 }
+
+const generateNumber = (max: number, min: number) => {
+	return `${Math.floor(Math.random() * max) + min}px`;
+};
 
 const Wrapper = ({ data, index }: Props) => {
 	const { ref, inView } = useInView({
@@ -41,6 +47,8 @@ const Wrapper = ({ data, index }: Props) => {
 							margin="var(--horizontal-gap) 0 0 5vw;"
 						/>
 					</div>
+
+					<ArcIconStatic StyledWrapper={StyledIconLeft} size={200} />
 				</StyledWrapper>
 			) : (
 				<StyledWrapper
@@ -56,6 +64,7 @@ const Wrapper = ({ data, index }: Props) => {
 							margin="var(--horizontal-gap) 5vw 0 0 ;"
 						/>
 					</div>
+					<ArcIconStatic StyledWrapper={StyledIconRight} size={200} />
 				</StyledWrapper>
 			)}
 		</>
@@ -64,9 +73,31 @@ const Wrapper = ({ data, index }: Props) => {
 
 export default Wrapper;
 
+const IconAncestor = styled(motion.svg)`
+	display: none;
+	position: absolute;
+	opacity: 0.3;
+	transform: translateY(-40%);
+
+	@media ${Breakpoints.desktop} {
+		display: block;
+	}
+`;
+
+const StyledIconLeft = styled(IconAncestor)<any>`
+	left: 0;
+	top: ${({ randomNumber }) => (randomNumber ? randomNumber : 0)};
+`;
+const StyledIconRight = styled(IconAncestor)`
+	right: 0;
+	top: 0;
+`;
+
 const StyledWrapper = styled(motion.div)<{ index: number }>`
 	width: 100%;
 	margin-bottom: var(--horizontal-gap);
+	position: relative;
+
 	& > div {
 		display: flex;
 		flex-direction: column;

@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
 export const ArcIcon = ({
 	StyledWrapper,
@@ -29,7 +30,7 @@ export const ArcIcon = ({
 };
 
 const generateNumber = (max: number, min: number) => {
-	return `${Math.floor(Math.random() * max) + min}px`;
+	return `${Math.floor(Math.random() * max) + min}%`;
 };
 
 export const ArcIconStatic = ({
@@ -38,13 +39,15 @@ export const ArcIconStatic = ({
 	color = "var(--second-col)",
 	fill = "none",
 }: any) => {
+	const [randomN, setRandomN] = useState("0px");
+	useEffect(() => setRandomN(generateNumber(50, 0)), []);
 	return (
 		<StyledWrapper
 			xmlns="http://www.w3.org/2000/svg"
 			width={size}
 			height={size}
 			viewBox="0 0 500 500"
-			randomNumber={generateNumber(10, 1)}
+			randomNumber={randomN}
 		>
 			<g
 				id="Ellipse_1"

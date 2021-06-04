@@ -19,9 +19,9 @@ interface Props {
 	index: number;
 }
 
-const generateNumber = (max: number, min: number) => {
-	return `${Math.floor(Math.random() * max) + min}px`;
-};
+// const generateNumber = (max: number, min: number) => {
+// 	return `${Math.floor(Math.random() * max) + min}px`;
+// };
 
 const Wrapper = ({ data, index }: Props) => {
 	const { ref, inView } = useInView({
@@ -64,7 +64,12 @@ const Wrapper = ({ data, index }: Props) => {
 							margin="var(--horizontal-gap) 5vw 0 0 ;"
 						/>
 					</div>
-					<ArcIconStatic StyledWrapper={StyledIconRight} size={200} />
+					<ArcIconStatic
+						StyledWrapper={StyledIconRight}
+						size={200}
+						fill="var(--third-col)"
+						color="none"
+					/>
 				</StyledWrapper>
 			)}
 		</>
@@ -86,11 +91,11 @@ const IconAncestor = styled(motion.svg)`
 
 const StyledIconLeft = styled(IconAncestor)<any>`
 	left: 0;
-	top: ${({ randomNumber }) => (randomNumber ? randomNumber : 0)};
+	top: ${({ randomNumber }) => randomNumber};
 `;
-const StyledIconRight = styled(IconAncestor)`
+const StyledIconRight = styled(IconAncestor)<any>`
 	right: 0;
-	top: 0;
+	bottom: ${({ randomNumber }) => randomNumber};
 `;
 
 const StyledWrapper = styled(motion.div)<{ index: number }>`

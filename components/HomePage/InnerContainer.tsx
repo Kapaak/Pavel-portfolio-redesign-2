@@ -25,6 +25,11 @@ const InnerContainer = () => {
 				<Button noUnderscore onClick={() => download("./CV.pdf", "CV.pdf")}>
 					Download CV
 				</Button>
+				{/* <Button noUnderscore>
+					<a download="PavelZapletal.pdf" href="./CV.pdf">
+						Download CV 2
+					</a>
+				</Button> */}
 			</div>
 		</StyledInnerContainer>
 	);

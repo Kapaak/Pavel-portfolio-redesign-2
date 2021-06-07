@@ -14,13 +14,24 @@ const index = () => {
 			<Logo />
 			<ListItems open={open} setOpen={setOpen} />
 			<Burger open={open} setOpen={setOpen} />
+			{open ? <FullPageDiv onClick={() => setOpen(prev => !prev)} /> : null}
 		</StyledNav>
 	);
 };
 
 export default index;
 
+const FullPageDiv = styled.div`
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: 2;
+`;
+
 const StyledNav = styled.nav`
+	position: relative;
 	display: flex;
 	background-color: transparent;
 	align-items: center;

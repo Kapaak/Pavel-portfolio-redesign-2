@@ -28,7 +28,7 @@ const GlobalStyles = createGlobalStyle`
         --fosi-text: calc(1.8rem / var(--xd-recalc));
         --fosi-nav: calc(2.8rem / var(--xd-recalc)); 
         --fosi-button: calc(1.7rem / var(--xd-recalc)); 
-        --fosi-nav:calc(2rem / var(--xd-recalc)); 
+        --fosi-nav:3rem; 
 
         --horizontal-gap:2rem;
         --vertical-gap:7rem;
@@ -77,8 +77,9 @@ const GlobalStyles = createGlobalStyle`
 			--xd-recalc: .87;
             --horizontal-gap:4rem;
 
-            --fosi-text: calc(1.5rem / var(--xd-recalc));
             --box-width:30rem;
+            --fosi-text: calc(1.5rem / var(--xd-recalc));
+            --fosi-nav:4rem;
 		}
     }
 

@@ -34,11 +34,10 @@ const Wrapper = ({ data, index }: Props) => {
 	const staticV = {
 		active: {
 			opacity: 0.3,
-			transition: { duration: 1, delay: 1 },
+			transition: { duration: 0.5, delay: 0.5 },
 		},
 		inactive: {
 			opacity: 0,
-			transition: { duration: 1, delay: 3 },
 		},
 	};
 
@@ -58,18 +57,24 @@ const Wrapper = ({ data, index }: Props) => {
 							margin="var(--horizontal-gap) 0 0 5vw;"
 						/>
 					</div>
-					<ArcIconStatic StyledWrapper={StyledIconLeft} size={200} />
+					<ArcIconStatic
+						StyledWrapper={StyledIconLeft}
+						size={200}
+						variants={staticV}
+					/>
 					<ArcIconStatic
 						StyledWrapper={StyledIconRightSmall}
 						size={100}
 						fill="#cccccc8c"
 						color="none"
+						variants={staticV}
 					/>
 					<ArcIconStatic
 						StyledWrapper={StyledIconRightSmall}
 						size={50}
 						fill="#cccccc8c"
 						color="none"
+						variants={staticV}
 					/>
 				</StyledWrapper>
 			) : (
@@ -107,8 +112,13 @@ const Wrapper = ({ data, index }: Props) => {
 						size={100}
 						fill="#cccccc8c"
 						color="none"
+						variants={staticV}
 					/>
-					<ArcIconStatic StyledWrapper={StyledIconLeftSmall} size={50} />
+					<ArcIconStatic
+						StyledWrapper={StyledIconLeftSmall}
+						size={50}
+						variants={staticV}
+					/>
 				</StyledWrapper>
 			)}
 		</>

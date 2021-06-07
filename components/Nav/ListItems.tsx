@@ -27,19 +27,19 @@ const StyledListItems = styled.ul<{ open: boolean }>`
 	display: ${({ open }) => (open ? "flex" : "none")};
 	flex-direction: column;
 	justify-content: center;
-	align-items: center;
 	top: 0;
-	left: 0;
+	right: 0;
 	z-index: 9;
+	font-size: var(--fosi-nav);
 
 	li {
 		text-decoration: none;
 		list-style: none;
 	}
 
-	width: 100vw;
+	width: 50%;
 	height: 100vh;
-	background-color: violet;
+	background-color: var(--second-col);
 
 	/* @media ${Breakpoints.tablet} {
 		display: block;

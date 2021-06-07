@@ -30,7 +30,7 @@ export const ArcIcon = ({
 };
 
 const generateNumber = (max: number, min: number) => {
-	return `${Math.floor(Math.random() * max) + min}%`;
+	return Math.floor(Math.random() * max) + min;
 };
 
 export const ArcIconStatic = ({
@@ -38,8 +38,10 @@ export const ArcIconStatic = ({
 	size,
 	color = "var(--second-col)",
 	fill = "none",
+
+	variants = "",
 }: any) => {
-	const [randomN, setRandomN] = useState("0px");
+	const [randomN, setRandomN] = useState(0);
 	useEffect(() => setRandomN(generateNumber(50, 0)), []);
 	return (
 		<StyledWrapper
@@ -56,7 +58,13 @@ export const ArcIconStatic = ({
 				stroke=""
 				strokeWidth="3"
 			>
-				<circle cx="249" cy="249" r="245" stroke={color} />
+				<motion.circle
+					cx="249"
+					cy="249"
+					r="245"
+					stroke={color}
+					variants={variants}
+				/>
 			</g>
 		</StyledWrapper>
 	);

@@ -31,6 +31,17 @@ const Wrapper = ({ data, index }: Props) => {
 	const { image, ...rest } = data;
 	const { portfolioNodeLeft, portfolioNodeRight } = portfolioVariants;
 
+	const staticV = {
+		active: {
+			opacity: 0.3,
+			transition: { duration: 1, delay: 1 },
+		},
+		inactive: {
+			opacity: 0,
+			transition: { duration: 1, delay: 3 },
+		},
+	};
+
 	return (
 		<>
 			{index % 2 === 0 ? (
@@ -47,8 +58,19 @@ const Wrapper = ({ data, index }: Props) => {
 							margin="var(--horizontal-gap) 0 0 5vw;"
 						/>
 					</div>
-
 					<ArcIconStatic StyledWrapper={StyledIconLeft} size={200} />
+					<ArcIconStatic
+						StyledWrapper={StyledIconRightSmall}
+						size={100}
+						fill="#cccccc8c"
+						color="none"
+					/>
+					<ArcIconStatic
+						StyledWrapper={StyledIconRightSmall}
+						size={50}
+						fill="#cccccc8c"
+						color="none"
+					/>
 				</StyledWrapper>
 			) : (
 				<StyledWrapper
@@ -64,12 +86,29 @@ const Wrapper = ({ data, index }: Props) => {
 							margin="var(--horizontal-gap) 5vw 0 0 ;"
 						/>
 					</div>
+
+					{/* <motion.div
+						initial={{ opacity: 0 }}
+						animate={{ color: "red", opacity: 1 }}
+						transition={{ delay: 1 }}
+					>
+						<h1>adsads</h1>
+					</motion.div> */}
+
 					<ArcIconStatic
 						StyledWrapper={StyledIconRight}
 						size={200}
-						fill="var(--third-col)"
+						fill="#cccccc8c"
+						color="none"
+						variants={staticV}
+					/>
+					<ArcIconStatic
+						StyledWrapper={StyledIconLeftSmall}
+						size={100}
+						fill="#cccccc8c"
 						color="none"
 					/>
+					<ArcIconStatic StyledWrapper={StyledIconLeftSmall} size={50} />
 				</StyledWrapper>
 			)}
 		</>
@@ -78,10 +117,10 @@ const Wrapper = ({ data, index }: Props) => {
 
 export default Wrapper;
 
-const IconAncestor = styled(motion.svg)`
+const IconAncestor = styled(motion.svg)<any>`
 	display: none;
 	position: absolute;
-	opacity: 0.3;
+	opacity: 0.5;
 	transform: translateY(-40%);
 
 	@media ${Breakpoints.desktop} {
@@ -89,13 +128,20 @@ const IconAncestor = styled(motion.svg)`
 	}
 `;
 
-const StyledIconLeft = styled(IconAncestor)<any>`
+const StyledIconLeft = styled(IconAncestor)`
 	left: 0;
-	top: ${({ randomNumber }) => randomNumber};
+	top: ${({ randomNumber }) => randomNumber}%;
 `;
 const StyledIconRight = styled(IconAncestor)<any>`
 	right: 0;
-	bottom: ${({ randomNumber }) => randomNumber};
+	bottom: ${({ randomNumber }) => randomNumber}%;
+`;
+
+const StyledIconRightSmall = styled(StyledIconRight)`
+	right: ${({ randomNumber }) => randomNumber}%;
+`;
+const StyledIconLeftSmall = styled(StyledIconRight)`
+	left: ${({ randomNumber }) => randomNumber}%;
 `;
 
 const StyledWrapper = styled(motion.div)<{ index: number }>`

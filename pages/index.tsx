@@ -1,5 +1,3 @@
-//libs
-import styled from "styled-components";
 //components
 import Nav from "../components/Nav";
 import HomePage from "../components/HomePage";

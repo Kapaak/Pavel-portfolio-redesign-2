@@ -64,6 +64,45 @@ export const aboutVariants = {
 	},
 };
 
+export const listItemsVariants = {
+	rootV: {
+		inactive: {
+			opacity: 0,
+			height: "0vh",
+			transition: {
+				when: "afterChildren",
+				staggerChildren: 0.2,
+			},
+		},
+		active: {
+			opacity: 1,
+			height: "100vh",
+			transition: {
+				staggerChildren: 0.2,
+				duration: 0.3,
+				when: "beforeChildren",
+			},
+		},
+	},
+	nodeV: {
+		inactive: {
+			opacity: 0,
+			x: 200,
+			transitionEnd: {
+				pointerEvents: "none",
+			},
+		},
+		active: {
+			opacity: 1,
+			x: 0,
+			transition: {
+				stiffness: 1,
+				type: "tween",
+			},
+		},
+	},
+};
+
 export const portfolioVariants = {
 	rootV: {
 		active: {

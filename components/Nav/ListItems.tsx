@@ -1,58 +1,61 @@
 //libs
 import { motion } from "framer-motion";
 import styled from "styled-components";
+import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 //styles
 import Breakpoints from "../global/Breakpoints";
+import { listItemsVariants } from "@/animations/variants";
 
 interface Props {
 	open: boolean;
 	setOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const navigatV = {
-	inactive: {
-		opacity: 0,
-		height: "0vh",
-		transition: {
-			when: "afterChildren",
-			staggerChildren: 0.2,
-		},
-	},
-	active: {
-		opacity: 1,
-		height: "100vh",
-		transition: {
-			staggerChildren: 0.2,
-			duration: 0.3,
-			when: "beforeChildren",
-		},
-	},
-};
+// const navigatV = {
+// 	inactive: {
+// 		opacity: 0,
+// 		height: "0vh",
+// 		transition: {
+// 			when: "afterChildren",
+// 			staggerChildren: 0.2,
+// 		},
+// 	},
+// 	active: {
+// 		opacity: 1,
+// 		height: "100vh",
+// 		transition: {
+// 			staggerChildren: 0.2,
+// 			duration: 0.3,
+// 			when: "beforeChildren",
+// 		},
+// 	},
+// };
 
-const nodeV = {
-	inactive: {
-		opacity: 0,
-		x: 200,
-		transitionEnd: {
-			pointerEvents: "none",
-		},
-	},
-	active: {
-		opacity: 1,
-		x: 0,
-		transition: {
-			stiffness: 1,
-			type: "tween",
-		},
-	},
-};
+// const nodeV = {
+// 	inactive: {
+// 		opacity: 0,
+// 		x: 200,
+// 		transitionEnd: {
+// 			pointerEvents: "none",
+// 		},
+// 	},
+// 	active: {
+// 		opacity: 1,
+// 		x: 0,
+// 		transition: {
+// 			stiffness: 1,
+// 			type: "tween",
+// 		},
+// 	},
+// };
 
 const ListItems = ({ open, setOpen }: Props) => {
+	const { rootV, nodeV } = listItemsVariants;
 	return (
 		<StyledListItems
 			initial="inactive"
 			animate={open ? "active" : "inactive"}
-			variants={navigatV}
+			variants={rootV}
 			open={open}
 		>
 			<StyledListItem variants={nodeV}>Home</StyledListItem>

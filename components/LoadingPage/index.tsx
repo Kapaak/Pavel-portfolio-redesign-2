@@ -18,12 +18,16 @@ const index = () => {
 
 	const rootV = {
 		inactive: {
-			width: "0vw",
+			display: "none",
 			transition: { duration: 1, when: "afterChildren" },
+			width: "90vw",
+			height: "90vh",
 		},
 		active: {
-			width: "100vw",
+			display: "flex",
 			transition: { duration: 1, when: "beforeChildren" },
+			width: "100vw",
+			height: "100vh",
 		},
 	};
 
@@ -45,6 +49,16 @@ const index = () => {
 			variants={rootV}
 		>
 			<motion.h1 variants={nodeV}>Pavel Zapletal</motion.h1>
+			<p
+				style={{
+					position: "absolute",
+					left: "10rem",
+					bottom: "10rem",
+					color: "var(--fourth-col)",
+				}}
+			>
+				loading...
+			</p>
 		</StyledLoadingWrapper>
 	);
 };
@@ -54,10 +68,11 @@ const StyledLoadingWrapper = styled(motion.div)`
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	left: 0;
-	top: 0;
-	width: 0vw;
-	height: 100vh;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 80vw;
+	height: 80vh;
 	background-color: var(--first-col);
 	z-index: 11;
 

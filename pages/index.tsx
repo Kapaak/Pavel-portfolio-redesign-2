@@ -13,7 +13,7 @@ import { footerData } from "../data";
 export default function Home() {
 	return (
 		<div>
-			<LoadingPage />
+			{/* <LoadingPage /> */}
 			<Nav />
 			<HomePage />
 			<AboutPage />

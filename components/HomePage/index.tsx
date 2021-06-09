@@ -7,7 +7,7 @@ import Breakpoints from "../global/Breakpoints";
 
 const index = () => {
 	return (
-		<StyledHomePage>
+		<StyledHomePage id="home-page">
 			<Wrapper />
 		</StyledHomePage>
 	);

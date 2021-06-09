@@ -5,7 +5,7 @@ import styled from "styled-components";
 
 const index = () => {
 	return (
-		<StyledContactPage>
+		<StyledContactPage id="contact-page">
 			<Wrapper />
 			<StyledPlaceholder />
 		</StyledContactPage>

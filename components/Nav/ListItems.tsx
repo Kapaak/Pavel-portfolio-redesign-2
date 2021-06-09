@@ -51,6 +51,9 @@ interface Props {
 
 const ListItems = ({ open, setOpen }: Props) => {
 	const { rootV, nodeV } = listItemsVariants;
+	const clickHandler = () => {
+		setOpen(false);
+	};
 	return (
 		<StyledListItems
 			initial="inactive"
@@ -58,10 +61,26 @@ const ListItems = ({ open, setOpen }: Props) => {
 			variants={rootV}
 			open={open}
 		>
-			<StyledListItem variants={nodeV}>Home</StyledListItem>
-			<StyledListItem variants={nodeV}>About</StyledListItem>
-			<StyledListItem variants={nodeV}>Portfolio</StyledListItem>
-			<StyledListItem variants={nodeV}>Contact</StyledListItem>
+			<StyledListItem variants={nodeV}>
+				<ScrollLink to="home-page" smooth={true} onClick={clickHandler}>
+					Home
+				</ScrollLink>
+			</StyledListItem>
+			<StyledListItem variants={nodeV}>
+				<ScrollLink to="about-page" smooth={true} onClick={clickHandler}>
+					About
+				</ScrollLink>
+			</StyledListItem>
+			<StyledListItem variants={nodeV}>
+				<ScrollLink to="portfolio-page" smooth={true} onClick={clickHandler}>
+					Portfolio
+				</ScrollLink>
+			</StyledListItem>
+			<StyledListItem variants={nodeV}>
+				<ScrollLink to="contact-page" smooth={true} onClick={clickHandler}>
+					Contact
+				</ScrollLink>
+			</StyledListItem>
 		</StyledListItems>
 	);
 };
@@ -74,6 +93,7 @@ const StyledListItem = styled(motion.li)<any>`
 	padding: 0 2rem;
 	margin-bottom: var(--text-mb);
 	font-size: var(--fosi-nav);
+	cursor: pointer;
 
 	@media ${Breakpoints.tablet} {
 		padding: 0 4rem;

@@ -30,7 +30,7 @@ const index = ({ data }: Props) => {
 	};
 
 	return (
-		<StyledPortfolioPageOutter>
+		<StyledPortfolioPageOutter id="portfolio-page">
 			<StyledPortfolioPage
 				ref={ref}
 				initial={false}

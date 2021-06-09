@@ -99,6 +99,9 @@ export const listItemsVariants = {
 				stiffness: 1,
 				type: "tween",
 			},
+			transitionEnd: {
+				pointerEvents: "auto",
+			},
 		},
 	},
 };

@@ -5,7 +5,7 @@ import Wrapper from "./Wrapper";
 
 const index = () => {
 	return (
-		<StyledAboutPage>
+		<StyledAboutPage id="about-page">
 			<Wrapper />
 		</StyledAboutPage>
 	);

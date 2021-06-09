@@ -1,7 +1,7 @@
 //libs
 import { motion } from "framer-motion";
 import styled from "styled-components";
-import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
+import { Link as ScrollLink } from "react-scroll";
 //styles
 import Breakpoints from "../global/Breakpoints";
 import { listItemsVariants } from "@/animations/variants";

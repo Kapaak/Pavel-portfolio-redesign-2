@@ -6,12 +6,15 @@ import Button from "../global/Button";
 import Link from "next/link";
 //breakpoints
 import Breakpoints from "../global/Breakpoints";
+//styles
+import { Highlight } from "../../styles/GlobalStyles";
 
 interface ObjectType {
 	title: string;
 	description: string;
 	colors: Array<string>;
 	url: string;
+	status?: string;
 }
 
 interface Props {
@@ -19,12 +22,17 @@ interface Props {
 	margin: string;
 }
 const TextContainer = ({ data, margin }: Props) => {
-	const { colors, description, title, url } = data;
+	const { colors, description, title, url, status } = data;
+	console.log(status);
 
 	return (
 		<StyledTextContainer margin={margin}>
 			<h2>{title}</h2>
-			<p>{description}</p>
+			<p>
+				{description}
+				<br />
+				{status ? <Highlight>{status}</Highlight> : null}
+			</p>
 			<ColorsContainer colors={colors} />
 			<Link href={url} passHref={true}>
 				<a>

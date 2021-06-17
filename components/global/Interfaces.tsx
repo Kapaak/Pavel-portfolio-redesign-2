@@ -4,6 +4,7 @@ export interface PortfolioObject {
 	url: string;
 	colors: Array<string>;
 	image: string;
+	status?: string;
 }
 
 export interface FooterObject {

@@ -19,10 +19,6 @@ interface Props {
 	index: number;
 }
 
-// const generateNumber = (max: number, min: number) => {
-// 	return `${Math.floor(Math.random() * max) + min}px`;
-// };
-
 const Wrapper = ({ data, index }: Props) => {
 	const { ref, inView } = useInView({
 		triggerOnce: true,
@@ -91,14 +87,6 @@ const Wrapper = ({ data, index }: Props) => {
 							margin="var(--horizontal-gap) 5vw 0 0 ;"
 						/>
 					</div>
-
-					{/* <motion.div
-						initial={{ opacity: 0 }}
-						animate={{ color: "red", opacity: 1 }}
-						transition={{ delay: 1 }}
-					>
-						<h1>adsads</h1>
-					</motion.div> */}
 
 					<ArcIconStatic
 						StyledWrapper={StyledIconRight}

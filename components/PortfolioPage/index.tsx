@@ -44,21 +44,8 @@ const index = ({ data }: Props) => {
 						return <Wrapper key={index} data={dataEl} index={index} />;
 				})}
 
-				{/* {data.map((dataEl, index) => (
-					<Wrapper key={index} data={dataEl} index={index} />
-				))} */}
 				{+loadImages <= data.length ? (
-					<Button
-						// onClick={() => {
-						// 	if (data.length > +loadImages) {
-						// 		setLoadImages(prev => prev + 2);
-						// 		console.log(loadImages, "loadImages");
-						// 	}
-						// }}
-						onClick={handleClick}
-					>
-						load more projects...
-					</Button>
+					<Button onClick={handleClick}>load more projects...</Button>
 				) : null}
 			</StyledPortfolioPage>
 		</StyledPortfolioPageOutter>

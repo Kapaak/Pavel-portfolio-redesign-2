@@ -18,12 +18,7 @@ export default index;
 const StyledHomePage = styled.div`
 	position: relative;
 	min-height: 100vh;
-	background: rgb(232, 231, 231);
-	background: linear-gradient(
-		1deg,
-		rgba(232, 231, 231, 1) 0%,
-		rgba(246, 246, 246, 1) 100%
-	);
+	background: var(--bg-col);
 
 	display: flex;
 	justify-content: flex-start;

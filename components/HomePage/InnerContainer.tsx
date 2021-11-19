@@ -1,13 +1,17 @@
 //components
-import { Button } from "@/styledComponents/index";
+import {
+	Button,
+	MainSubHeadline,
+	MainHeadline,
+} from "@/styledComponents/index";
 //styles
 import styled from "styled-components";
 
 const InnerContainer = () => {
 	return (
 		<StyledInnerContainer>
-			<h1>Pavel Zapletal</h1>
-			<h2>Web developer, UX/UI designer</h2>
+			<MainSubHeadline>Web developer, UX/UI designer</MainSubHeadline>
+			<MainHeadline>Pavel Zapletal</MainHeadline>
 			<div>
 				<Button>See more</Button>
 				<Button noUnderscore>
@@ -22,19 +26,4 @@ const InnerContainer = () => {
 
 export default InnerContainer;
 
-const StyledInnerContainer = styled.div`
-	h1,
-	h2 {
-		font-weight: var(--fowe-reg);
-	}
-	h1 {
-		font-size: var(--fosi-home-headline);
-		line-height: 1;
-		margin-bottom: 1rem;
-	}
-	h2 {
-		color: var(--second-col);
-		font-size: var(--fosi-home-subheadline);
-		margin-bottom: 2rem;
-	}
-`;
+const StyledInnerContainer = styled.div``;

@@ -16,6 +16,8 @@ const GlobalStyles = createGlobalStyle`
         --second-col: #2F45D5;
         --third-col:#CCCCCC;
         --fourth-col:#F0F0F0;
+        --bg-col:#F2F1EE;
+
         --fowe-reg:400;
         --fowe-bold:700;
 
@@ -50,8 +52,7 @@ const GlobalStyles = createGlobalStyle`
 
     body{
         font-size:1.6rem;
-        font-family: 'Noto Sans', sans-serif;
-        letter-spacing:var(--letter-spacing);
+        font-family: 'Karla', sans-serif;
 
         h1{
             font-size: var(--fosi-headline);

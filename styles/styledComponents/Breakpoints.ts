@@ -1,4 +1,4 @@
-const convertToEm = (number: number) => {
+const convertToEm = (number:number) => {
 	return number / 16;
 };
 
@@ -8,10 +8,8 @@ const devices = {
 	desktopB: convertToEm(1400),
 };
 
-const Breakpoints = {
+export const breakpoints = {
 	tablet: `(min-width:${devices.tablet}em)`,
 	desktop: `(min-width:${devices.desktop}em)`,
 	desktopB: `(min-width:${devices.desktopB}em)`,
 };
-
-export default Breakpoints;

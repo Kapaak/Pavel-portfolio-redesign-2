@@ -1,6 +1,6 @@
 //libs
 import styled from "styled-components";
-import Breakpoints from "../global/Breakpoints";
+import { breakpoints } from "@/styledComponents/index";
 
 const ColorContainer = ({ color }: { color: string }) => {
 	return <StyledColor color={color} />;
@@ -16,7 +16,7 @@ const StyledColor = styled.div<{ color: string }>`
 	border: 1px solid var(--first-col);
 	margin-right: 1rem;
 
-	@media ${Breakpoints.desktopB} {
+	@media ${breakpoints.desktopB} {
 		width: 4.4rem;
 		height: 4.4rem;
 		border: 2px solid var(--first-col);

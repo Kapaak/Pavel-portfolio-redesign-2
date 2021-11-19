@@ -1,7 +1,7 @@
 //libs
 import React, { useState, useEffect, useRef } from "react";
 import styled from "styled-components";
-import Breakpoints from "./Breakpoints";
+import { breakpoints } from "./Breakpoints";
 import { motion } from "framer-motion";
 //variants
 import { buttonUnderscoreVariant } from "../../animations/variants";
@@ -12,7 +12,7 @@ interface Props {
 	onClick?: () => void;
 }
 
-const Button = ({ children, noUnderscore, onClick }: Props) => {
+export const Button = ({ children, noUnderscore, onClick }: Props) => {
 	const { underlineV, textV } = buttonUnderscoreVariant;
 	const containerRef = useRef<any>(1);
 	const [variant, setVariant] = useState(
@@ -48,8 +48,6 @@ const Button = ({ children, noUnderscore, onClick }: Props) => {
 	);
 };
 
-export default Button;
-
 const StyledP = styled(motion.p)<{ variants: any }>``;
 
 const StyledButtonWithoutUnderscore = styled(motion.button)`
@@ -65,11 +63,16 @@ const StyledButtonWithoutUnderscore = styled(motion.button)`
 	line-height: var(--line-height);
 	overflow: hidden;
 
+	a {
+		color: inherit;
+		text-decoration: none;
+	}
+
 	&:first-child {
 		margin-right: 2rem;
 	}
 
-	@media ${Breakpoints.desktopB} {
+	@media ${breakpoints.desktopB} {
 		margin-bottom: 6rem;
 	}
 `;

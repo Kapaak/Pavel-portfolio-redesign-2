@@ -3,8 +3,8 @@ import IconsContainer from "./IconsContainer";
 //styles
 import styled from "styled-components";
 //interfaces
-import { FooterObject } from "../global/Interfaces";
-import Breakpoints from "../global/Breakpoints";
+import { FooterObject } from "../../interfaces";
+import { breakpoints } from "@/styledComponents/index";
 
 interface Props {
 	data: Array<FooterObject>;
@@ -36,7 +36,7 @@ const StyledFooter = styled.div`
 		margin-bottom: 0.6rem;
 	}
 
-	@media ${Breakpoints.tablet} {
+	@media ${breakpoints.tablet} {
 		flex-direction: row;
 		justify-content: center;
 

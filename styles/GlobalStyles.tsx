@@ -2,7 +2,7 @@
 import { createGlobalStyle } from "styled-components";
 import styled from "styled-components";
 //breakpoints
-import Breakpoints from "../components/global/Breakpoints";
+import { breakpoints } from "@/styledComponents/index";
 
 const GlobalStyles = createGlobalStyle`
     *,*::before,*::after{
@@ -72,7 +72,7 @@ const GlobalStyles = createGlobalStyle`
     }
 
 
-    @media ${Breakpoints.tablet}{
+    @media ${breakpoints.tablet}{
 		:root {
 			--xd-recalc: .87;
             --horizontal-gap:4rem;
@@ -83,14 +83,14 @@ const GlobalStyles = createGlobalStyle`
 		}
     }
 
-    @media ${Breakpoints.desktop}{
+    @media ${breakpoints.desktop}{
         :root{
             --xd-recalc:.86;
             --text-mb:2.5rem;
             --box-width:36rem;
         }
     }
-    @media ${Breakpoints.desktopB}{
+    @media ${breakpoints.desktopB}{
         :root{
             --xd-recalc:.75;
             /* --horizontal-gap:8rem;*/

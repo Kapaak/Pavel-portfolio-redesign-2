@@ -1,35 +1,20 @@
-//libs
-import fileDownload from "js-file-download";
-import axios from "axios";
 //components
-import Button from "../global/Button";
+import { Button } from "@/styledComponents/index";
 //styles
 import styled from "styled-components";
 
 const InnerContainer = () => {
-	const download = (url: string, filename: string) => {
-		axios
-			.get(url, {
-				responseType: "blob",
-			})
-			.then(res => {
-				fileDownload(res.data, filename);
-			});
-	};
 	return (
 		<StyledInnerContainer>
 			<h1>Pavel Zapletal</h1>
 			<h2>Web developer, UX/UI designer</h2>
 			<div>
 				<Button>See more</Button>
-				<Button noUnderscore onClick={() => download("./CV.pdf", "CV.pdf")}>
-					Download CV
-				</Button>
-				{/* <Button noUnderscore>
+				<Button noUnderscore>
 					<a download="PavelZapletal.pdf" href="./CV.pdf">
 						Download CV 2
 					</a>
-				</Button> */}
+				</Button>
 			</div>
 		</StyledInnerContainer>
 	);

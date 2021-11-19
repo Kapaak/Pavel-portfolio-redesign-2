@@ -9,7 +9,7 @@ import ImageContainer from "./ImageContainer";
 import { aboutVariants, arcAnimationVariant2 } from "@/animations/variants";
 import { arcAnimationVariant } from "@/animations/variants";
 //breakpoints
-import Breakpoints from "../global/Breakpoints";
+import { breakpoints } from "@/styledComponents/index";
 //icons
 import { ArcIcon } from "../../icons";
 
@@ -30,7 +30,7 @@ const InnerContainer = () => {
 			>
 				<StyledTextWrapper variants={nodeV}>
 					<Media
-						query={Breakpoints.desktop}
+						query={breakpoints.desktop}
 						defaultMatches={true}
 						render={() => (
 							<>
@@ -71,7 +71,7 @@ const StyledTextOutterWrapper = styled(motion.div)`
 	width: 100%;
 	z-index: 3;
 
-	@media ${Breakpoints.tablet} {
+	@media ${breakpoints.tablet} {
 		margin: 0 var(--horizontal-gap);
 		border-radius: var(--br-main);
 		padding: var(--vertical-gap) var(--horizontal-gap);
@@ -82,11 +82,11 @@ const StyledTextWrapper = styled(motion.div)`
 	display: flex;
 	flex-direction: column-reverse;
 
-	@media ${Breakpoints.desktop} {
+	@media ${breakpoints.desktop} {
 		flex-direction: row;
 	}
 
-	@media ${Breakpoints.desktopB} {
+	@media ${breakpoints.desktopB} {
 		max-width: 140rem;
 		margin: 0 auto;
 	}

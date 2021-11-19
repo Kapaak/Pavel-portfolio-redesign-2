@@ -6,9 +6,9 @@ import { motion } from "framer-motion";
 import TextContainer from "./TextContainer";
 import ImageContainer from "./ImageContainer";
 //interfaces
-import { PortfolioObject } from "../global/Interfaces";
+import { PortfolioObject } from "../../interfaces";
 //breakpoints
-import Breakpoints from "../global/Breakpoints";
+import { breakpoints } from "@/styledComponents/index";
 //variants
 import { portfolioVariants } from "@/animations/variants";
 //icons
@@ -121,7 +121,7 @@ const IconAncestor = styled(motion.svg)<any>`
 	opacity: 0.5;
 	transform: translateY(-40%);
 
-	@media ${Breakpoints.desktop} {
+	@media ${breakpoints.desktop} {
 		display: block;
 	}
 `;
@@ -154,16 +154,16 @@ const StyledWrapper = styled(motion.div)<{ index: number }>`
 		max-width: 79rem;
 		margin: 0 auto;
 
-		@media ${Breakpoints.tablet} {
+		@media ${breakpoints.tablet} {
 			flex-direction: ${({ index }) =>
 				index % 2 === 0 ? "row" : "row-reverse"};
 		}
-		@media ${Breakpoints.desktopB} {
+		@media ${breakpoints.desktopB} {
 			max-width: 100rem;
 		}
 	}
 
-	@media ${Breakpoints.desktop} {
+	@media ${breakpoints.desktop} {
 		margin-bottom: 14rem;
 	}
 `;

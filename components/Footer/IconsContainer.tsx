@@ -3,7 +3,7 @@ import styled from "styled-components";
 //components
 import IconContainer from "./IconContainer";
 //interfaces
-import { FooterObject } from "../global/Interfaces";
+import { FooterObject } from "../../interfaces";
 
 interface Props {
 	data: Array<FooterObject>;

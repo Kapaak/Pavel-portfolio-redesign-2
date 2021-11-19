@@ -2,10 +2,10 @@
 import styled from "styled-components";
 //components
 import ColorsContainer from "./ColorsContainer";
-import Button from "../global/Button";
+import { Button } from "@/styledComponents/index";
 import Link from "next/link";
 //breakpoints
-import Breakpoints from "../global/Breakpoints";
+import { breakpoints } from "@/styledComponents/index";
 //styles
 import { Highlight } from "../../styles/GlobalStyles";
 
@@ -58,7 +58,7 @@ const StyledTextContainer = styled.div<{ margin: string }>`
 		font-size: var(--fosi-text);
 	}
 
-	@media ${Breakpoints.tablet} {
+	@media ${breakpoints.tablet} {
 		margin: ${({ margin }) => margin};
 	}
 `;

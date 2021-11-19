@@ -2,7 +2,7 @@
 import styled from "styled-components";
 import Image from "next/image";
 //breakpoints
-import Breakpoints from "../global/Breakpoints";
+import { breakpoints } from "@/styledComponents/index";
 
 interface Props {
 	image: string;
@@ -38,7 +38,7 @@ const StyledImageContainer = styled.div`
 		box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.15);
 	}
 
-	@media ${Breakpoints.tablet} {
+	@media ${breakpoints.tablet} {
 		margin-bottom: 0;
 	}
 `;

@@ -5,11 +5,11 @@ import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
 //components
 import Wrapper from "./Wrapper";
-import Button from "../global/Button";
+import { Button } from "@/styledComponents/index";
 //interfaces
-import { PortfolioObject } from "../global/Interfaces";
+import { PortfolioObject } from "../../interfaces";
 //breakpoints
-import Breakpoints from "../global/Breakpoints";
+import { breakpoints } from "@/styledComponents/index";
 //variants
 import { portfolioVariants } from "@/animations/variants";
 
@@ -66,7 +66,7 @@ const StyledPortfolioPage = styled(motion.div)`
 	& > button {
 		font-size: var(--fosi-subheadline);
 	}
-	@media ${Breakpoints.tablet} {
+	@media ${breakpoints.tablet} {
 		padding: 0 var(--horizontal-gap);
 		& > h2 {
 			margin-bottom: 8rem;
@@ -76,7 +76,7 @@ const StyledPortfolioPage = styled(motion.div)`
 			align-self: center;
 		}
 	}
-	@media ${Breakpoints.desktop} {
+	@media ${breakpoints.desktop} {
 		& > h2 {
 			margin-bottom: 18rem;
 		}

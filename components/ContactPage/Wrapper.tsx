@@ -2,7 +2,7 @@
 import InnerContainer from "./InnerContainer";
 //styles
 import styled from "styled-components";
-import Breakpoints from "../global/Breakpoints";
+import { breakpoints } from "@/styledComponents/index";
 
 const Wrapper = () => {
 	return (
@@ -25,7 +25,7 @@ const StyledWrapper = styled.div`
 		max-width: 74rem;
 		margin: 0 auto;
 		z-index: 2;
-		@media ${Breakpoints.tablet} {
+		@media ${breakpoints.tablet} {
 			border-radius: var(--br-main);
 			text-align: center;
 			padding: 6rem 10rem;

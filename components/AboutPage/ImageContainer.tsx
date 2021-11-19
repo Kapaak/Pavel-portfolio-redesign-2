@@ -1,7 +1,7 @@
 //libs
 import styled from "styled-components";
 import Image from "next/image";
-import Breakpoints from "../global/Breakpoints";
+import { breakpoints } from "@/styledComponents/index";
 import { motion } from "framer-motion";
 
 const ImageContainer = () => {
@@ -37,7 +37,7 @@ const StyledContainer = styled(motion.div)`
 		transform: scale(1.2) translate(-30px, -40px);
 	}
 
-	@media ${Breakpoints.desktopB} {
+	@media ${breakpoints.desktopB} {
 		flex: 1 1 40%;
 		max-width: 40rem;
 	}

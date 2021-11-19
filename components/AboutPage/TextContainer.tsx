@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Image from "next/image";
 import { motion } from "framer-motion";
 //styles
-import Breakpoints from "../global/Breakpoints";
+import { breakpoints } from "@/styledComponents/index";
 import { Highlight } from "../../styles/GlobalStyles";
 
 const TextContainer = () => {
@@ -80,12 +80,12 @@ const StyledTextContainer = styled.div`
 		font-size: var(--fosi-text);
 	}
 
-	@media ${Breakpoints.desktop} {
+	@media ${breakpoints.desktop} {
 		margin: auto 0;
 		padding-right: 7vw;
 	}
 
-	@media ${Breakpoints.desktopB} {
+	@media ${breakpoints.desktopB} {
 		flex: 1 1 60%;
 		padding-right: 11vw;
 	}
@@ -108,7 +108,7 @@ const NotReallySlider = styled.div`
 		margin-left: var(--text-mb);
 	}
 
-	@media ${Breakpoints.tablet} {
+	@media ${breakpoints.tablet} {
 		div + div {
 			margin-left: 2rem;
 		}

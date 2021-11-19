@@ -4,7 +4,7 @@ import Image from "next/image";
 //styles
 import styled from "styled-components";
 //interfaces
-import { FooterObject } from "../global/Interfaces";
+import { FooterObject } from "../../interfaces";
 interface Props {
 	data: FooterObject;
 }

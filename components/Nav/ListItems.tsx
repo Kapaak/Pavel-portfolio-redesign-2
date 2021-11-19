@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import styled from "styled-components";
 import { Link as ScrollLink } from "react-scroll";
 //styles
-import Breakpoints from "../global/Breakpoints";
+import { breakpoints } from "@/styledComponents/index";
 import { listItemsVariants } from "@/animations/variants";
 
 interface Props {
@@ -95,7 +95,7 @@ const StyledListItem = styled(motion.li)<any>`
 	font-size: var(--fosi-nav);
 	cursor: pointer;
 
-	@media ${Breakpoints.tablet} {
+	@media ${breakpoints.tablet} {
 		padding: 0 4rem;
 	}
 `;
@@ -115,14 +115,14 @@ const StyledListItems = styled(motion.ul)<{ open: boolean }>`
 	height: 100vh;
 	background-color: var(--second-col);
 
-	@media ${Breakpoints.tablet} {
+	@media ${breakpoints.tablet} {
 		width: 33%;
 	}
 
-	/* @media ${Breakpoints.tablet} {
+	/* @media ${breakpoints.tablet} {
 		display: block;
 	}
-	@media ${Breakpoints.desktop} {
+	@media ${breakpoints.desktop} {
 		display: flex;
 	} */
 `;

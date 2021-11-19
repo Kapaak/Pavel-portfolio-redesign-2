@@ -1,7 +1,7 @@
 //libs
 import { useCallback } from "react";
 import styled from "styled-components";
-import Breakpoints from "../global/Breakpoints";
+import { breakpoints } from "@/styledComponents/index";
 
 interface Props {
 	open: boolean;
@@ -42,7 +42,7 @@ const StyledBurger = styled.div`
 		background-color: var(--first-col);
 	}
 
-	@media ${Breakpoints.desktop} {
+	@media ${breakpoints.desktop} {
 		margin: 4rem var(--horizontal-gap) 4rem auto;
 	}
 `;

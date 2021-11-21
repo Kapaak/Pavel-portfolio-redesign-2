@@ -1,3 +1,7 @@
+export default function TextContainer() {
+	return <div></div>;
+}
+
 // //libs
 // import styled from "styled-components";
 // //components

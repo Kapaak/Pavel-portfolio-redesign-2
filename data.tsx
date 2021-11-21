@@ -1,4 +1,4 @@
-import { PortfolioObject, FooterObject } from "./components/global/Interfaces";
+import { PortfolioObject, FooterObject } from "./interfaces/index";
 
 const data = (): Array<PortfolioObject> => [
 	{

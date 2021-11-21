@@ -32,6 +32,7 @@ export default InnerContainer;
 
 const StyledInnerContainer = styled.div`
 	margin-top: 10rem;
+	width: 100%;
 `;
 
 const ButtonWrapper = styled.div`

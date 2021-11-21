@@ -4,3 +4,4 @@ export  {MainSubHeadline} from "./MainSubHeadline";
 export  {MainHeadline} from "./MainHeadline";
 export  {Line} from "./Line";
 export  {Headline} from "./Headline";
+export  {Text} from "./Text";

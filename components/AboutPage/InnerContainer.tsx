@@ -1,8 +1,9 @@
 //libs
 import styled from "styled-components";
+import Image from "next/image";
+
 //components
 import TextContainer from "./TextContainer";
-import ImageContainer from "./ImageContainer";
 
 //breakpoints
 import { breakpoints } from "@/styledComponents/index";
@@ -10,12 +11,19 @@ import { breakpoints } from "@/styledComponents/index";
 const InnerContainer = () => {
 	return (
 		<StyledInnerContainer>
-			<StyledTextOutterWrapper>
-				<StyledTextWrapper>
-					<TextContainer />
-					<ImageContainer />
-				</StyledTextWrapper>
-			</StyledTextOutterWrapper>
+			{/* tohle zobraz jen na velkym */}
+			{/* <Image
+				src="/images/me.JPG"
+				alt="picture of myself"
+				width={384}
+				height={512}
+				// layout="responsive"
+				objectFit="contain"
+				//tady muzu nastavit nejaky intrinsic nebo neco takovyho
+				//a to udela, ze se to muze dostat do max vysky a dal ne
+				//takze to bude asi lepsi
+			/> */}
+			<TextContainer />
 		</StyledInnerContainer>
 	);
 };
@@ -23,29 +31,9 @@ const InnerContainer = () => {
 export default InnerContainer;
 
 const StyledInnerContainer = styled.div`
-	position: relative;
 	display: flex;
-	justify-content: center;
-	background: rgba(232, 231, 231, 1);
-`;
-const StyledTextOutterWrapper = styled.div`
-	position: relative;
-	padding: var(--vertical-gap) var(--horizontal-gap) var(--horizontal-gap);
-	background-color: var(--third-col);
-	max-width: 165rem;
-	width: 100%;
-	z-index: 3;
-
-	@media ${breakpoints.tablet} {
-		margin: 0 var(--horizontal-gap);
-		border-radius: var(--br-main);
-		padding: var(--vertical-gap) var(--horizontal-gap);
-	}
-`;
-
-const StyledTextWrapper = styled.div`
-	display: flex;
-	flex-direction: column-reverse;
+	flex-direction: column;
+	background-color: var(--col2);
 
 	@media ${breakpoints.desktop} {
 		flex-direction: row;

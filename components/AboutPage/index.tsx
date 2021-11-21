@@ -1,12 +1,11 @@
-import React from "react";
-//styles
 import styled from "styled-components";
-import Wrapper from "./Wrapper";
+//components
+import InnerContainer from "components/AboutPage/InnerContainer";
 
 const AboutPage = () => {
 	return (
 		<StyledAboutPage id="about-page">
-			<Wrapper />
+			<InnerContainer />
 		</StyledAboutPage>
 	);
 };

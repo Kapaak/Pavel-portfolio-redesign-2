@@ -28,7 +28,7 @@ const GlobalStyles = createGlobalStyle`
         --xd-recalc: 1.1;
 
         --fosi-home-headline: calc(5rem / var(--xd-recalc));
-        --fosi-home-subheadline: calc(2rem / var(--xd-recalc));
+        --fosi-home-subheadline: calc(2.3rem / var(--xd-recalc));
         --fosi-button: calc(1.6rem / var(--xd-recalc)); 
         
         

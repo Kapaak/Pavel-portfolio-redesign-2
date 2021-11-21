@@ -29,6 +29,7 @@ const GlobalStyles = createGlobalStyle`
 
         --f-mhl: calc(5rem / var(--xd-recalc));
         --f-mshl: calc(2.3rem / var(--xd-recalc));
+        --f-hl: calc(4.6rem / var(--xd-recalc));
         --f-btn: calc(1.6rem / var(--xd-recalc)); 
         
         

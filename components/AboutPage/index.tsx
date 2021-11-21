@@ -3,7 +3,7 @@ import React from "react";
 import styled from "styled-components";
 import Wrapper from "./Wrapper";
 
-const index = () => {
+const AboutPage = () => {
 	return (
 		<StyledAboutPage id="about-page">
 			<Wrapper />
@@ -11,7 +11,7 @@ const index = () => {
 	);
 };
 
-export default index;
+export default AboutPage;
 
 const StyledAboutPage = styled.div`
 	position: relative;

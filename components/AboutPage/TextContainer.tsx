@@ -4,7 +4,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 //styles
 import { breakpoints } from "@/styledComponents/index";
-import { Highlight } from "../../styles/GlobalStyles";
+import { Headline } from "@/styledComponents/index";
 
 const TextContainer = () => {
 	const AboutTextV = {
@@ -14,11 +14,11 @@ const TextContainer = () => {
 
 	return (
 		<StyledTextContainer>
-			<motion.h1 variants={AboutTextV}>About</motion.h1>
+			<Headline>About</Headline>
 			<motion.p variants={AboutTextV}>
-				Hi, I'm <Highlight>Pavel Zapletal</Highlight> a self-taught JavaScript
-				programmer. I'm 26 yo, living in Brno. Creating websites is my bread and
-				butter. When I'm not at home I usually go outside to enjoy some nature.
+				Hi, I'm Pavel Zapletal a self-taught JavaScript programmer. I'm 26 yo,
+				living in Brno. Creating websites is my bread and butter. When I'm not
+				at home I usually go outside to enjoy some nature.
 			</motion.p>
 			<motion.div variants={AboutTextV}>
 				<h2>What technologies do I like working with?</h2>

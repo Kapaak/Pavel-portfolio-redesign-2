@@ -52,7 +52,7 @@ export default ListItems;
 const StyledListItem = styled(motion.li)<any>`
 	text-decoration: none;
 	list-style: none;
-	padding: 0 2rem;
+	padding: 0 4rem;
 	margin-bottom: var(--text-mb);
 	font-size: var(--fosi-nav);
 	cursor: pointer;
@@ -63,28 +63,20 @@ const StyledListItem = styled(motion.li)<any>`
 `;
 
 const StyledListItems = styled(motion.ul)<{ open: boolean }>`
-	/* display: none; */
 	display: flex;
 	position: absolute;
-	/* display: ${({ open }) => (open ? "flex" : "none")}; */
 	flex-direction: column;
 	justify-content: center;
 	top: 0;
 	right: 0;
-	z-index: 9;
-
-	width: 50%;
+	width: 100%;
 	height: 100vh;
-	background-color: var(--second-col);
+	background-color: var(--col1);
+	color: var(--bg-col);
+	font-weight: var(--fowe-bold);
+	z-index: 9;
 
 	@media ${breakpoints.tablet} {
 		width: 33%;
 	}
-
-	/* @media ${breakpoints.tablet} {
-		display: block;
-	}
-	@media ${breakpoints.desktop} {
-		display: flex;
-	} */
 `;

@@ -5,12 +5,11 @@ import { Link as ScrollLink } from "react-scroll";
 import Image from "next/image";
 
 interface Props {
-	children: React.ReactNode;
+	children: any;
 	onClick?: () => void;
 	scrollTo?: any;
 	primaryButton?: boolean;
 	src?: string;
-	download?: string;
 }
 
 export const Button = ({

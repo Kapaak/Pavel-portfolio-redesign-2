@@ -15,7 +15,7 @@ export default function Home() {
 			<Nav />
 			<HomePage />
 			<AboutPage />
-			<PortfolioPage data={data()} />
+			{/* <PortfolioPage data={data()} /> */}
 			<ContactPage />
 			<Footer data={footerData()} />
 		</>

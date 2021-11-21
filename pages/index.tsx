@@ -13,10 +13,10 @@ export default function Home() {
 		<>
 			<Nav />
 			<HomePage />
-			{/* <AboutPage /> */}
-			{/* <PortfolioPage data={data()} /> */}
-			{/* <ContactPage /> */}
-			{/* <Footer data={footerData()} /> */}
+			<AboutPage />
+			{/* <PortfolioPage data={data()} />  */}
+			<ContactPage />
+			<Footer data={footerData()} />
 		</>
 	);
 }

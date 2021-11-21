@@ -5,7 +5,7 @@ import styled from "styled-components";
 //breakpoints
 import { breakpoints } from "@/styledComponents/index";
 
-const index = () => {
+const HomePage = () => {
 	return (
 		<StyledHomePage id="home-page">
 			<Wrapper />
@@ -13,7 +13,7 @@ const index = () => {
 	);
 };
 
-export default index;
+export default HomePage;
 
 const StyledHomePage = styled.div`
 	position: relative;

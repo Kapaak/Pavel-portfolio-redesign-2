@@ -12,4 +12,5 @@ const StyledMainhHeadline = styled.h1`
 	color: var(--first-col);
 	font-size: var(--fosi-home-headline);
 	font-weight: var(--fowe-bold);
+	text-align: center;
 `;

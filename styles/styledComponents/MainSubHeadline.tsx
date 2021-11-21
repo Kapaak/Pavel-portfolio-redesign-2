@@ -12,4 +12,5 @@ const StyledMainSubhHeadline = styled.h2`
 	color: var(--first-col);
 	font-size: var(--fosi-home-subheadline);
 	font-weight: var(--fowe-bold);
+	text-align: center;
 `;

@@ -34,9 +34,6 @@ const TextContainer = ({ data, margin }: Props) => {
 				{status ? <Highlight>{status}</Highlight> : null}
 			</p>
 			<ColorsContainer colors={colors} />
-			<Link href={url} passHref={true}>
-				<a>{/* <Button>Visit web</Button> */}</a>
-			</Link>
 		</StyledTextContainer>
 	);
 };

@@ -15,24 +15,21 @@ interface Props {
 
 export const Button = ({
 	children,
-	scrollTo,
+	scrollTo = "",
 	primaryButton = false,
-	src,
+	src = "",
 }: Props) => {
 	return (
 		<>
 			{primaryButton ? (
 				<ButtonPrimary>
-					{/*@ts-ignore*/}
 					<ScrollLink to={scrollTo} smooth={true}>
-						{/*@ts-ignore*/}
 						<Image src={src} height={18} width={18} />
 						<a>{children}</a>
 					</ScrollLink>
 				</ButtonPrimary>
 			) : (
 				<ButtonSecondary>
-					{/*@ts-ignore*/}
 					<ScrollLink to={scrollTo} smooth={true}>
 						<a>{children}</a>
 					</ScrollLink>

@@ -44,9 +44,9 @@ const index = ({ data }: Props) => {
 						return <Wrapper key={index} data={dataEl} index={index} />;
 				})}
 
-				{+loadImages <= data.length ? (
+				{/* {+loadImages <= data.length ? (
 					<Button onClick={handleClick}>load more projects...</Button>
-				) : null}
+				) : null} */}
 			</StyledPortfolioPage>
 		</StyledPortfolioPageOutter>
 	);

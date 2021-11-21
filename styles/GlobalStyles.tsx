@@ -20,6 +20,8 @@ const GlobalStyles = createGlobalStyle`
         --col1:#0D1321;
         --bg-col:#F2F1EE;
 
+        --shadow:0 0 20px rgba(8, 1, 1, 0.225);
+
         --fowe-reg:400;
         --fowe-bold:700;
 

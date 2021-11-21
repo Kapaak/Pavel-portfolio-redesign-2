@@ -27,20 +27,26 @@ const Burger = ({ open, setOpen }: Props) => {
 export default Burger;
 
 const StyledBurger = styled.div`
-	height: 2.5rem;
-	width: 3.5rem;
+	position: relative;
+	height: 4.2rem;
+	width: 4.5rem;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	margin: 2rem var(--horizontal-gap) 2rem auto;
 	cursor: pointer;
 	z-index: 11;
-	border: 1px solid red;
+	border-radius: 0.45rem;
+	box-shadow: var(--shadow);
+	padding: 1rem;
+	z-index: 999;
+	background-color: #f2f1eec7;
 
 	p {
-		height: 0.4rem;
+		height: 2.4px;
 		width: 100%;
-		background-color: var(--first-col);
+		background-color: var(--col1);
+		margin: 0 auto;
 	}
 
 	@media ${breakpoints.desktop} {

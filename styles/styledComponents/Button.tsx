@@ -24,6 +24,7 @@ export const Button = ({
 			{primaryButton ? (
 				<ButtonPrimary>
 					<ScrollLink to={scrollTo} smooth={true}>
+						{/*@ts-ignore*/}
 						<Image src={src} height={18} width={18} />
 						<a>{children}</a>
 					</ScrollLink>
@@ -42,7 +43,7 @@ export const Button = ({
 const ButtonGlobal = styled.button`
 	border: none;
 	font-family: inherit;
-	box-shadow: 0 0 20px rgba(8, 1, 1, 0.225);
+	box-shadow: var(--shadow);
 
 	a {
 		display: inline-flex;

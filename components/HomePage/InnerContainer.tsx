@@ -30,7 +30,9 @@ const InnerContainer = () => {
 
 export default InnerContainer;
 
-const StyledInnerContainer = styled.div``;
+const StyledInnerContainer = styled.div`
+	margin-top: 10rem;
+`;
 
 const ButtonWrapper = styled.div`
 	display: flex;

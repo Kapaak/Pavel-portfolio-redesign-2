@@ -22,7 +22,7 @@ const StyledHomePage = styled.div`
 
 	display: flex;
 	justify-content: flex-start;
-	align-items: flex-end;
+	align-items: center;
 	padding: var(--vertical-gap) var(--horizontal-gap);
 
 	@media ${breakpoints.tablet} {

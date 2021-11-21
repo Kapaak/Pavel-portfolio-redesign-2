@@ -23,6 +23,7 @@ export const Button = ({
 		<>
 			{primaryButton ? (
 				<ButtonPrimary>
+					{/*@ts-ignore*/}
 					<ScrollLink to={scrollTo} smooth={true}>
 						{/*@ts-ignore*/}
 						<Image src={src} height={18} width={18} />
@@ -31,6 +32,7 @@ export const Button = ({
 				</ButtonPrimary>
 			) : (
 				<ButtonSecondary>
+					{/*@ts-ignore*/}
 					<ScrollLink to={scrollTo} smooth={true}>
 						<a>{children}</a>
 					</ScrollLink>

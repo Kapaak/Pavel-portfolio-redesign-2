@@ -7,14 +7,14 @@ import Image from "next/image";
 interface Props {
 	children: any;
 	onClick?: () => void;
-	scrollTo?: any;
+	// scrollTo?: any;
 	primaryButton?: boolean;
 	src?: string;
 }
 
 export const Button = ({
 	children,
-	scrollTo = "",
+	// scrollTo = "",
 	primaryButton = false,
 	src = "",
 }: Props) => {
@@ -22,14 +22,14 @@ export const Button = ({
 		<div>
 			{primaryButton ? (
 				<ButtonPrimary>
-					<ScrollLink to={scrollTo} smooth={true}>
+					<ScrollLink to="shit-page" smooth={true}>
 						<Image src={src} height={18} width={18} />
 						<a>{children}</a>
 					</ScrollLink>
 				</ButtonPrimary>
 			) : (
 				<ButtonSecondary>
-					<ScrollLink to={scrollTo} smooth={true}>
+					<ScrollLink to="shit-page" smooth={true}>
 						<a>{children}</a>
 					</ScrollLink>
 				</ButtonSecondary>

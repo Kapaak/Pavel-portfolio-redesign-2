@@ -6,7 +6,6 @@ export default function TextContainer() {
 // import styled from "styled-components";
 // //components
 // import ColorsContainer from "./ColorsContainer";
-// import { Button } from "@/styledComponents/index";
 // import Link from "next/link";
 // //breakpoints
 // import { breakpoints } from "@/styledComponents/index";

@@ -11,6 +11,6 @@ export const MainSubHeadline = ({ children }: Props) => {
 const StyledMainSubhHeadline = styled.h2`
 	color: var(--first-col);
 	font-size: var(--fosi-home-subheadline);
-	font-weight: var(--fowe-bold);
+	font-weight: var(--f-mshl);
 	text-align: center;
 `;

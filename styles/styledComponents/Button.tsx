@@ -48,7 +48,7 @@ const ButtonGlobal = styled.button`
 		display: inline-flex;
 		align-items: center;
 		padding: 0.55rem 0.8rem;
-		font-size: var(--fosi-button);
+		font-size: var(--f-btn);
 	}
 `;
 

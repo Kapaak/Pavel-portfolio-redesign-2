@@ -43,7 +43,7 @@ const StyledBurger = styled.div`
 	background-color: #f2f1eec7;
 
 	p {
-		height: 2.5px;
+		height: 0.2rem;
 		width: 100%;
 		background-color: var(--col1);
 		margin: 0 auto;

@@ -11,44 +11,6 @@ interface Props {
 	setOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-// const navigatV = {
-// 	inactive: {
-// 		opacity: 0,
-// 		height: "0vh",
-// 		transition: {
-// 			when: "afterChildren",
-// 			staggerChildren: 0.2,
-// 		},
-// 	},
-// 	active: {
-// 		opacity: 1,
-// 		height: "100vh",
-// 		transition: {
-// 			staggerChildren: 0.2,
-// 			duration: 0.3,
-// 			when: "beforeChildren",
-// 		},
-// 	},
-// };
-
-// const nodeV = {
-// 	inactive: {
-// 		opacity: 0,
-// 		x: 200,
-// 		transitionEnd: {
-// 			pointerEvents: "none",
-// 		},
-// 	},
-// 	active: {
-// 		opacity: 1,
-// 		x: 0,
-// 		transition: {
-// 			stiffness: 1,
-// 			type: "tween",
-// 		},
-// 	},
-// };
-
 const ListItems = ({ open, setOpen }: Props) => {
 	const { rootV, nodeV } = listItemsVariants;
 	const clickHandler = () => {

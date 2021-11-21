@@ -16,6 +16,8 @@ const GlobalStyles = createGlobalStyle`
         --second-col: #2F45D5;
         --third-col:#CCCCCC;
         --fourth-col:#F0F0F0;
+
+        --col1:#0D1321;
         --bg-col:#F2F1EE;
 
         --fowe-reg:400;
@@ -23,13 +25,15 @@ const GlobalStyles = createGlobalStyle`
 
         --xd-recalc: 1.1;
 
-        --fosi-home-headline: calc(7rem / var(--xd-recalc));
+        --fosi-home-headline: calc(5.4rem / var(--xd-recalc));
         --fosi-home-subheadline: calc(2.5rem / var(--xd-recalc));
+        --fosi-button: calc(1.6rem / var(--xd-recalc)); 
+        
+        
         --fosi-headline: calc(5.6rem / var(--xd-recalc));
         --fosi-subheadline: calc(2.5rem / var(--xd-recalc));
         --fosi-text: calc(1.8rem / var(--xd-recalc));
         --fosi-nav: calc(2.8rem / var(--xd-recalc)); 
-        --fosi-button: calc(1.7rem / var(--xd-recalc)); 
         --fosi-nav:3rem; 
 
         --horizontal-gap:2rem;

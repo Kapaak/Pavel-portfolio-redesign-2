@@ -1,88 +1,79 @@
 //libs
-import React, { useState, useEffect, useRef } from "react";
 import styled from "styled-components";
 import { breakpoints } from "./Breakpoints";
-import { motion } from "framer-motion";
-//variants
-import { buttonUnderscoreVariant } from "../../animations/variants";
+import { Link as ScrollLink } from "react-scroll";
+import Image from "next/image";
 
 interface Props {
 	children: React.ReactNode;
-	noUnderscore?: boolean;
 	onClick?: () => void;
+	scrollTo: string;
+	primaryButton?: boolean;
+	src?: string;
+	download?: string;
 }
 
-export const Button = ({ children, noUnderscore, onClick }: Props) => {
-	const { underlineV, textV } = buttonUnderscoreVariant;
-	const containerRef = useRef<any>(1);
-	const [variant, setVariant] = useState(
-		underlineV(containerRef.current?.clientHeight / 2)
-	);
-	useEffect(() => {
-		setVariant(underlineV(containerRef.current?.clientHeight / 2));
-		window.addEventListener("resize", () => {
-			setVariant(underlineV(containerRef.current?.clientHeight / 2));
-		});
-
-		return window.removeEventListener("resize", () => {
-			setVariant(underlineV(containerRef.current?.clientHeight / 2));
-			console.log(containerRef.current?.clientHeight);
-		});
-	}, []);
-
-	const handleClick = () => {
-		if (onClick) onClick();
-	};
-
-	return noUnderscore ? (
-		<StyledButtonWithoutUnderscore onClick={handleClick}>
-			{children}
-		</StyledButtonWithoutUnderscore>
-	) : (
-		<StyledButton whileHover="visible" onClick={handleClick}>
-			<StyledP ref={containerRef} variants={textV}>
-				{children}
-			</StyledP>
-			<StyledUnderline variants={variant} />
-		</StyledButton>
+export const Button = ({
+	children,
+	scrollTo,
+	primaryButton = false,
+	src,
+}: Props) => {
+	return (
+		<>
+			{primaryButton ? (
+				<ButtonPrimary>
+					<ScrollLink to={scrollTo} smooth={true}>
+						<Image src={src} height={18} width={18} />
+						<a>{children}</a>
+					</ScrollLink>
+				</ButtonPrimary>
+			) : (
+				<ButtonSecondary>
+					<ScrollLink to={scrollTo} smooth={true}>
+						<a>{children}</a>
+					</ScrollLink>
+				</ButtonSecondary>
+			)}
+		</>
 	);
 };
 
-const StyledP = styled(motion.p)<{ variants: any }>``;
-
-const StyledButtonWithoutUnderscore = styled(motion.button)`
-	position: relative;
+const ButtonGlobal = styled.button`
 	border: none;
-	padding: 1rem 1rem 1rem 0;
-	margin-bottom: var(--text-mb);
-	font-size: var(--fosi-button);
-	background-color: transparent;
-	cursor: pointer;
-	z-index: 1;
-	letter-spacing: var(--letter-spacing);
-	line-height: var(--line-height);
-	overflow: hidden;
+	font-family: inherit;
+	box-shadow: 0 0 20px rgba(8, 1, 1, 0.225);
 
 	a {
-		color: inherit;
-		text-decoration: none;
-	}
-
-	&:first-child {
-		margin-right: 2rem;
-	}
-
-	@media ${breakpoints.desktopB} {
-		margin-bottom: 6rem;
+		display: inline-flex;
+		align-items: center;
+		padding: 0.55rem 0.8rem;
+		font-size: var(--fosi-button);
 	}
 `;
 
-const StyledButton = styled(StyledButtonWithoutUnderscore)``;
+const ButtonSecondary = styled(ButtonGlobal)`
+	border-radius: 0.6rem;
+	background: var(--bg-col);
+	border: 1px solid var(--col1);
 
-const StyledUnderline = styled(motion.p)<{ variants: any }>`
-	position: absolute;
-	width: calc(100% - 1rem);
-	height: 0.3rem;
-	background-color: var(--first-col);
-	transform: translateY(-50%);
+	a {
+		margin: 0 0.5rem;
+	}
+`;
+
+const ButtonPrimary = styled(ButtonGlobal)`
+	border: 1px solid var(--col1);
+	background-color: var(--col1);
+	border-radius: 0.6rem;
+
+	span {
+		display: inline-block;
+		margin: 0 0.25rem !important;
+	}
+	a {
+		padding: 0.55rem 0.8rem;
+		color: var(--bg-col);
+		margin-right: 0.25rem;
+	}
 `;

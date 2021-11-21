@@ -3,6 +3,7 @@ import {
 	Button,
 	MainSubHeadline,
 	MainHeadline,
+	Line,
 } from "@/styledComponents/index";
 //styles
 import styled from "styled-components";
@@ -10,16 +11,19 @@ import styled from "styled-components";
 const InnerContainer = () => {
 	return (
 		<StyledInnerContainer>
-			<MainSubHeadline>Web developer, UX/UI designer</MainSubHeadline>
+			<MainSubHeadline>web developer, UX/UI designer</MainSubHeadline>
+			<Line />
 			<MainHeadline>Pavel Zapletal</MainHeadline>
-			<div>
-				<Button>See more</Button>
-				<Button noUnderscore>
-					<a download="PavelZapletal.pdf" href="./CV.pdf">
-						Download CV 2
-					</a>
+			<ButtonWrapper>
+				<Button
+					scrollTo="about-page"
+					primaryButton
+					src="/images/icons/info-icon.svg"
+				>
+					more info
 				</Button>
-			</div>
+				<Button scrollTo="contact-page">contact</Button>
+			</ButtonWrapper>
 		</StyledInnerContainer>
 	);
 };
@@ -27,3 +31,10 @@ const InnerContainer = () => {
 export default InnerContainer;
 
 const StyledInnerContainer = styled.div``;
+
+const ButtonWrapper = styled.div`
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 2rem;
+`;

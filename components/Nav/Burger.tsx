@@ -35,6 +35,7 @@ const StyledBurger = styled.div`
 	margin: 2rem var(--horizontal-gap) 2rem auto;
 	cursor: pointer;
 	z-index: 11;
+	border: 1px solid red;
 
 	p {
 		height: 0.4rem;

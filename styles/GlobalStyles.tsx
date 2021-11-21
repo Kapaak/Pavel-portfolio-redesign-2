@@ -32,8 +32,8 @@ const GlobalStyles = createGlobalStyle`
         --fosi-button: calc(1.6rem / var(--xd-recalc)); 
         
         
-        --fosi-headline: calc(5.6rem / var(--xd-recalc));
-        --fosi-subheadline: calc(2.5rem / var(--xd-recalc));
+        --fosi-headline: calc(5.2rem / var(--xd-recalc));
+        --fosi-subheadline: calc(2.2rem / var(--xd-recalc));
         --fosi-text: calc(1.8rem / var(--xd-recalc));
         --fosi-nav: calc(2.8rem / var(--xd-recalc)); 
         --fosi-nav:3rem; 

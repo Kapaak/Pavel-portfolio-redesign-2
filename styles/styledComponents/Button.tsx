@@ -19,7 +19,7 @@ export const Button = ({
 	src = "",
 }: Props) => {
 	return (
-		<>
+		<div>
 			{primaryButton ? (
 				<ButtonPrimary>
 					<ScrollLink to={scrollTo} smooth={true}>
@@ -34,7 +34,7 @@ export const Button = ({
 					</ScrollLink>
 				</ButtonSecondary>
 			)}
-		</>
+		</div>
 	);
 };
 

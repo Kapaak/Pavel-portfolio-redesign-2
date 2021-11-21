@@ -22,16 +22,12 @@ export const Button = ({
 		<div>
 			{primaryButton ? (
 				<ButtonPrimary>
-					<ScrollLink to="shit-page" smooth={true}>
-						<Image src={src} height={18} width={18} />
-						<a>{children}</a>
-					</ScrollLink>
+					<Image src={src} height={18} width={18} />
+					<a>{children}</a>
 				</ButtonPrimary>
 			) : (
 				<ButtonSecondary>
-					<ScrollLink to="shit-page" smooth={true}>
-						<a>{children}</a>
-					</ScrollLink>
+					<a>{children}</a>
 				</ButtonSecondary>
 			)}
 		</div>

@@ -5,32 +5,37 @@ import { Link as ScrollLink } from "react-scroll";
 import Image from "next/image";
 
 interface Props {
-	children: any;
+	children: React.ReactNode;
 	onClick?: () => void;
-	// scrollTo?: any;
+	scrollTo?: string;
 	primaryButton?: boolean;
 	src?: string;
+	download?: string;
 }
 
 export const Button = ({
 	children,
-	// scrollTo = "",
+	scrollTo = "",
 	primaryButton = false,
 	src = "",
 }: Props) => {
 	return (
-		<div>
+		<>
 			{primaryButton ? (
 				<ButtonPrimary>
-					<Image src={src} height={18} width={18} />
-					<a>{children}</a>
+					<ScrollLink to={scrollTo} smooth={true}>
+						<Image src={src} height={18} width={18} />
+						<a>{children}</a>
+					</ScrollLink>
 				</ButtonPrimary>
 			) : (
 				<ButtonSecondary>
-					<a>{children}</a>
+					<ScrollLink to={scrollTo} smooth={true}>
+						<a>{children}</a>
+					</ScrollLink>
 				</ButtonSecondary>
 			)}
-		</div>
+		</>
 	);
 };
 

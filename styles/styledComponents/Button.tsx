@@ -7,7 +7,7 @@ import Image from "next/image";
 interface Props {
 	children: React.ReactNode;
 	onClick?: () => void;
-	scrollTo?: string;
+	scrollTo?: any;
 	primaryButton?: boolean;
 	src?: string;
 	download?: string;

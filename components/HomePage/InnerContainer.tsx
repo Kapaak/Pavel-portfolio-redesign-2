@@ -15,14 +15,10 @@ const InnerContainer = () => {
 			<Line />
 			<MainHeadline>Pavel Zapletal</MainHeadline>
 			<ButtonWrapper>
-				<Button
-					scrollTo="about-page"
-					primaryButton
-					src="/images/icons/info-icon.svg"
-				>
+				<Button primaryButton src="/images/icons/info-icon.svg">
 					more info
 				</Button>
-				<Button scrollTo="contact-page">contact</Button>
+				<Button>contact</Button>
 			</ButtonWrapper>
 		</StyledInnerContainer>
 	);

@@ -14,10 +14,10 @@ export default function Home() {
 		<>
 			<Nav />
 			<HomePage />
-			<AboutPage />
+			{/* <AboutPage /> */}
 			{/* <PortfolioPage data={data()} /> */}
-			<ContactPage />
-			<Footer data={footerData()} />
+			{/* <ContactPage /> */}
+			{/* <Footer data={footerData()} /> */}
 		</>
 	);
 }

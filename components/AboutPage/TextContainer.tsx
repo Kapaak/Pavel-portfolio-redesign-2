@@ -6,7 +6,7 @@ import { breakpoints } from "@/styledComponents/index";
 import { Headline, Text } from "@/styledComponents/index";
 //others
 //@ts-ignore
-import meImg from "../../public/images/me.jpg";
+import meImg from "../../public/images/profile-img.jpg";
 
 const TextContainer = () => {
 	return (

@@ -25,13 +25,13 @@ export const Button = ({
 				<ButtonPrimary>
 					<ScrollLink to={scrollTo} smooth={true}>
 						<Image src={src} height={18} width={18} />
-						<a>{children}</a>
+						<p>{children}</p>
 					</ScrollLink>
 				</ButtonPrimary>
 			) : (
 				<ButtonSecondary>
 					<ScrollLink to={scrollTo} smooth={true}>
-						<a>{children}</a>
+						<p>{children}</p>
 					</ScrollLink>
 				</ButtonSecondary>
 			)}
@@ -43,12 +43,19 @@ const ButtonGlobal = styled.button`
 	border: none;
 	font-family: inherit;
 	box-shadow: var(--shadow);
+	cursor: pointer;
 
+	p,
 	a {
 		display: inline-flex;
 		align-items: center;
-		padding: 0.55rem 0.8rem;
+		padding: 0.4rem 0.8rem;
 		font-size: var(--f-btn);
+	}
+
+	&:hover {
+		transition: transform 0.3s linear;
+		transform: scale(1.1);
 	}
 `;
 
@@ -57,6 +64,7 @@ const ButtonSecondary = styled(ButtonGlobal)`
 	background: var(--bg-col);
 	border: 1px solid var(--col1);
 
+	p,
 	a {
 		margin: 0 0.5rem;
 	}
@@ -71,8 +79,8 @@ const ButtonPrimary = styled(ButtonGlobal)`
 		display: inline-block;
 		margin: 0 0.25rem !important;
 	}
+	p,
 	a {
-		padding: 0.55rem 0.8rem;
 		color: var(--bg-col);
 		margin-right: 0.25rem;
 	}

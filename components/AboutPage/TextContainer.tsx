@@ -6,35 +6,58 @@ import { breakpoints } from "@/styledComponents/index";
 import { Headline, Text } from "@/styledComponents/index";
 //others
 //@ts-ignore
-import meImg from "../../public/images/me.JPG";
+import meImg from "../../public/images/me.jpg";
 
 const TextContainer = () => {
 	return (
 		<StyledTextContainer>
 			<Headline>About me</Headline>
-			<ImageWrapper>
-				<Image src={meImg} objectFit="cover"></Image>
-			</ImageWrapper>
-			<TextWrapper>
-				<Text>
-					Hi, I'm Pavel Zapletal a self-taught JavaScript programmer. I'm 26 yo,
-					living in Brno. Creating websites is my bread and butter. When I'm not
-					at home I usually go outside to enjoy some nature.
-				</Text>
-			</TextWrapper>
+			<FlexWrapper>
+				<ImageWrapper>
+					<Image src={meImg} objectFit="cover" placeholder="blur" />
+				</ImageWrapper>
+				<TextWrapper>
+					<Text>
+						Hi, I'm Pavel Zapletal a self-taught JavaScript programmer. I'm 26
+						yo, living in Brno. Creating websites is my bread and butter. When
+						I'm not at home I usually go outside to enjoy some nature.
+					</Text>
+				</TextWrapper>
+			</FlexWrapper>
 		</StyledTextContainer>
 	);
 };
 
 export default TextContainer;
 
+const FlexWrapper = styled.div`
+	display: flex;
+	flex-direction: column;
+	gap: 3rem;
+
+	@media ${breakpoints.tabletS} {
+		flex-direction: row;
+	}
+`;
+
 const ImageWrapper = styled.div`
 	height: 22rem;
 	border-radius: 3rem;
 	overflow: hidden;
+
+	@media ${breakpoints.tabletS} {
+		flex: 1 1 60%;
+		height: auto;
+
+		& > span {
+			height: 100% !important;
+		}
+	}
 `;
 
-const TextWrapper = styled.div``;
+const TextWrapper = styled.div`
+	flex: 1 1 40%;
+`;
 
 const StyledTextContainer = styled.div`
 	display: flex;

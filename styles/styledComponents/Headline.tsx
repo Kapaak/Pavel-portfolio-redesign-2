@@ -21,9 +21,9 @@ const StyledHeadline = styled.div<{ invertColors: boolean }>`
 	&::before {
 		content: "";
 		position: absolute;
-		top: 0;
+		top: -0.8rem;
 		left: 0;
-		width: 8%;
+		width: 1.5rem;
 		height: 0.4rem;
 		background-color: ${({ invertColors }) =>
 			invertColors ? "var(--bg-col)" : "var(--col1)"};

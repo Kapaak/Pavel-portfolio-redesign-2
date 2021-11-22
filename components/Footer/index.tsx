@@ -4,7 +4,7 @@ import IconsContainer from "./IconsContainer";
 import styled from "styled-components";
 //interfaces
 import { FooterObject } from "../../interfaces";
-import { breakpoints } from "@/styledComponents/index";
+import { breakpoints, Text } from "@/styledComponents/index";
 
 interface Props {
 	data: Array<FooterObject>;
@@ -15,7 +15,7 @@ const index = ({ data }: Props) => {
 
 	return (
 		<StyledFooter>
-			<p>© {year} Pavel Zapletal</p>
+			<Text>© {year} Pavel Zapletal</Text>
 			<IconsContainer data={data} />
 		</StyledFooter>
 	);
@@ -30,18 +30,13 @@ const StyledFooter = styled.div`
 	align-content: center;
 	padding: 0 var(--horizontal-gap) var(--horizontal-gap);
 	color: var(--fourth-col);
+	gap: 1rem;
 
-	p {
-		font-size: var(--fosi-text);
-		margin-bottom: 0.6rem;
-	}
-
-	@media ${breakpoints.tablet} {
+	@media ${breakpoints.tabletS} {
 		flex-direction: row;
 		justify-content: center;
+		gap: 2rem;
 
-		p {
-			margin: 0 var(--horizontal-gap) 0 0;
-		}
+		align-items: center;
 	}
 `;

@@ -6,7 +6,7 @@ export const Line = () => {
 
 const StyledLine = styled.div`
 	background-color: var(--col1);
-	width: 90%;
+	width: 30rem;
 	height: 0.3rem;
 	margin: 0 auto;
 `;

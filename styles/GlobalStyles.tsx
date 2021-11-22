@@ -22,6 +22,7 @@ const GlobalStyles = createGlobalStyle`
         --bg-col:#F2F1EE;
 
         --shadow:0 0 20px rgba(8, 1, 1, 0.225);
+        --max-width:96rem;
 
         --fowe-reg:400;
         --fowe-bold:700;
@@ -48,8 +49,6 @@ const GlobalStyles = createGlobalStyle`
 
         --br-main:1.5rem;
 
-        --box-width:26rem;
-        --box-height:calc(var(--box-width)*1.5);
     }
 
     html{
@@ -82,9 +81,8 @@ const GlobalStyles = createGlobalStyle`
     @media ${breakpoints.tablet}{
 		:root {
 			--xd-recalc: .87;
-            --horizontal-gap:4rem;
+            --horizontal-gap:7rem;
 
-            --box-width:30rem;
             --f-t: calc(1.5rem / var(--xd-recalc));
             --fosi-nav:4rem;
 		}
@@ -94,16 +92,13 @@ const GlobalStyles = createGlobalStyle`
         :root{
             --xd-recalc:.86;
             --text-mb:2.5rem;
-            --box-width:36rem;
+            --vertical-gap:10rem;
         }
     }
     @media ${breakpoints.desktopB}{
         :root{
             --xd-recalc:.75;
-            /* --horizontal-gap:8rem;*/
-            --vertical-gap:8rem;
-            --box-width:42rem;
-            --box-height:calc(var(--box-width)*1.4);
+            --vertical-gap:12rem;
         }
     }
     

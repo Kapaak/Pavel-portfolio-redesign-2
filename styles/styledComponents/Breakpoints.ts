@@ -6,7 +6,7 @@ const devices = {
 	tabletS: convertToEm(500),
 	tablet: convertToEm(768),
 	desktop: convertToEm(1024),
-	desktopB: convertToEm(1400),
+	desktopB: convertToEm(1300),
 };
 
 export const breakpoints = {

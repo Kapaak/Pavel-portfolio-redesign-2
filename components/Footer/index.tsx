@@ -36,7 +36,12 @@ const StyledFooter = styled.div`
 		flex-direction: row;
 		justify-content: center;
 		gap: 2rem;
+		padding-bottom: 2rem;
 
 		align-items: center;
+	}
+
+	@media ${breakpoints.desktop} {
+		margin-top: -6rem;
 	}
 `;

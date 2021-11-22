@@ -39,6 +39,15 @@ const FlexWrapper = styled.div`
 	@media ${breakpoints.tabletS} {
 		flex-direction: row;
 	}
+
+	@media ${breakpoints.desktopB} {
+		gap: 5rem;
+
+		img {
+			transform: scale(1.3);
+			margin-left: -5.5rem !important;
+		}
+	}
 `;
 
 const ImageWrapper = styled.div`
@@ -47,7 +56,7 @@ const ImageWrapper = styled.div`
 	overflow: hidden;
 
 	@media ${breakpoints.tabletS} {
-		flex: 1 1 60%;
+		flex: 1 1 50%;
 		height: auto;
 		border-radius: 2rem;
 
@@ -55,10 +64,20 @@ const ImageWrapper = styled.div`
 			height: 100% !important;
 		}
 	}
+
+	@media ${breakpoints.tablet} {
+		max-width: 35rem;
+		height: 44rem;
+	}
+
+	@media ${breakpoints.desktopB} {
+		max-width: 38rem;
+		height: 50rem;
+	}
 `;
 
 const TextWrapper = styled.div`
-	flex: 1 1 40%;
+	flex: 1 1 45%;
 	display: flex;
 	flex-direction: column;
 	gap: 2rem;
@@ -71,6 +90,10 @@ const TextWrapper = styled.div`
 		& > div:first-child {
 			display: inline-block;
 		}
+	}
+
+	@media ${breakpoints.desktopB} {
+		padding-top: 2rem;
 	}
 `;
 

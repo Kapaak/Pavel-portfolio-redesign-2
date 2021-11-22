@@ -1,17 +1,17 @@
 //libs
+import { Headline } from "@/styledComponents/index";
 import styled from "styled-components";
-import { Highlight } from "../../styles/GlobalStyles";
 
 const InnerContainer = () => {
 	return (
 		<StyledInnerContainer>
 			<StyledTextWrapper>
-				<h1>Contact</h1>
+				<Headline invertColors>Contact</Headline>
 				<p>
 					I am always open to new challenges. Want to create something great
 					together? Or just say hello? Feel free to ask me anything.
 				</p>
-				<Highlight>pavel.zaplet25@gmail.com</Highlight>
+				<HighlightedText>pavel.zaplet25@gmail.com</HighlightedText>
 			</StyledTextWrapper>
 		</StyledInnerContainer>
 	);
@@ -19,18 +19,18 @@ const InnerContainer = () => {
 
 export default InnerContainer;
 
-const StyledInnerContainer = styled.div`
-	flex: 1 1 75%;
-	padding: var(--vertical-gap) var(--horizontal-gap);
-	background-color: var(--third-col);
-`;
+const StyledInnerContainer = styled.div``;
 
 const StyledTextWrapper = styled.div`
-	width: 100%;
-	background-color: var(--third-col);
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 2rem;
+`;
 
-	p {
-		margin-bottom: var(--text-mb);
-		font-size: var(--fosi-text);
-	}
+const HighlightedText = styled.div`
+	position: relative;
+	line-height: 2;
+
+	border-bottom: 2px solid var(--bg-col);
 `;

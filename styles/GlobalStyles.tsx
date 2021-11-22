@@ -38,7 +38,7 @@ const GlobalStyles = createGlobalStyle`
         --fosi-nav: calc(2.8rem / var(--xd-recalc)); 
         --fosi-nav:3rem; 
 
-        --horizontal-gap:2rem;
+        --horizontal-gap:3rem;
         --vertical-gap:7rem;
 
         --headline-mb:2.5rem;

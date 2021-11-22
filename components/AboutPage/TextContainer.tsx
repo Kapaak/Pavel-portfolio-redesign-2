@@ -29,7 +29,7 @@ const TextContainer = () => {
 export default TextContainer;
 
 const ImageWrapper = styled.div`
-	height: 18rem;
+	height: 22rem;
 	border-radius: 3rem;
 	overflow: hidden;
 `;
@@ -37,6 +37,7 @@ const ImageWrapper = styled.div`
 const TextWrapper = styled.div``;
 
 const StyledTextContainer = styled.div`
-	margin-bottom: var(--horizontal-gap);
-	z-index: 2;
+	display: flex;
+	flex-direction: column;
+	gap: 3rem;
 `;

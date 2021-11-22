@@ -1,29 +1,16 @@
-//components
-import Wrapper from "./Wrapper";
-//styles
+//libraries
 import styled from "styled-components";
+//components
+import InnerContainer from "components/ContactPage/InnerContainer";
+//styles
+import { Section } from "@/styledComponents/index";
 
-const index = () => {
+const ContactPage = () => {
 	return (
-		<StyledContactPage id="contact-page">
-			<Wrapper />
-			<StyledPlaceholder />
-		</StyledContactPage>
+		<Section id="contact-page" invert>
+			<InnerContainer />
+		</Section>
 	);
 };
 
-export default index;
-
-const StyledContactPage = styled.div`
-	position: relative;
-	display: flex;
-	background-color: var(--fourth-col);
-`;
-
-const StyledPlaceholder = styled.div`
-	position: absolute;
-	bottom: 0;
-	width: 100%;
-	height: 30%;
-	background-color: var(--first-col);
-`;
+export default ContactPage;

@@ -11,4 +11,5 @@ export const Text = ({ children }: Props) => {
 
 const StyledText = styled.div`
 	font-size: var(--f-t);
+	line-height: 1.8;
 `;

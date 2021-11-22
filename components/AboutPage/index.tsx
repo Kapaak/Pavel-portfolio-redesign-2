@@ -1,19 +1,15 @@
 import styled from "styled-components";
 //components
 import InnerContainer from "components/AboutPage/InnerContainer";
+//styles
+import { Section } from "@/styledComponents/index";
 
 const AboutPage = () => {
 	return (
-		<StyledAboutPage id="about-page">
+		<Section id="about-page" background="var(--col2)">
 			<InnerContainer />
-		</StyledAboutPage>
+		</Section>
 	);
 };
 
 export default AboutPage;
-
-const StyledAboutPage = styled.div`
-	position: relative;
-	display: flex;
-	z-index: 1;
-`;

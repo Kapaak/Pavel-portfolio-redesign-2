@@ -33,14 +33,8 @@ export default InnerContainer;
 const StyledInnerContainer = styled.div`
 	display: flex;
 	flex-direction: column;
-	background-color: var(--col2);
 
 	@media ${breakpoints.desktop} {
 		flex-direction: row;
-	}
-
-	@media ${breakpoints.desktopB} {
-		max-width: 140rem;
-		margin: 0 auto;
 	}
 `;

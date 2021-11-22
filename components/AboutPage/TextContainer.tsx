@@ -17,6 +17,7 @@ const TextContainer = () => {
 					<Image src={meImg} objectFit="cover" placeholder="blur" />
 				</ImageWrapper>
 				<TextWrapper>
+					<Headline>About me</Headline>
 					<Text>
 						Hi, I'm Pavel Zapletal a self-taught JavaScript programmer. I'm 26
 						yo, living in Brno. Creating websites is my bread and butter. When
@@ -48,6 +49,7 @@ const ImageWrapper = styled.div`
 	@media ${breakpoints.tabletS} {
 		flex: 1 1 60%;
 		height: auto;
+		border-radius: 2rem;
 
 		& > span {
 			height: 100% !important;
@@ -57,10 +59,29 @@ const ImageWrapper = styled.div`
 
 const TextWrapper = styled.div`
 	flex: 1 1 40%;
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+
+	& > div:first-child {
+		display: none;
+	}
+
+	@media ${breakpoints.tablet} {
+		& > div:first-child {
+			display: inline-block;
+		}
+	}
 `;
 
 const StyledTextContainer = styled.div`
 	display: flex;
 	flex-direction: column;
 	gap: 3rem;
+
+	@media ${breakpoints.tablet} {
+		& > div:first-child {
+			display: none;
+		}
+	}
 `;

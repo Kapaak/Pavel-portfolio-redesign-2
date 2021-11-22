@@ -75,8 +75,4 @@ const StyledListItems = styled(motion.ul)<{ open: boolean }>`
 	color: var(--bg-col);
 	font-weight: var(--fowe-bold);
 	z-index: 9;
-
-	@media ${breakpoints.tablet} {
-		width: 33%;
-	}
 `;

@@ -85,7 +85,7 @@ const GlobalStyles = createGlobalStyle`
             --horizontal-gap:4rem;
 
             --box-width:30rem;
-            --fosi-text: calc(1.5rem / var(--xd-recalc));
+            --f-t: calc(1.5rem / var(--xd-recalc));
             --fosi-nav:4rem;
 		}
     }

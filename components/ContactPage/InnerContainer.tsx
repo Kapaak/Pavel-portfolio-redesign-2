@@ -13,7 +13,9 @@ const InnerContainer = () => {
 					together? Or just say hello? Feel free to ask me anything.
 				</Text>
 			</TextWrapper>
-			<HighlightedText>pavel.zaplet25@gmail.com</HighlightedText>
+			<HighlightedText>
+				<a href="mailto:pavel.zaplet25@gmail.com">pavel.zaplet25@gmail.com</a>
+			</HighlightedText>
 		</StyledInnerContainer>
 	);
 };
@@ -33,13 +35,18 @@ const StyledInnerContainer = styled.div`
 
 const TextWrapper = styled.div`
 	@media ${breakpoints.tabletS} {
-		padding: 0 var(--horizontal-gap);
+		width: 77%;
 	}
 `;
 
 const HighlightedText = styled.div`
 	position: relative;
 	line-height: 2;
-
+	font-size: var(--f-t);
 	border-bottom: 2px solid var(--bg-col);
+
+	a {
+		color: inherit;
+		text-decoration: none;
+	}
 `;

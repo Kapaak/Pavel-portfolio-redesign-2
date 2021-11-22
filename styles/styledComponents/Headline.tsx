@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { breakpoints } from ".";
 
 interface Props {
 	children: React.ReactNode;
@@ -27,5 +28,9 @@ const StyledHeadline = styled.div<{ invertColors: boolean }>`
 		height: 0.4rem;
 		background-color: ${({ invertColors }) =>
 			invertColors ? "var(--bg-col)" : "var(--col1)"};
+	}
+
+	@media ${breakpoints.tabletS} {
+		margin-top: 1.5rem;
 	}
 `;

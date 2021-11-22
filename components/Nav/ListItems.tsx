@@ -35,7 +35,7 @@ const ListItems = ({ open, setOpen }: Props) => {
 			</StyledListItem>
 			<StyledListItem variants={nodeV}>
 				<ScrollLink to="portfolio-page" smooth={true} onClick={clickHandler}>
-					Portfolio
+					Projects
 				</ScrollLink>
 			</StyledListItem>
 			<StyledListItem variants={nodeV}>

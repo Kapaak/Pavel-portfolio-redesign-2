@@ -9,8 +9,6 @@ interface Props {
 }
 
 const Burger = ({ open, setOpen }: Props) => {
-	console.log("burger");
-
 	const handleOpen = useCallback(() => {
 		setOpen(!open);
 	}, [open]);
@@ -50,6 +48,8 @@ const StyledBurger = styled.div`
 	}
 
 	@media ${breakpoints.desktop} {
-		margin: 4rem var(--horizontal-gap) 4rem auto;
+		/* margin: 4rem var(--horizontal-gap) 4rem auto; */
+
+		display: none;
 	}
 `;

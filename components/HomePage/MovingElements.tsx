@@ -13,82 +13,97 @@ import SanityIcon from "../../public/icons/sanity.svg";
 const MovingElements = () => {
 	return (
 		<StyledMovingElements>
-			<h1 style={{ textAlign: "center" }}>moving elements</h1>
-			<InnerWrapper>
-				<MovingElement
-					top={10}
-					left={40}
-					animate={{
-						x: [0, getRandomNumber(1, 15), 0, getRandomNumber(1, 15), 0],
-						y: [0, getRandomNumber(1, 10), getRandomNumber(1, 10), 0],
-					}}
-					transition={{ repeat: Infinity, duration: 4 }}
-				>
-					<Image src={GithubIcon} />
-					<p>github</p>
-				</MovingElement>
-				<MovingElement
-					top={15}
-					left={15}
-					animate={{
-						x: [0, getRandomNumber(1, 15), 0, getRandomNumber(1, 15), 0],
-						y: [0, getRandomNumber(1, 10), getRandomNumber(1, 10), 0],
-					}}
-					transition={{ repeat: Infinity, duration: 4 }}
-				>
-					<Image src={NextjsIcon} />
-					<p>next.js</p>
-				</MovingElement>
-				<MovingElement
-					top={40}
-					left={10}
-					animate={{
-						x: [0, getRandomNumber(1, 15), 0, getRandomNumber(1, 15), 0],
-						y: [0, getRandomNumber(1, 10), getRandomNumber(1, 10), 0],
-					}}
-					transition={{ repeat: Infinity, duration: 4 }}
-				>
-					<Image src={ReactIcon} />
-					<p>react</p>
-				</MovingElement>
-				<MovingElement
-					top={55}
-					left={35}
-					animate={{
-						x: [0, getRandomNumber(1, 15), 0, getRandomNumber(1, 15), 0],
-						y: [0, getRandomNumber(1, 10), getRandomNumber(1, 10), 0],
-					}}
-					transition={{ repeat: Infinity, duration: 4 }}
-				>
-					<Image src={TypescriptIcon} />
-					<p>typescript</p>
-				</MovingElement>
-				<MovingElement
-					top={65}
-					left={65}
-					animate={{
-						x: [0, getRandomNumber(1, 15), 0, getRandomNumber(1, 15), 0],
-						y: [0, getRandomNumber(1, 10), getRandomNumber(1, 10), 0],
-					}}
-					transition={{ repeat: Infinity, duration: 4 }}
-				>
-					<Image src={SvelteIcon} />
-					<p>svelte</p>
-				</MovingElement>
+			<MovingElement
+				top={10}
+				left={35}
+				animate={{
+					x: [0, getRandomNumber(1, 15), 0, getRandomNumber(1, 15), 0],
+					y: [0, getRandomNumber(1, 10), getRandomNumber(1, 10), 0],
+				}}
+				transition={{ repeat: Infinity, duration: 4 }}
+				drag
+				dragConstraints={{ left: 0, top: 0, right: 0, bottom: 0 }}
+				dragElastic={1}
+			>
+				<Image src={GithubIcon} />
+				<p>github</p>
+			</MovingElement>
+			<MovingElement
+				top={40}
+				left={40}
+				animate={{
+					x: [0, getRandomNumber(1, 15), 0, getRandomNumber(1, 15), 0],
+					y: [0, getRandomNumber(1, 10), getRandomNumber(1, 10), 0],
+				}}
+				transition={{ repeat: Infinity, duration: 4 }}
+				drag
+				dragConstraints={{ left: 0, top: 0, right: 0, bottom: 0 }}
+				dragElastic={1}
+			>
+				<Image src={NextjsIcon} />
+				<p>next.js</p>
+			</MovingElement>
+			<MovingElement
+				top={55}
+				left={60}
+				animate={{
+					x: [0, getRandomNumber(1, 15), 0, getRandomNumber(1, 15), 0],
+					y: [0, getRandomNumber(1, 10), getRandomNumber(1, 10), 0],
+				}}
+				transition={{ repeat: Infinity, duration: 4 }}
+				drag
+				dragConstraints={{ left: 0, top: 0, right: 0, bottom: 0 }}
+				dragElastic={1}
+			>
+				<Image src={ReactIcon} />
+				<p>react</p>
+			</MovingElement>
+			<MovingElement
+				top={65}
+				left={28}
+				animate={{
+					x: [0, getRandomNumber(1, 15), 0, getRandomNumber(1, 15), 0],
+					y: [0, getRandomNumber(1, 10), getRandomNumber(1, 10), 0],
+				}}
+				transition={{ repeat: Infinity, duration: 4 }}
+				drag
+				dragConstraints={{ left: 0, top: 0, right: 0, bottom: 0 }}
+				dragElastic={1}
+			>
+				<Image src={TypescriptIcon} />
+				<p>typescript</p>
+			</MovingElement>
+			<MovingElement
+				top={25}
+				left={12}
+				animate={{
+					x: [0, getRandomNumber(1, 15), 0, getRandomNumber(1, 15), 0],
+					y: [0, getRandomNumber(1, 10), getRandomNumber(1, 10), 0],
+				}}
+				transition={{ repeat: Infinity, duration: 4 }}
+				drag
+				dragConstraints={{ left: 0, top: 0, right: 0, bottom: 0 }}
+				dragElastic={1}
+			>
+				<Image src={SvelteIcon} />
+				<p>svelte</p>
+			</MovingElement>
 
-				<MovingElement
-					top={35}
-					left={35}
-					animate={{
-						x: [0, getRandomNumber(1, 15), 0, getRandomNumber(1, 15), 0],
-						y: [0, getRandomNumber(1, 10), getRandomNumber(1, 10), 0],
-					}}
-					transition={{ repeat: Infinity, duration: 4 }}
-				>
-					<Image src={SanityIcon} />
-					<p>sanity.io</p>
-				</MovingElement>
-			</InnerWrapper>
+			<MovingElement
+				top={25}
+				left={65}
+				animate={{
+					x: [0, getRandomNumber(1, 15), 0, getRandomNumber(1, 15), 0],
+					y: [0, getRandomNumber(1, 10), getRandomNumber(1, 10), 0],
+				}}
+				transition={{ repeat: Infinity, duration: 4 }}
+				drag
+				dragConstraints={{ left: 0, top: 0, right: 0, bottom: 0 }}
+				dragElastic={1}
+			>
+				<Image src={SanityIcon} />
+				<p>sanity.io</p>
+			</MovingElement>
 		</StyledMovingElements>
 	);
 };
@@ -107,10 +122,15 @@ const MovingElement = styled(motion.div)<{ top: number; left: number }>`
 	display: flex;
 	top: ${({ top }) => (top ? `${top}%` : "0")};
 	left: ${({ left }) => (left ? `${left}%` : "0")};
+	border: 1px solid var(--bg-col);
 
 	padding: 2rem;
-	border: 1px solid var(--col1);
+
 	border-radius: 50%;
+
+	img {
+		pointer-events: none;
+	}
 
 	p {
 		position: absolute;
@@ -122,19 +142,24 @@ const MovingElement = styled(motion.div)<{ top: number; left: number }>`
 		border-radius: 0.5rem;
 		transform: translate(-50%, 20%);
 		font-size: 1.4rem;
+		opacity: 0;
+		transition: all 0.5s ease;
+	}
+
+	&:hover {
+		border: 1px solid var(--col1);
+		p {
+			opacity: 1;
+		}
 	}
 `;
 
-const InnerWrapper = styled.div`
-	position: relative;
-	border: 1px solid red;
-	height: 100%;
-`;
-
 const StyledMovingElements = styled.div`
+	position: relative;
 	width: 100%;
 	height: 60rem;
-	border: 1px solid black;
+	overflow: hidden;
+	/* border: 1px solid black; */
 `;
 
 export default MovingElements;

@@ -31,7 +31,7 @@ const InnerContainer = () => {
 export default InnerContainer;
 
 const StyledInnerContainer = styled.div`
-	margin-top: 10rem;
+	//margin-top: 10rem;//add
 	width: 100%;
 `;
 

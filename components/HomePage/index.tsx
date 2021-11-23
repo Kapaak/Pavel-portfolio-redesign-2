@@ -23,6 +23,7 @@ const StyledHomePage = styled.div`
 	background: var(--bg-col);
 
 	display: flex;
+	flex-direction: column-reverse; //remove
 	justify-content: flex-start;
 	align-items: center;
 	padding: var(--vertical-gap) var(--horizontal-gap);

@@ -157,7 +157,8 @@ const MovingElement = styled(motion.div)<{ top: number; left: number }>`
 const StyledMovingElements = styled.div`
 	position: relative;
 	width: 100%;
-	height: 60rem;
+	height: 37rem;
+	/* height: 60rem; //add */
 	overflow: hidden;
 	/* border: 1px solid black; */
 `;

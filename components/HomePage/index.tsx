@@ -4,11 +4,13 @@ import Wrapper from "./Wrapper";
 import styled from "styled-components";
 //breakpoints
 import { breakpoints } from "@/styledComponents/index";
+import MovingElements from "./MovingElements";
 
 const HomePage = () => {
 	return (
 		<StyledHomePage id="home-page">
 			<Wrapper />
+			<MovingElements />
 		</StyledHomePage>
 	);
 };

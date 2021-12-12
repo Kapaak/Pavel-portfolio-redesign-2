@@ -19,6 +19,7 @@ const GlobalStyles = createGlobalStyle`
 
         --col1:#0D1321;
         --col2:#E8E8DD;
+        --col3:#FBFBFB;
         --bg-col:#F2F1EE;
 
         --shadow:0 0 20px rgba(8, 1, 1, 0.225);
@@ -33,6 +34,7 @@ const GlobalStyles = createGlobalStyle`
         --f-mshl: calc(2.3rem / var(--xd-recalc));
         --f-hl: calc(4.6rem / var(--xd-recalc));
         --f-btn: calc(1.6rem / var(--xd-recalc)); 
+        --f-bt: calc(2rem / var(--xd-recalc));
         --f-t: calc(1.8rem / var(--xd-recalc));
         
         --fosi-subheadline: calc(2.5rem / var(--xd-recalc));

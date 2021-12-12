@@ -2,6 +2,7 @@
 import Nav from "../components/Nav";
 import HomePage from "../components/HomePage";
 import AboutPage from "../components/AboutPage";
+import ProjectsPage from "components/ProjectsPage";
 import ContactPage from "../components/ContactPage";
 import Footer from "../components/Footer";
 //data
@@ -14,6 +15,7 @@ export default function Home() {
 			<Nav />
 			<HomePage />
 			<AboutPage />
+			<ProjectsPage />
 			<ContactPage />
 			<Footer data={footerData()} />
 		</>

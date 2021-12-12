@@ -8,4 +8,3 @@ export { Text } from "./Text";
 export { Section } from "./Section";
 export { MaxWidth } from "./MaxWidth";
 export { FlexWrapper } from "./FlexWrapper";
-export { ButtonNew } from "./ButtonNew";

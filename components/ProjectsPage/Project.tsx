@@ -12,8 +12,10 @@ const Project = () => {
 				<Image src={ProjectImage} />
 			</ImageWrapper>
 			<HeadlineWrapper>Rick and Morty</HeadlineWrapper>
-			{/*je treba ty buttony prepsat, je to shit */}
-			<ButtonsWrapper>{/* <Button>pepe</Button> */}</ButtonsWrapper>
+			<ButtonsWrapper>
+				<Button primaryButton={true}>visit website</Button>
+				<Button>show details</Button>
+			</ButtonsWrapper>
 			<div>
 				hidden
 				<div>left options</div>
@@ -30,6 +32,10 @@ const HeadlineWrapper = styled.h1`
 
 const ButtonsWrapper = styled.div`
 	display: flex;
+
+	/* button a {
+		padding: 0.2rem;
+	} */
 `;
 
 const ImageWrapper = styled.div`

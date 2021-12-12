@@ -24,7 +24,7 @@ export const Button = ({
 			{primaryButton ? (
 				<ButtonPrimary>
 					<ScrollLink to={scrollTo} smooth={true}>
-						<Image src={src} height={18} width={18} />
+						{src.length !== 0 && <Image src={src} height={18} width={18} />}
 						<p>{children}</p>
 					</ScrollLink>
 				</ButtonPrimary>

@@ -6,13 +6,7 @@ interface Props {
 	invertColors?: boolean;
 }
 
-export const Headline = ({ children, invertColors = false }: Props) => {
-	return (
-		<StyledHeadline invertColors={invertColors}>{children}</StyledHeadline>
-	);
-};
-
-const StyledHeadline = styled.div<{ invertColors: boolean }>`
+export const Headline = styled.div<{ invertColors: boolean }>`
 	position: relative;
 	color: ${({ invertColors }) =>
 		invertColors ? "var(--bg-col)" : "var(--col1)"};

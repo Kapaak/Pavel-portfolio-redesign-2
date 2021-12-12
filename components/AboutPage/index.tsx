@@ -2,14 +2,20 @@ import styled from "styled-components";
 //components
 import InnerContainer from "components/AboutPage/InnerContainer";
 //styles
-import { Section } from "@/styledComponents/index";
+import { MaxWidth, Section } from "styles/customs";
 
 const AboutPage = () => {
 	return (
-		<Section id="about-page" background="var(--col2)">
-			<InnerContainer />
-		</Section>
+		<SAboutPage id="about-page">
+			<MaxWidth>
+				<InnerContainer />
+			</MaxWidth>
+		</SAboutPage>
 	);
 };
+
+const SAboutPage = styled(Section)`
+	background-color: var(--col2);
+`;
 
 export default AboutPage;

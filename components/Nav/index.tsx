@@ -1,7 +1,7 @@
 //libs
-import { breakpoints } from "@/styledComponents/Breakpoints";
 import { useState } from "react";
 import styled from "styled-components";
+import { breakpoints } from "@/customs/index";
 //components
 import Burger from "./Burger";
 import ListItems from "./ListItems";
@@ -14,7 +14,7 @@ const index = () => {
 	return (
 		<StyledNav>
 			<WrapperDiv>
-				<Logo />
+				<Logo open={open} />
 				<ListItems open={open} setOpen={setOpen} />
 				<ListItemsDesktop />
 				<Burger open={open} setOpen={setOpen} />

@@ -3,14 +3,21 @@ import styled from "styled-components";
 //components
 import InnerContainer from "components/ContactPage/InnerContainer";
 //styles
-import { Section } from "@/styledComponents/index";
+import { MaxWidth, Section } from "styles/customs";
 
 const ContactPage = () => {
 	return (
-		<Section id="contact-page" invert>
-			<InnerContainer />
-		</Section>
+		<SContactPage id="contact-page">
+			<MaxWidth>
+				<InnerContainer />
+			</MaxWidth>
+		</SContactPage>
 	);
 };
+
+const SContactPage = styled(Section)`
+	background-color: var(--col1);
+	color: var(--bg-col);
+`;
 
 export default ContactPage;

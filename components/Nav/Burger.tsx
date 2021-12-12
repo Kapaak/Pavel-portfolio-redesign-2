@@ -1,7 +1,7 @@
 //libs
 import { useCallback } from "react";
 import styled from "styled-components";
-import { breakpoints } from "@/styledComponents/index";
+import { breakpoints } from "styles/customs";
 
 interface Props {
 	open: boolean;

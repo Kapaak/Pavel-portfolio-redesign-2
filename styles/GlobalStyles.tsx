@@ -2,7 +2,7 @@
 import { createGlobalStyle } from "styled-components";
 import styled from "styled-components";
 //breakpoints
-import { breakpoints } from "@/styledComponents/index";
+import { breakpoints } from "styles/customs";
 
 const GlobalStyles = createGlobalStyle`
     *,*::before,*::after{
@@ -22,7 +22,7 @@ const GlobalStyles = createGlobalStyle`
         --bg-col:#F2F1EE;
 
         --shadow:0 0 20px rgba(8, 1, 1, 0.225);
-        --max-width:96rem;
+        --max-width:130rem;
 
         --fowe-reg:400;
         --fowe-bold:700;
@@ -95,7 +95,7 @@ const GlobalStyles = createGlobalStyle`
             --vertical-gap:10rem;
         }
     }
-    @media ${breakpoints.desktopB}{
+    @media ${breakpoints.desktopX}{
         :root{
             --xd-recalc:.75;
             --vertical-gap:12rem;

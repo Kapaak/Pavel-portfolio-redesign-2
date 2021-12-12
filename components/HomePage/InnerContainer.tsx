@@ -1,12 +1,8 @@
 //components
-import {
-	Button,
-	MainSubHeadline,
-	MainHeadline,
-	Line,
-} from "@/styledComponents/index";
+import { Button, MainSubHeadline, MainHeadline, Line } from "styles/customs";
 //styles
 import styled from "styled-components";
+import { breakpoints } from "styles/customs";
 
 const InnerContainer = () => {
 	return (
@@ -40,4 +36,8 @@ const ButtonWrapper = styled.div`
 	align-items: center;
 	justify-content: center;
 	gap: 2rem;
+
+	@media ${breakpoints.desktop} {
+		justify-content: flex-start;
+	}
 `;

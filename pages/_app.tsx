@@ -1,7 +1,7 @@
 //types
 import type { AppProps } from "next/app";
 //components
-import Head from "@/styledComponents/Head";
+import Head from "styles/customs/Head";
 //styles
 import GlobalStyles from "../styles/GlobalStyles";
 

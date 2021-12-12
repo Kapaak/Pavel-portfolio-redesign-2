@@ -4,7 +4,7 @@ import IconsContainer from "./IconsContainer";
 import styled from "styled-components";
 //interfaces
 import { FooterObject } from "../../interfaces";
-import { breakpoints, Text } from "@/styledComponents/index";
+import { breakpoints, Text } from "styles/customs";
 
 interface Props {
 	data: Array<FooterObject>;

@@ -2,8 +2,8 @@
 import styled from "styled-components";
 import Image from "next/image";
 //styles
-import { breakpoints } from "@/styledComponents/index";
-import { Headline, Text } from "@/styledComponents/index";
+import { breakpoints } from "styles/customs";
+import { Headline, Text } from "styles/customs";
 //others
 //@ts-ignore
 import meImg from "../../public/images/profile-img.jpg";
@@ -40,7 +40,7 @@ const FlexWrapper = styled.div`
 		flex-direction: row;
 	}
 
-	@media ${breakpoints.desktopB} {
+	@media ${breakpoints.desktopX} {
 		gap: 5rem;
 
 		img {
@@ -70,7 +70,7 @@ const ImageWrapper = styled.div`
 		height: 44rem;
 	}
 
-	@media ${breakpoints.desktopB} {
+	@media ${breakpoints.desktopX} {
 		max-width: 38rem;
 		height: 50rem;
 	}
@@ -92,7 +92,7 @@ const TextWrapper = styled.div`
 		}
 	}
 
-	@media ${breakpoints.desktopB} {
+	@media ${breakpoints.desktopX} {
 		padding-top: 2rem;
 	}
 `;

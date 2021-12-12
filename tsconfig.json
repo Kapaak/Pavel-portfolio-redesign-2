@@ -22,8 +22,8 @@
       "@/animations/*": [
         "animations/*"
       ],
-      "@/styledComponents/*": [
-        "styles/styledComponents/*"
+      "@/customs/*": [
+        "styles/customs/*"
       ]
     },
     "incremental": true

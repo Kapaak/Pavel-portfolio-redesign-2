@@ -3,7 +3,7 @@ import styled from "styled-components";
 //components
 import InnerContainer from "./InnerContainer";
 //breakpoints
-import { breakpoints } from "@/styledComponents/index";
+import { breakpoints } from "styles/customs/";
 
 const Wrapper = () => {
 	return (

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { breakpoints } from ".";
 
 interface Props {
 	children: React.ReactNode;
@@ -13,4 +14,8 @@ const StyledMainSubhHeadline = styled.h2`
 	font-size: var(--f-mshl);
 	font-weight: var(--fowe-bold);
 	text-align: center;
+
+	@media ${breakpoints.desktop} {
+		text-align: left;
+	}
 `;

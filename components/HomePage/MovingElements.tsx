@@ -11,99 +11,34 @@ import SvelteIcon from "../../public/icons/svelte.svg";
 import SanityIcon from "../../public/icons/sanity.svg";
 
 const MovingElements = () => {
+	const arrayIcons = [
+		{ img: GithubIcon, name: "github", position: [10, 35] },
+		{ img: NextjsIcon, name: "next.js", position: [40, 40] },
+		{ img: ReactIcon, name: "react", position: [55, 60] },
+		{ img: TypescriptIcon, name: "typescript", position: [65, 28] },
+		{ img: SvelteIcon, name: "svelte", position: [25, 12] },
+		{ img: SanityIcon, name: "sanity.io", position: [25, 65] },
+	];
 	return (
 		<StyledMovingElements>
-			<MovingElement
-				top={10}
-				left={35}
-				animate={{
-					x: [0, getRandomNumber(1, 15), 0, getRandomNumber(1, 15), 0],
-					y: [0, getRandomNumber(1, 10), getRandomNumber(1, 10), 0],
-				}}
-				transition={{ repeat: Infinity, duration: 4 }}
-				drag
-				dragConstraints={{ left: 0, top: 0, right: 0, bottom: 0 }}
-				dragElastic={1}
-			>
-				<Image src={GithubIcon} />
-				<p>github</p>
-			</MovingElement>
-			<MovingElement
-				top={40}
-				left={40}
-				animate={{
-					x: [0, getRandomNumber(1, 15), 0, getRandomNumber(1, 15), 0],
-					y: [0, getRandomNumber(1, 10), getRandomNumber(1, 10), 0],
-				}}
-				transition={{ repeat: Infinity, duration: 4 }}
-				drag
-				dragConstraints={{ left: 0, top: 0, right: 0, bottom: 0 }}
-				dragElastic={1}
-			>
-				<Image src={NextjsIcon} />
-				<p>next.js</p>
-			</MovingElement>
-			<MovingElement
-				top={55}
-				left={60}
-				animate={{
-					x: [0, getRandomNumber(1, 15), 0, getRandomNumber(1, 15), 0],
-					y: [0, getRandomNumber(1, 10), getRandomNumber(1, 10), 0],
-				}}
-				transition={{ repeat: Infinity, duration: 4 }}
-				drag
-				dragConstraints={{ left: 0, top: 0, right: 0, bottom: 0 }}
-				dragElastic={1}
-			>
-				<Image src={ReactIcon} />
-				<p>react</p>
-			</MovingElement>
-			<MovingElement
-				top={65}
-				left={28}
-				animate={{
-					x: [0, getRandomNumber(1, 15), 0, getRandomNumber(1, 15), 0],
-					y: [0, getRandomNumber(1, 10), getRandomNumber(1, 10), 0],
-				}}
-				transition={{ repeat: Infinity, duration: 4 }}
-				drag
-				dragConstraints={{ left: 0, top: 0, right: 0, bottom: 0 }}
-				dragElastic={1}
-			>
-				<Image src={TypescriptIcon} />
-				<p>typescript</p>
-			</MovingElement>
-			<MovingElement
-				top={25}
-				left={12}
-				animate={{
-					x: [0, getRandomNumber(1, 15), 0, getRandomNumber(1, 15), 0],
-					y: [0, getRandomNumber(1, 10), getRandomNumber(1, 10), 0],
-				}}
-				transition={{ repeat: Infinity, duration: 4 }}
-				drag
-				dragConstraints={{ left: 0, top: 0, right: 0, bottom: 0 }}
-				dragElastic={1}
-			>
-				<Image src={SvelteIcon} />
-				<p>svelte</p>
-			</MovingElement>
-
-			<MovingElement
-				top={25}
-				left={65}
-				animate={{
-					x: [0, getRandomNumber(1, 15), 0, getRandomNumber(1, 15), 0],
-					y: [0, getRandomNumber(1, 10), getRandomNumber(1, 10), 0],
-				}}
-				transition={{ repeat: Infinity, duration: 4 }}
-				drag
-				dragConstraints={{ left: 0, top: 0, right: 0, bottom: 0 }}
-				dragElastic={1}
-			>
-				<Image src={SanityIcon} />
-				<p>sanity.io</p>
-			</MovingElement>
+			{arrayIcons?.map((icon, index) => (
+				<MovingElement
+					key={index}
+					top={icon.position[0]}
+					left={icon.position[1]}
+					animate={{
+						x: [0, getRandomNumber(1, 15), 0, getRandomNumber(1, 15), 0],
+						y: [0, getRandomNumber(1, 10), getRandomNumber(1, 10), 0],
+					}}
+					transition={{ repeat: Infinity, duration: 4 }}
+					drag
+					dragConstraints={{ left: 0, top: 0, right: 0, bottom: 0 }}
+					dragElastic={1}
+				>
+					<Image src={icon.img} />
+					<p>{icon.name}</p>
+				</MovingElement>
+			))}
 		</StyledMovingElements>
 	);
 };
@@ -123,12 +58,11 @@ const MovingElement = styled(motion.div)<{ top: number; left: number }>`
 	top: ${({ top }) => (top ? `${top}%` : "0")};
 	left: ${({ left }) => (left ? `${left}%` : "0")};
 	border: 1px solid var(--bg-col);
-
 	padding: 2rem;
-
 	border-radius: 50%;
 
 	img {
+		width: 5rem !important;
 		pointer-events: none;
 	}
 

@@ -4,9 +4,9 @@ import Image from "next/image";
 //styles
 import styled from "styled-components";
 //interfaces
-import { FooterObject } from "../../interfaces";
+import { FooterType } from "../../interfaces";
 interface Props {
-	data: FooterObject;
+	data: FooterType;
 }
 
 const IconContainer = ({ data }: Props) => {

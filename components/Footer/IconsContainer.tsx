@@ -3,10 +3,10 @@ import styled from "styled-components";
 //components
 import IconContainer from "./IconContainer";
 //interfaces
-import { FooterObject } from "../../interfaces";
+import { FooterType } from "../../interfaces";
 
 interface Props {
-	data: Array<FooterObject>;
+	data: Array<FooterType>;
 }
 
 const IconsContainer = ({ data }: Props) => {

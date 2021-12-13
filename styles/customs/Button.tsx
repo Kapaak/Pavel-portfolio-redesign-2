@@ -18,18 +18,19 @@ export const Button = ({
 	scrollTo = "",
 	primaryButton = false,
 	src = "",
+	onClick,
 }: Props) => {
 	return (
 		<>
 			{primaryButton ? (
-				<ButtonPrimary>
+				<ButtonPrimary onClick={onClick}>
 					<ScrollLink to={scrollTo} smooth={true}>
 						{src.length !== 0 && <Image src={src} height={18} width={18} />}
 						<p>{children}</p>
 					</ScrollLink>
 				</ButtonPrimary>
 			) : (
-				<ButtonSecondary>
+				<ButtonSecondary onClick={onClick}>
 					<ScrollLink to={scrollTo} smooth={true}>
 						<p>{children}</p>
 					</ScrollLink>
@@ -74,7 +75,7 @@ const ButtonSecondary = styled(ButtonGlobal)`
 `;
 
 const ButtonPrimary = styled(ButtonGlobal)`
-	border: 1px solid var(--col1);
+	/* border: 1px solid var(--col1); */
 	background-color: var(--col1);
 	box-shadow: var(--shadow);
 

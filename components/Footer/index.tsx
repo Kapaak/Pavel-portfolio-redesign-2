@@ -3,11 +3,11 @@ import IconsContainer from "./IconsContainer";
 //styles
 import styled from "styled-components";
 //interfaces
-import { FooterObject } from "../../interfaces";
+import { FooterType } from "../../interfaces";
 import { breakpoints, Text } from "styles/customs";
 
 interface Props {
-	data: Array<FooterObject>;
+	data: Array<FooterType>;
 }
 
 const index = ({ data }: Props) => {

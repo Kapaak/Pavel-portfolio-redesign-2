@@ -6,8 +6,7 @@ import ProjectsPage from "components/ProjectsPage";
 import ContactPage from "../components/ContactPage";
 import Footer from "../components/Footer";
 //data
-import data from "../data";
-import { footerData } from "../data";
+import { footerData, projectData } from "../data";
 
 export default function Home() {
 	return (
@@ -15,9 +14,9 @@ export default function Home() {
 			<Nav />
 			<HomePage />
 			<AboutPage />
-			<ProjectsPage />
+			<ProjectsPage data={projectData} />
 			<ContactPage />
-			<Footer data={footerData()} />
+			<Footer data={footerData} />
 		</>
 	);
 }

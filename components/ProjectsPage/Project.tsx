@@ -2,23 +2,31 @@
 import { useState } from "react";
 import styled from "styled-components";
 import Image from "next/image";
-//other
-import ProjectImage from "../../public/images/projects/RickAndMorty-app.png";
-import { Button } from "@/customs/Button";
+//styles
+import { ButtonProject } from "@/customs/index";
+//others
+import { ProjectType } from "interfaces";
 
-const Project = () => {
+interface Props {
+	data: ProjectType;
+}
+
+const Project = ({ data }: Props) => {
 	const [active, setActive] = useState(false);
 
-	console.log(active);
+	const handleClick = () => {
+		setActive(prev => !prev);
+	};
+
 	return (
 		<SProject>
 			<ImageWrapper>
-				<Image src={ProjectImage} layout="fill" objectFit="cover" />
+				<Image src={data.image} layout="fill" objectFit="cover" />
 			</ImageWrapper>
-			<HeadlineWrapper>Rick and Morty</HeadlineWrapper>
+			<HeadlineWrapper>{data.title}</HeadlineWrapper>
 			<ButtonsWrapper>
-				<Button primaryButton={true}>visit website</Button>
-				<button onClick={() => setActive(prev => !prev)}>show details</button>
+				<ButtonProject variant={1}>visit website</ButtonProject>
+				<ButtonProject onClick={handleClick}>show details</ButtonProject>
 			</ButtonsWrapper>
 			<DetailsWrapper active={active}>
 				<DetailsLeft>
@@ -27,13 +35,9 @@ const Project = () => {
 					<p>Fonts</p>
 				</DetailsLeft>
 				<DetailsRight>
-					<p>
-						Next.js <span style={{ color: "var(--col4)" }}>/</span> Sanity.io
-					</p>
+					<p>Next.js / Sanity.io</p>
 					<p>Colors</p>
-					<p>
-						Roboto <span style={{ color: "var(--col4)" }}>/</span> Oswald
-					</p>
+					<p>Roboto / Oswald</p>
 				</DetailsRight>
 			</DetailsWrapper>
 		</SProject>
@@ -41,18 +45,17 @@ const Project = () => {
 };
 
 const DetailsLeft = styled.div`
-	padding: 2rem;
-	border-radius: 1rem;
-	background-color: var(--col1);
-	color: var(--col3);
+	padding: 2rem 0;
+	font-weight: var(--fowe-bold);
 `;
 
 const DetailsRight = styled.div`
-	padding: 2rem;
+	padding: 2rem 0;
 `;
 
 const DetailsWrapper = styled.div<{ active: boolean }>`
 	display: ${({ active }) => (active ? "flex" : "none")};
+	gap: 2rem;
 	border-top: 1px solid var(--col4);
 	margin-top: 2rem;
 	padding: 2rem 0;
@@ -67,23 +70,11 @@ const HeadlineWrapper = styled.h1`
 const ButtonsWrapper = styled.div`
 	display: flex;
 	gap: 1rem;
-
-	button a {
-		padding: 0.6rem 0.8rem;
-	}
-
-	button:last-child {
-		border: none;
-
-		background-color: transparent;
-		box-shadow: none;
-		font-weight: var(--fowe-bold);
-	}
 `;
 
 const ImageWrapper = styled.div`
 	position: relative;
-	border-radius: 1.4rem;
+	border-radius: 1.2rem;
 	overflow: hidden;
 	height: 18rem;
 `;

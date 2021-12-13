@@ -1,13 +1,13 @@
-export interface PortfolioObject {
+export interface ProjectType {
 	title: string;
-	description: string;
 	url: string;
 	colors: Array<string>;
-	image: string;
-	status?: string;
+	image: StaticImageData;
+	fonts: Array<string>;
+	tech: Array<string>;
 }
 
-export interface FooterObject {
+export interface FooterType {
 	icon: string;
 	link: string;
 }

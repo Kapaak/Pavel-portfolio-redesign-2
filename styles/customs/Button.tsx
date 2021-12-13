@@ -23,14 +23,14 @@ export const Button = ({
 	return (
 		<>
 			{primaryButton ? (
-				<ButtonPrimary onClick={onClick}>
+				<ButtonPrimary>
 					<ScrollLink to={scrollTo} smooth={true}>
 						{src.length !== 0 && <Image src={src} height={18} width={18} />}
 						<p>{children}</p>
 					</ScrollLink>
 				</ButtonPrimary>
 			) : (
-				<ButtonSecondary onClick={onClick}>
+				<ButtonSecondary>
 					<ScrollLink to={scrollTo} smooth={true}>
 						<p>{children}</p>
 					</ScrollLink>

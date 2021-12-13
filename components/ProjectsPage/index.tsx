@@ -4,14 +4,22 @@ import styled from "styled-components";
 import Project from "./Project";
 //styles
 import { Section, MaxWidth, FlexWrapper, Headline } from "@/customs/index";
+//interfaces
+import { ProjectType } from "interfaces";
 
-const ProjectsPage = () => {
+interface Props {
+	data: Array<ProjectType>;
+}
+
+const ProjectsPage = ({ data }: Props) => {
 	return (
 		<SProjectPage>
 			<MaxWidth>
 				<Headline>Recent projects</Headline>
 				<FlexWrapper>
-					<Project />
+					{data.map((d: ProjectType, i: number) => (
+						<Project key={i} data={d} />
+					))}
 				</FlexWrapper>
 			</MaxWidth>
 		</SProjectPage>

@@ -13,5 +13,5 @@ export const ButtonProject = styled.button<{ variant?: RangeType }>`
 		variant == 1 ? "var(--col1)" : "var(--bg-col)"};
 	color: ${({ variant }) => (variant == 1 ? "var(--bg-col)" : "var(--col1)")};
 	padding: 0.8rem 1.4rem;
-	font-size: var(--f-btn);
+	font-size: 1.6rem;
 `;

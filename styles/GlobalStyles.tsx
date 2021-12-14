@@ -91,7 +91,7 @@ const GlobalStyles = createGlobalStyle`
 		:root {
 			--xd-recalc: .87;
             --horizontal-gap:7rem;
-
+            --f-bt: calc(2.3rem / var(--xd-recalc));
             --f-t: calc(1.5rem / var(--xd-recalc));
             --fosi-nav:4rem;
 		}

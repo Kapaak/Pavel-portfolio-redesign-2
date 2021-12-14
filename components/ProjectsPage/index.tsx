@@ -3,7 +3,7 @@ import styled from "styled-components";
 //components
 import Project from "./Project";
 //styles
-import { Section, MaxWidth, FlexWrapper, Headline } from "@/customs/index";
+import { Section, MaxWidth, Headline, breakpoints } from "@/customs/index";
 //interfaces
 import { ProjectType } from "interfaces";
 
@@ -38,9 +38,12 @@ const SMaxWidth = styled(MaxWidth)`
 
 const GridWrapper = styled.div`
 	display: grid;
-	/* grid-template-columns: repeat(2, 1fr); */
 	align-items: flex-start;
 	gap: 2rem;
+
+	@media ${breakpoints.tablet} {
+		grid-template-columns: repeat(2, 1fr);
+	}
 `;
 
 const SProjectPage = styled(Section)`

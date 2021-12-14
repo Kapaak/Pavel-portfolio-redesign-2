@@ -16,7 +16,7 @@ const ListItemsDesktop = () => {
 				</ScrollLink>
 			</StyledListItem>
 			<StyledListItem>
-				<ScrollLink to="portfolio-page" smooth={true}>
+				<ScrollLink to="projects-page" smooth={true}>
 					Projects
 				</ScrollLink>
 			</StyledListItem>

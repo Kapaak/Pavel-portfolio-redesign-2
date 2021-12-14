@@ -13,7 +13,7 @@ interface Props {
 
 const ProjectsPage = ({ data }: Props) => {
 	return (
-		<SProjectPage>
+		<SProjectPage id="projects-page">
 			<SMaxWidth>
 				<Headline>Recent projects</Headline>
 				<GridWrapper>

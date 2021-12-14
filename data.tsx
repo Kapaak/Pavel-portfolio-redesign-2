@@ -34,23 +34,23 @@ export const projectData: Array<ProjectType> = [
 
 export const footerData: Array<FooterType> = [
 	{
-		icon: "/images/icons/codepen.svg",
+		icon: "/icons/codepen.svg",
 		link: "https://codepen.io/Kapaak",
 	},
 	{
-		icon: "/images/icons/github2.svg",
+		icon: "/icons/github.svg",
 		link: "https://github.com/Kapaak",
 	},
 	{
-		icon: "/images/icons/linkedin.svg",
+		icon: "/icons/linkedin.svg",
 		link: "https://www.linkedin.com/in/pavel-zapletal-903bb2188/",
 	},
 	{
-		icon: "/images/icons/instagram.svg",
+		icon: "/icons/instagram.svg",
 		link: "https://www.instagram.com/pavel_kapaak/",
 	},
 	{
-		icon: "/images/icons/facebook.svg",
+		icon: "/icons/facebook.svg",
 		link: "https://www.facebook.com/pavel.kappa.zapletal",
 	},
 ];

@@ -16,7 +16,7 @@ const ProjectsPage = ({ data }: Props) => {
 		<SProjectPage>
 			<MaxWidth>
 				<Headline>Recent projects</Headline>
-				<FlexWrapper>
+				<FlexWrapper gap="2rem">
 					{data.map((d: ProjectType, i: number) => (
 						<Project key={i} data={d} />
 					))}

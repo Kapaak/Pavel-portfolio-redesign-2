@@ -85,6 +85,7 @@ const GlobalStyles = createGlobalStyle`
     @media ${breakpoints.tabletS}{
 		:root {
             --horizontal-gap:5rem;
+            --f-hl: calc(3rem / var(--xd-recalc));
 		}
     }
     @media ${breakpoints.tablet}{
@@ -107,6 +108,7 @@ const GlobalStyles = createGlobalStyle`
     @media ${breakpoints.desktopX}{
         :root{
             --xd-recalc:.75;
+            --f-bt: calc(2rem / var(--xd-recalc));
             --vertical-gap:12rem;
         }
     }

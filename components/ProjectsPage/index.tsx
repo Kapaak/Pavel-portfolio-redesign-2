@@ -44,6 +44,10 @@ const GridWrapper = styled.div`
 	@media ${breakpoints.tablet} {
 		grid-template-columns: repeat(2, 1fr);
 	}
+
+	@media ${breakpoints.desktopX} {
+		grid-template-columns: repeat(3, 1fr);
+	}
 `;
 
 const SProjectPage = styled(Section)`

@@ -4,31 +4,40 @@ import { ProjectType, FooterType } from "./interfaces/index";
 import AmbrozImage from "./public/images/projects/Ambroz.png";
 import BarboraNovakovaImage from "./public/images/projects/BarboraNovakova.png";
 import RickAndMortyImage from "./public/images/projects/RickAndMorty.png";
+import KuchtaBuchtaImage from "./public/images/projects/KuchtaBuchta.png";
 
 export const projectData: Array<ProjectType> = [
 	{
+		title: "Kuchta Buchta",
+		colors: ["#B0235F", "#FA7268", "#363636"],
+		url: "https://kuchta-buchta.vercel.app/",
+		image: KuchtaBuchtaImage,
+		fonts: ["Oswald", "Rajdhani"],
+		tech: ["Next.js", "Sanity.io"],
+	},
+	{
 		title: "Barbora Nováková",
-		colors: ["#B66460", "#F4D58D", "#F8F8F8 "],
+		colors: ["#F8F8F8", "#8D0801", "#001427 "],
 		url: "https://barboranovakova.vercel.app/",
 		image: BarboraNovakovaImage,
-		fonts: ["InitialFont", "InitialFont2"],
-		tech: ["DefaultTech", "DefaultTech2"],
+		fonts: ["Roboto", "Righteous"],
+		tech: ["Next.js", "Sanity.io"],
 	},
+	// {
+	// 	title: "Stomatologie Ambrožovi",
+	// 	colors: ["#FE6246", "#E5568F", "#F6C64E"],
+	// 	url: "https://ambroz-dent.vercel.app/",
+	// 	image: AmbrozImage,
+	// 	fonts: ["InitialFont", "InitialFont2"],
+	// 	tech: ["DefaultTech", "DefaultTech2"],
+	// },
 	{
-		title: "Stomatologie Ambrožovi",
-		colors: ["#FE6246", "#E5568F", "#F6C64E"],
-		url: "https://ambroz-dent.vercel.app/",
-		image: AmbrozImage,
-		fonts: ["InitialFont", "InitialFont2"],
-		tech: ["DefaultTech", "DefaultTech2"],
-	},
-	{
-		title: "Rick & Morty database",
-		colors: ["#01383A", "#88BE43", "#F5C1A0"],
-		url: "https://rick-and-morty-dbs.vercel.app/",
+		title: "Rick and Morty",
+		colors: ["#001427", "#A2F3BC", "#F5BB40"],
+		url: "https://rick-a-morty.vercel.app/",
 		image: RickAndMortyImage,
-		fonts: ["InitialFont", "InitialFont2"],
-		tech: ["DefaultTech", "DefaultTech2"],
+		fonts: ["Rajdhani"],
+		tech: ["Next.js", "Rick and Morty API"],
 	},
 ];
 

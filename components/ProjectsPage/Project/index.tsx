@@ -26,7 +26,9 @@ const Project = ({ data }: Props) => {
 			<HeadlineWrapper>{data.title}</HeadlineWrapper>
 			<ButtonsWrapper>
 				<ButtonProject variant={1}>visit website</ButtonProject>
-				<ButtonProject onClick={handleClick}>show details</ButtonProject>
+				<ButtonProject onClick={handleClick}>
+					{active ? "hide " : "show "}details
+				</ButtonProject>
 			</ButtonsWrapper>
 			<ProjectDetails
 				active={active}

@@ -31,7 +31,7 @@ const ProjectDetails = ({ active, colors, fonts, tech }: Props) => {
 
 	const outputFonts = () => {
 		return fonts.map((f, i) => {
-			if (i + 1 !== tech.length && tech.length === 1)
+			if (i + 1 !== fonts.length)
 				return (
 					<SmallFlexWrapper key={i} direction="row" gap=".5rem">
 						<p>{f}</p>

@@ -31,7 +31,7 @@ const ProjectDetails = ({ active, colors, fonts, tech }: Props) => {
 
 	const outputFonts = () => {
 		return fonts.map((f, i) => {
-			if (i + 1 !== tech.length)
+			if (i + 1 !== tech.length && tech.length === 1)
 				return (
 					<SmallFlexWrapper key={i} direction="row" gap=".5rem">
 						<p>{f}</p>
@@ -77,12 +77,14 @@ const ColoredBox = styled.div<{ color: string }>`
 `;
 
 const DetailsLeft = styled(FlexWrapper)`
-	padding: 2rem 0;
+	gap: 1rem;
+	padding: 2rem 0 0;
 	font-weight: var(--fowe-bold);
 `;
 
 const DetailsRight = styled(FlexWrapper)`
-	padding: 2rem 0;
+	gap: 1rem;
+	padding: 2rem 0 0;
 	height: auto;
 `;
 
@@ -91,7 +93,6 @@ const DetailsWrapper = styled.div<{ active: boolean }>`
 	gap: 2rem;
 	border-top: 1px solid var(--col4);
 	margin-top: 2rem;
-	padding: 2rem 0;
 `;
 
 export default ProjectDetails;

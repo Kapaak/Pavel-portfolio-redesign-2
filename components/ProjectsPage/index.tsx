@@ -14,17 +14,34 @@ interface Props {
 const ProjectsPage = ({ data }: Props) => {
 	return (
 		<SProjectPage>
-			<MaxWidth>
+			<SMaxWidth>
 				<Headline>Recent projects</Headline>
-				<FlexWrapper gap="2rem">
+				<GridWrapper>
 					{data.map((d: ProjectType, i: number) => (
 						<Project key={i} data={d} />
 					))}
-				</FlexWrapper>
-			</MaxWidth>
+				</GridWrapper>
+				{/* <FlexWrapper gap="2rem">
+					{data.map((d: ProjectType, i: number) => (
+						<Project key={i} data={d} />
+					))}
+				</FlexWrapper> */}
+			</SMaxWidth>
 		</SProjectPage>
 	);
 };
+
+const SMaxWidth = styled(MaxWidth)`
+	display: grid;
+	gap: 3rem;
+`;
+
+const GridWrapper = styled.div`
+	display: grid;
+	/* grid-template-columns: repeat(2, 1fr); */
+	align-items: flex-start;
+	gap: 2rem;
+`;
 
 const SProjectPage = styled(Section)`
 	background-color: var(--bg-col);

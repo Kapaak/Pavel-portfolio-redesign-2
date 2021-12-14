@@ -1,6 +1,7 @@
 //libraries
 import { useState } from "react";
 import styled from "styled-components";
+import Link from "next/link";
 //components
 import ProjectImage from "./ProjectImage";
 import ProjectDetails from "./ProjectDetails";
@@ -25,7 +26,11 @@ const Project = ({ data }: Props) => {
 			<ProjectImage imageUrl={data.image} />
 			<HeadlineWrapper>{data.title}</HeadlineWrapper>
 			<ButtonsWrapper>
-				<ButtonProject variant={1}>visit website</ButtonProject>
+				<Link href={data.url}>
+					<a>
+						<ButtonProject variant={1}>visit website</ButtonProject>
+					</a>
+				</Link>
 				<ButtonProject onClick={handleClick}>
 					{active ? "hide " : "show "}details
 				</ButtonProject>
@@ -43,7 +48,7 @@ const Project = ({ data }: Props) => {
 const HeadlineWrapper = styled.h1`
 	font-size: var(--f-bt);
 	font-weight: var(--fowe-bold);
-	margin: 3rem 0 2rem;
+	margin: 3rem 0 1rem;
 `;
 
 const ButtonsWrapper = styled.div`
@@ -55,7 +60,7 @@ const SProject = styled.div`
 	width: 100%;
 	/* box-shadow: var(--shadow); */
 	border-radius: 2rem;
-	padding: 0.8rem 1.2rem;
+	padding: 1rem 1.2rem 2rem;
 	background-color: var(--col3);
 `;
 

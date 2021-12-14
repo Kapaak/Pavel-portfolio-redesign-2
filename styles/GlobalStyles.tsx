@@ -36,7 +36,7 @@ const GlobalStyles = createGlobalStyle`
         --f-mshl: calc(2.3rem / var(--xd-recalc));
         --f-hl: calc(4rem / var(--xd-recalc));
         --f-btn: calc(1.6rem / var(--xd-recalc)); 
-        --f-bt: calc(3rem / var(--xd-recalc));
+        --f-bt: calc(2.6rem / var(--xd-recalc));
         --f-t: calc(1.8rem / var(--xd-recalc));
         
         --fosi-subheadline: calc(2.5rem / var(--xd-recalc));
@@ -82,6 +82,11 @@ const GlobalStyles = createGlobalStyle`
     }
 
 
+    @media ${breakpoints.tabletS}{
+		:root {
+            --horizontal-gap:5rem;
+		}
+    }
     @media ${breakpoints.tablet}{
 		:root {
 			--xd-recalc: .87;

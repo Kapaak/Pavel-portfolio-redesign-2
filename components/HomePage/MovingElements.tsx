@@ -9,6 +9,7 @@ import TypescriptIcon from "../../public/icons/typescript.svg";
 import NextjsIcon from "../../public/icons/nextjs.svg";
 import SvelteIcon from "../../public/icons/svelte.svg";
 import SanityIcon from "../../public/icons/sanity.svg";
+import { breakpoints } from "@/customs/Breakpoints";
 
 const MovingElements = () => {
 	const arrayIcons = [
@@ -84,6 +85,12 @@ const MovingElement = styled(motion.div)<{ top: number; left: number }>`
 		border: 1px solid var(--col1);
 		p {
 			opacity: 1;
+		}
+	}
+
+	@media ${breakpoints.desktopX} {
+		img {
+			width: 6.5rem !important;
 		}
 	}
 `;

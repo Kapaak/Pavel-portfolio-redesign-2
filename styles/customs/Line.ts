@@ -14,4 +14,8 @@ export const Line = styled.div`
 	@media ${breakpoints.desktop} {
 		margin: 0;
 	}
+
+	@media ${breakpoints.desktopX} {
+		width: 44.5rem;
+	}
 `;

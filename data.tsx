@@ -5,6 +5,7 @@ import AmbrozImage from "./public/images/projects/Ambroz.png";
 import BarboraNovakovaImage from "./public/images/projects/BarboraNovakova.png";
 import RickAndMortyImage from "./public/images/projects/RickAndMorty.png";
 import KuchtaBuchtaImage from "./public/images/projects/KuchtaBuchta.png";
+import ChatAppImage from "./public/images/projects/ChatApp.png";
 
 export const projectData: Array<ProjectType> = [
 	{
@@ -38,6 +39,14 @@ export const projectData: Array<ProjectType> = [
 		image: RickAndMortyImage,
 		fonts: ["Rajdhani"],
 		tech: ["Next.js", "Rick and Morty API"],
+	},
+	{
+		title: "Chat app",
+		colors: ["#ececec", "#163cff"],
+		url: "https://chat-app-final.vercel.app/",
+		image: ChatAppImage,
+		fonts: ["Raleway"],
+		tech: ["Next.js", "Firebase"],
 	},
 ];
 

@@ -71,7 +71,7 @@ const SmallFlexWrapper = styled(FlexWrapper)`
 const ColoredBox = styled.div<{ color: string }>`
 	border-radius: 0.4rem;
 	box-shadow: 0 0 20px rgba(8, 1, 1, 0.125);
-	width: 2rem;
+	width: 4rem;
 	height: 2rem;
 	background-color: ${({ color }) => (color ? color : "#000")};
 `;

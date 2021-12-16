@@ -44,7 +44,7 @@ const WrapperDiv = styled.div`
 	margin: auto;
 
 	@media ${breakpoints.desktop} {
-		padding: 1rem;
+		padding: 2rem 1rem;
 	}
 `;
 
@@ -57,8 +57,6 @@ const StyledNav = styled.nav`
 	width: 100%;
 	z-index: 10;
 
-	@media ${breakpoints.desktop} {
-		background-color: #f2f1ee85;
-		backdrop-filter: blur(8px);
-	}
+	background-color: #f2f1ee85;
+	backdrop-filter: blur(8px);
 `;

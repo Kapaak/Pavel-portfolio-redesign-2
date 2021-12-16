@@ -11,7 +11,12 @@ interface Props {
 const ProjectImage = ({ imageUrl }: Props) => {
 	return (
 		<ImageWrapper>
-			<Image src={imageUrl} layout="fill" objectFit="cover" />
+			<Image
+				src={imageUrl}
+				layout="fill"
+				objectFit="cover"
+				placeholder="blur"
+			/>
 		</ImageWrapper>
 	);
 };

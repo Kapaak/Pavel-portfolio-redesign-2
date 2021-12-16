@@ -21,11 +21,6 @@ const ProjectsPage = ({ data }: Props) => {
 						<Project key={i} data={d} />
 					))}
 				</GridWrapper>
-				{/* <FlexWrapper gap="2rem">
-					{data.map((d: ProjectType, i: number) => (
-						<Project key={i} data={d} />
-					))}
-				</FlexWrapper> */}
 			</SMaxWidth>
 		</SProjectPage>
 	);

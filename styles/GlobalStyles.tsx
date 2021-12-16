@@ -24,7 +24,7 @@ const GlobalStyles = createGlobalStyle`
 
         --bg-col:#F2F1EE;
 
-        --shadow:0 0 20px rgba(8, 1, 1, 0.225);
+        --shadow:0 0 20px 0 rgba(8, 1, 1, 0.225);
         --max-width:130rem;
 
         --fowe-reg:400;
@@ -52,8 +52,30 @@ const GlobalStyles = createGlobalStyle`
         --line-height:1.6;
 
         --br-main:1.5rem;
-
     }
+
+    ::-webkit-scrollbar{
+        width:1rem;
+        height:1rem;
+        border-radius:.3rem;
+    }
+
+    ::-webkit-scrollbar-track{
+        background:var(--col3);
+    }
+
+    ::-webkit-scrollbar-thumb{
+        background:var(--col1);
+        border-radius:.3rem;
+    }
+
+    @supports (scrollbar-color: #ababab #ababab){
+        *{
+            scrollbar-color: var(--col1) var(--col3);
+            scrollbar-width:thin;
+        }
+    }
+
 
     html{
         font-size:62.5%;

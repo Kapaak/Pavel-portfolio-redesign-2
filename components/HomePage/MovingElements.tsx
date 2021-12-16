@@ -4,7 +4,7 @@ import styled from "styled-components";
 import Image from "next/image";
 //icons
 import ReactIcon from "../../public/icons/react.svg";
-import GithubIcon from "../../public/icons/github.svg";
+import GithubIcon from "../../public/icons/github2.svg";
 import TypescriptIcon from "../../public/icons/typescript.svg";
 import NextjsIcon from "../../public/icons/nextjs.svg";
 import SvelteIcon from "../../public/icons/svelte.svg";
@@ -79,6 +79,7 @@ const MovingElement = styled(motion.div)<{ top: number; left: number }>`
 		font-size: 1.4rem;
 		opacity: 0;
 		transition: all 0.5s ease;
+		z-index: 6;
 	}
 
 	&:hover {

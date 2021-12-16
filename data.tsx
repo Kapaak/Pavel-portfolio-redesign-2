@@ -46,7 +46,7 @@ export const projectData: Array<ProjectType> = [
 		url: "https://chat-app-final.vercel.app/",
 		image: ChatAppImage,
 		fonts: ["Raleway"],
-		tech: ["Next.js", "Firebase"],
+		tech: ["Next.js", "Pusher"],
 	},
 ];
 

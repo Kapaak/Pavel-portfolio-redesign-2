@@ -41,17 +41,16 @@ const StyledListItemsDesktop = styled.div`
 `;
 
 const StyledListItem = styled.div`
+	width: 7rem;
 	a {
 		font-size: var(--f-t);
 		color: var(--col1);
 		padding: 0.8rem 1.3rem;
-		border-radius: 0.8rem;
+		border-radius: 0.4rem;
 		cursor: pointer;
 
 		&:hover {
-			background-color: var(--col1);
-			color: var(--bg-col);
-			transition: all 0.3s ease;
+			font-weight: 600;
 		}
 	}
 `;

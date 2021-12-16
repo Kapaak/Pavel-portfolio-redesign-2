@@ -25,8 +25,8 @@ export const Button = ({
 			{primaryButton ? (
 				<ButtonPrimary>
 					<ScrollLink to={scrollTo} smooth={true}>
-						{src.length !== 0 && <Image src={src} height={18} width={18} />}
 						<p>{children}</p>
+						{src.length !== 0 && <Image src={src} height={18} width={18} />}
 					</ScrollLink>
 				</ButtonPrimary>
 			) : (
@@ -47,7 +47,8 @@ const ButtonGlobal = styled.button`
 	border-radius: 0.6rem;
 
 	a {
-		display: inline-flex;
+		display: flex;
+		justify-content: space-between;
 		gap: 1rem;
 	}
 
@@ -58,26 +59,29 @@ const ButtonGlobal = styled.button`
 	a {
 		padding: 0.8rem 0.9rem;
 	}
-
-	&:hover {
-		transition: transform 0.3s linear;
-		transform: scale(1.06);
-	}
 `;
 
 const ButtonSecondary = styled(ButtonGlobal)`
-	box-shadow: 0 0 20px rgba(8, 1, 1, 0.125);
+	box-shadow: 0 0 30px rgba(8, 1, 1, 0.1);
+	transition: all 0.3s ease;
 	/* border: 1px solid var(--col1); */
 
 	a {
 		margin: 0 0.5rem;
+	}
+
+	&:hover {
+		box-shadow: 0 0 15px rgba(8, 1, 1, 0.04), 0 0 40px rgba(8, 1, 1, 0.1);
+		transition: all 0.3s ease;
 	}
 `;
 
 const ButtonPrimary = styled(ButtonGlobal)`
 	/* border: 1px solid var(--col1); */
 	background-color: var(--col1);
-	box-shadow: var(--shadow);
+	box-shadow: 0 0 20px rgba(8, 1, 1, 0.08);
+	transition: width 0.1s linear;
+	width: 14rem;
 
 	span {
 		display: inline-block;
@@ -90,5 +94,11 @@ const ButtonPrimary = styled(ButtonGlobal)`
 
 	a {
 		margin: 0 0.6rem;
+	}
+
+	&:hover {
+		box-shadow: 0 0 15px rgba(8, 1, 1, 0.04), 0 0 40px rgba(8, 1, 1, 0.1);
+		transition: all 0.2s linear;
+		width: 15.5rem;
 	}
 `;

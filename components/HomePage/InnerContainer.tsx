@@ -11,7 +11,7 @@ const InnerContainer = () => {
 			<Line />
 			<MainHeadline>Pavel Zapletal</MainHeadline>
 			<ButtonWrapper>
-				<Button scrollTo="about-page" primaryButton src="/icons/info-icon.svg">
+				<Button scrollTo="about-page" primaryButton src="/icons/arrow.svg">
 					more info
 				</Button>
 				<Button scrollTo="contact-page">contact</Button>

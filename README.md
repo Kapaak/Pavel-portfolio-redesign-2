@@ -1,6 +1,6 @@
 ## Intro
 
-This is my brand new redesign for my webpages
+This is a redesign for my webpages.
 
 
 ### Used technologies

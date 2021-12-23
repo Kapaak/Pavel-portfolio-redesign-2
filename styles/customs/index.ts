@@ -9,3 +9,4 @@ export { Section } from "./Section";
 export { MaxWidth } from "./MaxWidth";
 export { FlexWrapper } from "./FlexWrapper";
 export { ButtonProject } from "./ButtonProject";
+export { AnimationDiv } from "./AnimationDiv";

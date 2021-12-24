@@ -21,7 +21,7 @@ const StyledLogo = styled.div<{ open: boolean }>`
 	font-size: 2.5rem;
 	font-weight: var(--fowe-bold);
 	margin-left: var(--horizontal-gap);
-	z-index: 10;
+	z-index: 999;
 	color: ${({ open }) => (open ? "var(--col2)" : "var(--col1)")};
 	cursor: pointer;
 

@@ -102,10 +102,10 @@ export const listItemsVariants = {
     inactive: {
       opacity: 0,
       height: "0vh",
-      transition: {
-        when: "afterChildren",
-        staggerChildren: 0.2,
-      },
+      // transition: {
+      //   when: "afterChildren",
+      //   staggerChildren: 0.2,
+      // },
     },
     active: {
       opacity: 1,

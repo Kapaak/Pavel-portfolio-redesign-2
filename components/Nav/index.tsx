@@ -18,22 +18,12 @@ const index = () => {
 				<ListItems open={open} setOpen={setOpen} />
 				<ListItemsDesktop />
 				<Burger open={open} setOpen={setOpen} />
-				{open ? <FullPageDiv onClick={() => setOpen(prev => !prev)} /> : null}
 			</WrapperDiv>
 		</StyledNav>
 	);
 };
 
 export default index;
-
-const FullPageDiv = styled.div`
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100vw;
-	height: 100vh;
-	z-index: 998;
-`;
 
 const WrapperDiv = styled.div`
 	display: flex;

@@ -74,5 +74,5 @@ const StyledListItems = styled(motion.ul)<{ open: boolean }>`
 	background-color: var(--col1);
 	color: var(--bg-col);
 	font-weight: var(--fowe-bold);
-	z-index: 9;
+	z-index: 998;
 `;

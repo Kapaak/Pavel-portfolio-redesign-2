@@ -6,6 +6,7 @@ export const Line = styled.div`
 	width: 30rem;
 	height: 0.3rem;
 	margin: 0 auto;
+	max-width:100%;
 
 	@media ${breakpoints.tablet} {
 		width: 38rem;

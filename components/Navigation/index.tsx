@@ -9,7 +9,7 @@ import ListItemsDesktop from "./ListItemsDesktop";
 import Logo from "./Logo";
 //styles
 
-const index = () => {
+const Navigation = () => {
 	const [open, setOpen] = useState(false);
 	return (
 		<StyledNav>
@@ -23,7 +23,7 @@ const index = () => {
 	);
 };
 
-export default index;
+export default Navigation;
 
 const WrapperDiv = styled.div`
 	display: flex;

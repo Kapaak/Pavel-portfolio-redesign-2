@@ -1,5 +1,5 @@
 //components
-import Nav from "../components/Nav";
+import Nav from "../components/Navigation";
 import HomePage from "../components/HomePage";
 import AboutPage from "../components/AboutPage";
 import ProjectsPage from "components/ProjectsPage";

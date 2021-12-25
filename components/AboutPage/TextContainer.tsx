@@ -7,6 +7,17 @@ import { Headline, Text, breakpoints } from "@/customs/index";
 import ProfileImage from "@/public/images/profile-img.jpg";
 
 const TextContainer = () => {
+	const getAge = (dateString: string) => {
+		var today = new Date();
+		var birthDate = new Date(dateString);
+		var age = today.getFullYear() - birthDate.getFullYear();
+		var m = today.getMonth() - birthDate.getMonth();
+		if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+			age--;
+		}
+		return age;
+	};
+
 	return (
 		<StyledTextContainer>
 			<Headline>About me</Headline>
@@ -17,9 +28,19 @@ const TextContainer = () => {
 				<TextWrapper>
 					<Headline>About me</Headline>
 					<Text>
-						Hi, I'm Pavel Zapletal a self-taught JavaScript programmer. I'm 26
-						yo, living in Brno. Creating websites is my bread and butter. When
-						I'm not at home I usually go outside to enjoy some nature.
+						Hi, I'm Pavel Zapletal a self-taught JavaScript programmer. I'm{" "}
+						{getAge("1994/07/10")} yo, living in Brno. Creating websites is my
+						bread and butter. When I'm not at home I usually go outside to enjoy
+						some nature.
+					</Text>
+					<Text>
+						I'm mostly interested in front-end frameworks like Next.js and
+						Svelte, but I also have some knowledge in Nest.js and Express.
+					</Text>
+					<Text>
+						Besides my passion for front-end development I also like to read
+						about mobile applications and in near future I would like to touch
+						technologies like React Native and SwiftUI.
 					</Text>
 				</TextWrapper>
 			</FlexWrapper>

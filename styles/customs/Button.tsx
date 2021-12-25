@@ -67,6 +67,10 @@ const ButtonSecondary = styled(ButtonGlobal)`
 		margin: 0 0.5rem;
 	}
 
+	p {
+		color: var(--col1);
+	}
+
 	&:hover {
 		box-shadow: 0 0 15px rgba(8, 1, 1, 0.04), 0 0 40px rgba(8, 1, 1, 0.1);
 		transition: all 0.3s ease;

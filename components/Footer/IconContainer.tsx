@@ -1,10 +1,10 @@
 //libs
 import Link from "next/link";
 import Image from "next/image";
-//styles
 import styled from "styled-components";
 //interfaces
 import { FooterType } from "../../interfaces";
+
 interface Props {
 	data: FooterType;
 }

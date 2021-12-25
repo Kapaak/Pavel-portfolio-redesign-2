@@ -1,5 +1,7 @@
+//libraries
 import styled from "styled-components";
 import { Link as ScrollLink } from "react-scroll";
+//components
 import { breakpoints } from "styles/customs/Breakpoints";
 
 const ListItemsDesktop = () => {

@@ -24,6 +24,12 @@
       ],
       "@/customs/*": [
         "styles/customs/*"
+      ],
+      "@/public/*":[
+        "public/*"
+      ],
+      "@/components/*":[
+        "components/*"
       ]
     },
     "incremental": true

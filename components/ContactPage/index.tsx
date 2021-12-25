@@ -1,9 +1,9 @@
 //libraries
 import styled from "styled-components";
 //components
-import InnerContainer from "components/ContactPage/InnerContainer";
+import InnerContainer from "./InnerContainer";
 //styles
-import { MaxWidth, Section } from "styles/customs";
+import { MaxWidth, Section } from "@/customs/index";
 
 const ContactPage = () => {
 	return (

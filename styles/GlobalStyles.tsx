@@ -1,6 +1,5 @@
 //libraries
 import { createGlobalStyle } from "styled-components";
-import styled from "styled-components";
 //breakpoints
 import { breakpoints } from "styles/customs";
 
@@ -86,15 +85,10 @@ const GlobalStyles = createGlobalStyle`
         font-family: 'Karla', sans-serif;
 
         h1{
-            font-size: var(--fosi-headline);
-		    font-weight: var(--fowe-reg);
             margin-bottom: var(--headline-mb);
-            
-	}
+	    }   
 
         h2{
-            font-size: var(--fosi-subheadline);
-		    font-weight: var(--fowe-reg);
             margin-bottom: var(--text-mb);   
         }
 
@@ -142,11 +136,6 @@ const GlobalStyles = createGlobalStyle`
     
   
 
-`;
-
-export const Highlight = styled.span`
-	color: var(--second-col);
-	font-weight: var(--fowe-bold);
 `;
 
 export default GlobalStyles;

@@ -3,7 +3,7 @@ import styled from "styled-components";
 //components
 import TextContainer from "./TextContainer";
 //breakpoints
-import { breakpoints } from "styles/customs";
+import { breakpoints } from "@/customs/index";
 
 const InnerContainer = () => {
 	return (

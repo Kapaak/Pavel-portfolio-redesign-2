@@ -5,7 +5,7 @@ import styled from "styled-components";
 import MovingElements from "./MovingElements";
 import Wrapper from "./Wrapper";
 //styles
-import { breakpoints, MaxWidth, FlexWrapper, Section } from "styles/customs";
+import { breakpoints, MaxWidth, FlexWrapper, Section } from "@/customs/index";
 
 const HomePage = () => {
 	return (
@@ -40,12 +40,4 @@ const SFlexWrapper = styled(FlexWrapper)`
 	@media ${breakpoints.desktop} {
 		flex-direction: row;
 	}
-`;
-
-const StyledHomePage = styled.div`
-	/* position: relative; */
-	/* min-height: 100vh; */
-	background: var(--bg-col);
-
-	padding: var(--vertical-gap) var(--horizontal-gap);
 `;

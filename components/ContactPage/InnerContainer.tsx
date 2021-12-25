@@ -1,7 +1,7 @@
 //libs
 import styled from "styled-components";
 //styles
-import { Headline, breakpoints, Text } from "styles/customs";
+import { Headline, breakpoints, Text } from "@/customs/index";
 
 const InnerContainer = () => {
 	return (

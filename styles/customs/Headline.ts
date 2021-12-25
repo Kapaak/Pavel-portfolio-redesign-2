@@ -1,11 +1,6 @@
 import styled from "styled-components";
 import { breakpoints } from ".";
 
-interface Props {
-	children: React.ReactNode;
-	invertColors?: boolean;
-}
-
 export const Headline = styled.div<{ invertColors?: boolean }>`
 	position: relative;
 	color: ${({ invertColors }) =>

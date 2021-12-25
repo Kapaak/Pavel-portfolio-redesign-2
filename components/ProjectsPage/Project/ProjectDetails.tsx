@@ -1,6 +1,7 @@
 //libraries
-import { FlexWrapper } from "@/customs/FlexWrapper";
 import styled from "styled-components";
+//components
+import { FlexWrapper } from "@/customs/FlexWrapper";
 
 interface Props {
 	active: boolean;

@@ -40,8 +40,4 @@ const StyledFooter = styled.div`
 
 		align-items: center;
 	}
-
-	/* @media ${breakpoints.desktop} {
-		margin-top: -6rem;
-	} */
 `;

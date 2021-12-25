@@ -104,6 +104,11 @@ const StyledMovingElements = styled(AnimationDiv)`
 	width: 100%;
 	height: 37rem;
 	overflow: hidden;
+	display: none;
+
+	@media ${breakpoints.tablet} {
+		display: block;
+	}
 `;
 
 export default MovingElements;

@@ -2,11 +2,9 @@
 import styled from "styled-components";
 import Image from "next/image";
 //styles
-import { breakpoints } from "styles/customs";
-import { Headline, Text } from "styles/customs";
+import { Headline, Text, breakpoints } from "@/customs/index";
 //others
-//@ts-ignore
-import meImg from "../../public/images/profile-img.jpg";
+import ProfileImage from "@/public/images/profile-img.jpg";
 
 const TextContainer = () => {
 	return (
@@ -14,7 +12,7 @@ const TextContainer = () => {
 			<Headline>About me</Headline>
 			<FlexWrapper>
 				<ImageWrapper>
-					<Image src={meImg} objectFit="cover" placeholder="blur" />
+					<Image src={ProfileImage} objectFit="cover" placeholder="blur" />
 				</ImageWrapper>
 				<TextWrapper>
 					<Headline>About me</Headline>

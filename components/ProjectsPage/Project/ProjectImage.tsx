@@ -1,7 +1,7 @@
 //libraries
 import styled from "styled-components";
 import Image from "next/image";
-//styles
+//components
 import { breakpoints } from "@/customs/Breakpoints";
 
 interface Props {

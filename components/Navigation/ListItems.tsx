@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import styled from "styled-components";
 import { Link as ScrollLink } from "react-scroll";
 //styles
-import { breakpoints } from "styles/customs";
+import { breakpoints } from "@/customs/index";
 import { listItemsVariants } from "@/animations/variants";
 
 interface Props {

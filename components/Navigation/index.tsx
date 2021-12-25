@@ -1,8 +1,8 @@
 //libs
 import { useState } from "react";
 import styled from "styled-components";
-import { breakpoints } from "@/customs/index";
 //components
+import { breakpoints } from "@/customs/index";
 import Burger from "./Burger";
 import ListItems from "./ListItems";
 import ListItemsDesktop from "./ListItemsDesktop";

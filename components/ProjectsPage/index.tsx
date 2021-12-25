@@ -2,7 +2,7 @@
 import styled from "styled-components";
 //components
 import Project from "./Project";
-//styles
+//components
 import { Section, MaxWidth, Headline, breakpoints } from "@/customs/index";
 //interfaces
 import { ProjectType } from "interfaces";

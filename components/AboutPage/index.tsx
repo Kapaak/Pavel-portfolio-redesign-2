@@ -1,6 +1,6 @@
 import styled from "styled-components";
 //components
-import InnerContainer from "components/AboutPage/InnerContainer";
+import InnerContainer from "./InnerContainer";
 //styles
 import { MaxWidth, Section } from "styles/customs";
 

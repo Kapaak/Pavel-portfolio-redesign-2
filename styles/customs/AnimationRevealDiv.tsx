@@ -7,7 +7,6 @@ interface Props {
 export const AnimationRevealDiv = ({ children }: Props) => {
 	return (
 		<motion.div
-			//@ts-ignore
 			whileInView="visible"
 			viewport={{ once: true, margin: "-80px" }}
 			initial="hidden"

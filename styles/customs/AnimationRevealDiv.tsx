@@ -9,9 +9,9 @@ export const AnimationRevealDiv = ({ children }: Props) => {
 		<motion.div
 			//@ts-ignore
 			whileInView="visible"
-			viewport={{ once: true }}
+			viewport={{ once: true, margin: "-100px" }}
 			initial="hidden"
-			transition={{ duration: 1 }}
+			transition={{ duration: 0.5 }}
 			variants={{ visible: { opacity: 1 }, hidden: { opacity: 0 } }}
 		>
 			{children}

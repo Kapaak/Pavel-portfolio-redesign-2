@@ -3,7 +3,13 @@ import styled from "styled-components";
 //components
 import Project from "./Project";
 //components
-import { Section, MaxWidth, Headline, breakpoints } from "@/customs/index";
+import {
+	Section,
+	MaxWidth,
+	Headline,
+	breakpoints,
+	AnimationRevealDiv,
+} from "@/customs/index";
 //interfaces
 import { ProjectType } from "interfaces";
 
@@ -14,14 +20,16 @@ interface Props {
 const ProjectsPage = ({ data }: Props) => {
 	return (
 		<SProjectPage id="projects-page">
-			<SMaxWidth>
-				<Headline>Recent projects</Headline>
-				<GridWrapper>
-					{data.map((d: ProjectType, i: number) => (
-						<Project key={i} data={d} />
-					))}
-				</GridWrapper>
-			</SMaxWidth>
+			<AnimationRevealDiv>
+				<SMaxWidth>
+					<Headline>Recent projects</Headline>
+					<GridWrapper>
+						{data.map((d: ProjectType, i: number) => (
+							<Project key={i} data={d} />
+						))}
+					</GridWrapper>
+				</SMaxWidth>
+			</AnimationRevealDiv>
 		</SProjectPage>
 	);
 };

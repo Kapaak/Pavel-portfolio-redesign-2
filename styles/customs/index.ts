@@ -10,3 +10,4 @@ export { MaxWidth } from "./MaxWidth";
 export { FlexWrapper } from "./FlexWrapper";
 export { ButtonProject } from "./ButtonProject";
 export { AnimationDiv } from "./AnimationDiv";
+export { AnimationRevealDiv } from "./AnimationRevealDiv";

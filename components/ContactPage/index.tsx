@@ -3,14 +3,16 @@ import styled from "styled-components";
 //components
 import InnerContainer from "./InnerContainer";
 //styles
-import { MaxWidth, Section } from "@/customs/index";
+import { AnimationRevealDiv, MaxWidth, Section } from "@/customs/index";
 
 const ContactPage = () => {
 	return (
 		<SContactPage id="contact-page">
-			<MaxWidth>
-				<InnerContainer />
-			</MaxWidth>
+			<AnimationRevealDiv>
+				<MaxWidth>
+					<InnerContainer />
+				</MaxWidth>
+			</AnimationRevealDiv>
 		</SContactPage>
 	);
 };

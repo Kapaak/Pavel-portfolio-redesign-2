@@ -2,14 +2,16 @@ import styled from "styled-components";
 //components
 import InnerContainer from "./InnerContainer";
 //styles
-import { MaxWidth, Section } from "styles/customs";
+import { AnimationRevealDiv, MaxWidth, Section } from "styles/customs";
 
 const AboutPage = () => {
 	return (
 		<SAboutPage id="about-page">
-			<MaxWidth>
-				<InnerContainer />
-			</MaxWidth>
+			<AnimationRevealDiv>
+				<MaxWidth>
+					<InnerContainer />
+				</MaxWidth>
+			</AnimationRevealDiv>
 		</SAboutPage>
 	);
 };

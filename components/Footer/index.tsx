@@ -10,7 +10,7 @@ interface Props {
 	data: Array<FooterType>;
 }
 
-const index = ({ data }: Props) => {
+const Footer = ({ data }: Props) => {
 	const year = new Date().getFullYear();
 
 	return (
@@ -21,7 +21,7 @@ const index = ({ data }: Props) => {
 	);
 };
 
-export default index;
+export default Footer;
 
 const StyledFooter = styled.div`
 	background-color: var(--first-col);

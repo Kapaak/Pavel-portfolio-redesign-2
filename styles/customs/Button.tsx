@@ -48,16 +48,14 @@ const ButtonGlobal = styled.button`
 
 	a {
 		display: flex;
+		padding: 0.8rem 0.9rem;
 		justify-content: space-between;
 		gap: 1rem;
+		color: inherit;
 	}
 
 	p {
 		font-size: var(--f-btn);
-	}
-
-	a {
-		padding: 0.8rem 0.9rem;
 	}
 `;
 

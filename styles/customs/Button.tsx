@@ -64,7 +64,6 @@ const ButtonGlobal = styled.button`
 const ButtonSecondary = styled(ButtonGlobal)`
 	box-shadow: 0 0 30px rgba(8, 1, 1, 0.1);
 	transition: all 0.3s ease;
-	/* border: 1px solid var(--col1); */
 
 	a {
 		margin: 0 0.5rem;
@@ -77,7 +76,6 @@ const ButtonSecondary = styled(ButtonGlobal)`
 `;
 
 const ButtonPrimary = styled(ButtonGlobal)`
-	/* border: 1px solid var(--col1); */
 	background-color: var(--col1);
 	box-shadow: 0 0 20px rgba(8, 1, 1, 0.08);
 	transition: width 0.1s linear;
@@ -85,7 +83,6 @@ const ButtonPrimary = styled(ButtonGlobal)`
 
 	span {
 		display: inline-block;
-		/* margin: 0 0.25rem !important; */
 	}
 
 	p {
@@ -96,9 +93,11 @@ const ButtonPrimary = styled(ButtonGlobal)`
 		margin: 0 0.6rem;
 	}
 
-	&:hover {
-		box-shadow: 0 0 15px rgba(8, 1, 1, 0.04), 0 0 40px rgba(8, 1, 1, 0.1);
-		transition: all 0.2s linear;
-		width: 15.5rem;
+	@media ${breakpoints.desktop} {
+		&:hover {
+			box-shadow: 0 0 15px rgba(8, 1, 1, 0.04), 0 0 40px rgba(8, 1, 1, 0.1);
+			transition: all 0.2s linear;
+			width: 15.5rem;
+		}
 	}
 `;

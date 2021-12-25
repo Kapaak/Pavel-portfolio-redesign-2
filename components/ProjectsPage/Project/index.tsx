@@ -58,7 +58,6 @@ const ButtonsWrapper = styled.div`
 
 const SProject = styled.div`
 	width: 100%;
-	/* box-shadow: var(--shadow); */
 	border-radius: 2rem;
 	padding: 1rem 1.2rem 2rem;
 	background-color: var(--col3);

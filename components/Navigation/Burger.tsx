@@ -31,7 +31,7 @@ const StyledBurger = styled.div<{ open: boolean }>`
 	display: flex;
 	flex-direction: column;
 	justify-content: ${({ open }) => (open ? "center" : "space-between")};
-	margin: 2rem var(--horizontal-gap) 2rem auto;
+	margin: 1.4rem var(--horizontal-gap) 1.4rem auto;
 	cursor: pointer;
 	z-index: 11;
 	border-radius: 0.45rem;

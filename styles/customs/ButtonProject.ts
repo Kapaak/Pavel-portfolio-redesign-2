@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { breakpoints } from ".";
 
 type RangeType = 1 | 2;
 
@@ -14,9 +15,11 @@ export const ButtonProject = styled.button<{ variant?: RangeType }>`
 	font-size: 1.6rem;
 	transition: box-shadow 0.5s ease;
 
-	&:hover {
-		box-shadow: ${({ variant }) => (variant == 1 ? "var(--shadow)" : "none")};
-		font-weight: ${({ variant }) => (variant == 1 ? "500" : "600")};
-		transition: box-shadow 0.5s ease;
+	@media ${breakpoints.desktop} {
+		&:hover {
+			box-shadow: ${({ variant }) => (variant == 1 ? "var(--shadow)" : "none")};
+			font-weight: ${({ variant }) => (variant == 1 ? "500" : "600")};
+			transition: box-shadow 0.5s ease;
+		}
 	}
 `;

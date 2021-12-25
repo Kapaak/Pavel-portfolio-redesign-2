@@ -103,6 +103,11 @@ const GlobalStyles = createGlobalStyle`
         }
     }
 
+    a[href^="tel"],a[href^="mail"]{
+		color:inherit;
+		text-decoration:none;
+	}
+
 
     @media ${breakpoints.tabletS}{
 		:root {

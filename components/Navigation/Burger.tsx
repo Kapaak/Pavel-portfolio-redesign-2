@@ -14,9 +14,9 @@ const Burger = ({ open, setOpen }: Props) => {
 	}, [open]);
 
 	return (
-		<StyledBurger onClick={handleOpen}>
+		<StyledBurger open={open} onClick={handleOpen}>
 			<p></p>
-			<p></p>
+			{!open && <p></p>}
 			<p></p>
 		</StyledBurger>
 	);
@@ -24,13 +24,13 @@ const Burger = ({ open, setOpen }: Props) => {
 
 export default Burger;
 
-const StyledBurger = styled.div`
+const StyledBurger = styled.div<{ open: boolean }>`
 	position: relative;
 	height: 4.2rem;
 	width: 4.5rem;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
+	justify-content: ${({ open }) => (open ? "center" : "space-between")};
 	margin: 2rem var(--horizontal-gap) 2rem auto;
 	cursor: pointer;
 	z-index: 11;
@@ -45,11 +45,20 @@ const StyledBurger = styled.div`
 		width: 100%;
 		background-color: var(--col1);
 		margin: 0 auto;
+		transition: all 0.5s ease;
+
+		&:first-child {
+			transform: ${({ open }) => (open ? "rotate(45deg)" : "rotate(0)")};
+			margin-top: ${({ open }) => (open ? "0.1rem" : "0")};
+		}
+
+		&:last-child {
+			margin-top: ${({ open }) => (open ? "-0.1rem" : "0")};
+			transform: ${({ open }) => (open ? "rotate(-45deg)" : "rotate(0)")};
+		}
 	}
 
 	@media ${breakpoints.desktop} {
-		/* margin: 4rem var(--horizontal-gap) 4rem auto; */
-
 		display: none;
 	}
 `;

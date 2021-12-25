@@ -51,10 +51,10 @@ const ButtonGlobal = styled.button`
 		padding: 0.8rem 0.9rem;
 		justify-content: space-between;
 		gap: 1rem;
-		color: inherit;
 	}
 
 	p {
+		color: inherit;
 		font-size: var(--f-btn);
 	}
 `;

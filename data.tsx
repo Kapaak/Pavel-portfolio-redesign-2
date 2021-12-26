@@ -1,7 +1,7 @@
 //interfaces
 import { ProjectType, FooterType } from "./interfaces/index";
 //images
-import AmbrozImage from "./public/images/projects/Ambroz.png";
+import DentalClinicProto from "./public/images/projects/DentalClinicProto.png";
 import BarboraNovakovaImage from "./public/images/projects/BarboraNovakova.png";
 import RickAndMortyImage from "./public/images/projects/RickAndMorty.png";
 import KuchtaBuchtaImage from "./public/images/projects/KuchtaBuchta.png";
@@ -24,14 +24,14 @@ export const projectData: Array<ProjectType> = [
 		fonts: ["Roboto", "Righteous"],
 		tech: ["Next.js", "Sanity.io"],
 	},
-	// {
-	// 	title: "Stomatologie Ambrožovi",
-	// 	colors: ["#FE6246", "#E5568F", "#F6C64E"],
-	// 	url: "https://ambroz-dent.vercel.app/",
-	// 	image: AmbrozImage,
-	// 	fonts: ["InitialFont", "InitialFont2"],
-	// 	tech: ["DefaultTech", "DefaultTech2"],
-	// },
+	{
+		title: "Dental clinic prototype",
+		colors: ["#FE6246", "#E5568F", "#F6C64E"],
+		url: "https://dental-clinic-prototype.vercel.app/",
+		image: DentalClinicProto,
+		fonts: ["Poppins", "Raleway"],
+		tech: ["Next.js", "Saniy.io"],
+	},
 	{
 		title: "Rick and Morty",
 		colors: ["#001427", "#A2F3BC", "#F5BB40"],

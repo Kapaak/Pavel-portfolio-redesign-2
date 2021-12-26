@@ -9,12 +9,18 @@ const InnerContainer = () => {
 			<Headline invertColors>Contact</Headline>
 			<TextWrapper>
 				<Text>
-					I am always open to new challenges. Want to create something great
-					together? Or just say hello? Feel free to ask me anything.
+					I am always open for new challenges. If you want to create something
+					great, don't hesitate to contact me. Or just say hello. Feel free to
+					reach me out.
 				</Text>
 			</TextWrapper>
 			<HighlightedText>
 				<a href="mailto:pavel.zaplet25@gmail.com">pavel.zaplet25@gmail.com</a>
+			</HighlightedText>
+			<HighlightedText>
+				<a href="/CV.pdf" download>
+					download curriculum vitae
+				</a>
 			</HighlightedText>
 		</StyledInnerContainer>
 	);

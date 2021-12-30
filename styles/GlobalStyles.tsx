@@ -53,6 +53,10 @@ const GlobalStyles = createGlobalStyle`
         --br-main:1.5rem;
     }
 
+    ::selection{
+        background:#f14f57
+    }
+
     ::-webkit-scrollbar{
         width:1rem;
         height:1rem;

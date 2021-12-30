@@ -9,9 +9,8 @@ const InnerContainer = () => {
 			<Headline invertColors>Contact</Headline>
 			<TextWrapper>
 				<Text>
-					I am always open for new challenges. If you want to create something
-					great, don't hesitate to contact me. Or just say hello. Feel free to
-					reach me out.
+					I am always available for new challenges. If you want to create
+					something awesome or just ask, don't hesitate to contact me.
 				</Text>
 			</TextWrapper>
 			<HighlightedText>

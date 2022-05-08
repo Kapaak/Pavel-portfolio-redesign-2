@@ -23,7 +23,7 @@ const Project = ({ data }: Props) => {
 
 	return (
 		<SProject>
-			<ProjectImage imageUrl={data.image} />
+			<ProjectImage imageUrl={data.image} alt={data.title} />
 			<HeadlineWrapper>{data.title}</HeadlineWrapper>
 			<ButtonsWrapper>
 				<Link href={data.url}>

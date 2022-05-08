@@ -10,4 +10,5 @@ export interface ProjectType {
 export interface FooterType {
 	icon: string;
 	link: string;
+	name: string;
 }

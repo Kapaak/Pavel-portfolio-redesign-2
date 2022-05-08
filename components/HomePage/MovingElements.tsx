@@ -39,7 +39,7 @@ const MovingElements = () => {
 					dragConstraints={{ left: 0, top: 0, right: 0, bottom: 0 }}
 					dragElastic={1}
 				>
-					<Image src={icon.img} />
+					<Image src={icon.img} alt={icon.name} />
 					<p>{icon.name}</p>
 				</MovingElement>
 			))}

@@ -18,7 +18,6 @@ export const Button = ({
 	scrollTo = "",
 	primaryButton = false,
 	src = "",
-	onClick,
 }: Props) => {
 	return (
 		<>
@@ -26,7 +25,9 @@ export const Button = ({
 				<ButtonPrimary>
 					<ScrollLink to={scrollTo} smooth={true}>
 						<p>{children}</p>
-						{src.length !== 0 && <Image src={src} height={18} width={18} />}
+						{src.length !== 0 && (
+							<Image src={src} height={18} width={18} alt="arrow" />
+						)}
 					</ScrollLink>
 				</ButtonPrimary>
 			) : (

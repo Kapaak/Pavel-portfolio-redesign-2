@@ -13,7 +13,7 @@ const IconContainer = ({ data }: Props) => {
 	return (
 		<Link href={data.link} passHref={true}>
 			<StyledIconContainer>
-				<Image src={data.icon} width={20} height={20} />
+				<Image src={data.icon} width={20} height={20} alt={data.name} />
 			</StyledIconContainer>
 		</Link>
 	);

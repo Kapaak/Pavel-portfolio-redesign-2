@@ -23,7 +23,12 @@ const TextContainer = () => {
 			<Headline>About me</Headline>
 			<FlexWrapper>
 				<ImageWrapper>
-					<Image src={ProfileImage} objectFit="cover" placeholder="blur" />
+					<Image
+						src={ProfileImage}
+						objectFit="cover"
+						placeholder="blur"
+						alt="my profile picture"
+					/>
 				</ImageWrapper>
 				<TextWrapper>
 					<Headline>About me</Headline>

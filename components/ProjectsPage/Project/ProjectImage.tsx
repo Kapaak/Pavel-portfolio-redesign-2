@@ -6,9 +6,10 @@ import { breakpoints } from "@/customs/Breakpoints";
 
 interface Props {
 	imageUrl: StaticImageData;
+	alt: string;
 }
 
-const ProjectImage = ({ imageUrl }: Props) => {
+const ProjectImage = ({ imageUrl, alt }: Props) => {
 	return (
 		<ImageWrapper>
 			<Image
@@ -16,6 +17,7 @@ const ProjectImage = ({ imageUrl }: Props) => {
 				layout="fill"
 				objectFit="cover"
 				placeholder="blur"
+				alt={`${alt} picture`}
 			/>
 		</ImageWrapper>
 	);

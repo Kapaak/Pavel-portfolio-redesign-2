@@ -29,7 +29,12 @@ const InnerContainer = () => {
 				<MainHeadline>Pavel Zapletal</MainHeadline>
 			</AnimationDiv>
 			<ButtonWrapper custom={1.5} variants={opacityVariant}>
-				<Button scrollTo="about-page" primaryButton src="/icons/arrow.svg">
+				<Button
+					scrollTo="about-page"
+					primaryButton
+					src="/icons/arrow.svg"
+					alt="arrow"
+				>
 					more info
 				</Button>
 				<Button scrollTo="contact-page">contact</Button>

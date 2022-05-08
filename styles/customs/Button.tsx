@@ -6,11 +6,11 @@ import Image from "next/image";
 
 interface Props {
 	children: React.ReactNode;
-	onClick?: () => void;
 	scrollTo?: string;
 	primaryButton?: boolean;
 	src?: string;
 	download?: string;
+	alt?: string;
 }
 
 export const Button = ({
@@ -18,6 +18,7 @@ export const Button = ({
 	scrollTo = "",
 	primaryButton = false,
 	src = "",
+	alt,
 }: Props) => {
 	return (
 		<>
@@ -26,7 +27,7 @@ export const Button = ({
 					<ScrollLink to={scrollTo} smooth={true}>
 						<p>{children}</p>
 						{src.length !== 0 && (
-							<Image src={src} height={18} width={18} alt="arrow" />
+							<Image src={src} height={18} width={18} alt={alt} />
 						)}
 					</ScrollLink>
 				</ButtonPrimary>

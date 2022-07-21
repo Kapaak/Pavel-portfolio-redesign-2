@@ -19,6 +19,10 @@ const HeadSelector = () => {
 				name="description"
 				content="Hi, my name is Pavel Zapletal and this is my portfolio website. I am a website creator, designer and programmer :)."
 			/>
+			<meta
+				name="google-site-verification"
+				content="iHmb0qA_zuGADAzjuGNQhiGb4wx8Y-YK5MYeKgxurqY"
+			/>
 		</Head>
 	);
 };

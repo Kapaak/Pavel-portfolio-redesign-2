@@ -1,6 +1,6 @@
 //libraries
 import styled from "styled-components";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 //components
 import { breakpoints } from "@/customs/Breakpoints";
 

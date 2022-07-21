@@ -30,7 +30,7 @@ export const projectData: Array<ProjectType> = [
 		url: "https://dental-clinic-prototype.vercel.app/",
 		image: DentalClinicProto,
 		fonts: ["Poppins", "Raleway"],
-		tech: ["Next.js", "Saniy.io"],
+		tech: ["Next.js", "Sanity.io"],
 	},
 	{
 		title: "Rick and Morty",

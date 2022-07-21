@@ -10,6 +10,7 @@ const HeadSelector = () => {
 				href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap"
 				rel="stylesheet"
 			/>
+			<link rel="canonical" href="https://pavelzapletal.cz/" />
 			<meta name="author" content="Pavel Zapletal" />
 			<meta
 				name="keywords"

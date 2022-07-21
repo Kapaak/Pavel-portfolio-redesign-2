@@ -45,7 +45,7 @@ const Project = ({ data }: Props) => {
 	);
 };
 
-const HeadlineWrapper = styled.h1`
+const HeadlineWrapper = styled.h3`
 	font-size: var(--f-bt);
 	font-weight: var(--fowe-bold);
 	margin: 3rem 0 1rem;

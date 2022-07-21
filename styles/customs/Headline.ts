@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { breakpoints } from ".";
 
-export const Headline = styled.div<{ invertColors?: boolean }>`
+export const Headline = styled.h2<{ invertColors?: boolean }>`
 	position: relative;
 	color: ${({ invertColors }) =>
 		invertColors ? "var(--bg-col)" : "var(--col1)"};

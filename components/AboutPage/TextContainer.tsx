@@ -106,12 +106,12 @@ const TextWrapper = styled.div`
 	flex-direction: column;
 	gap: 2rem;
 
-	& > div:first-child {
+	& > ${Headline} {
 		display: none;
 	}
 
 	@media ${breakpoints.tablet} {
-		& > div:first-child {
+		& > ${Headline} {
 			display: inline-block;
 		}
 	}
@@ -127,7 +127,7 @@ const StyledTextContainer = styled.div`
 	gap: 3rem;
 
 	@media ${breakpoints.tablet} {
-		& > div:first-child {
+		& > ${Headline} {
 			display: none;
 		}
 	}

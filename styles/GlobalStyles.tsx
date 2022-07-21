@@ -88,14 +88,6 @@ const GlobalStyles = createGlobalStyle`
         font-size:1.6rem;
         font-family: 'Karla', sans-serif;
 
-        h1{
-            margin-bottom: var(--headline-mb);
-	    }   
-
-        h2{
-            margin-bottom: var(--text-mb);   
-        }
-
         p{
             line-height:var(--line-height);
         }

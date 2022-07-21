@@ -14,6 +14,7 @@ const StyledMainSubhHeadline = styled.h2`
 	font-size: var(--f-mshl);
 	font-weight: var(--fowe-bold);
 	text-align: center;
+	margin-bottom: var(--text-mb);
 
 	@media ${breakpoints.desktop} {
 		text-align: left;

@@ -1,13 +1,30 @@
 //interfaces
 import { ProjectType, FooterType } from "./interfaces/index";
 //images
-import DentalClinicProto from "./public/images/projects/DentalClinicProto.png";
-import BarboraNovakovaImage from "./public/images/projects/BarboraNovakova.png";
-import RickAndMortyImage from "./public/images/projects/RickAndMorty.png";
-import KuchtaBuchtaImage from "./public/images/projects/KuchtaBuchta.png";
-import ChatAppImage from "./public/images/projects/ChatApp.png";
+import Kometa from "./public/images/projects/kometa.png";
+import BarboraNovakovaImage from "./public/images/projects/bara-novakova.png";
+import RickAndMortyImage from "./public/images/projects/rick-a-morty.png";
+import KuchtaBuchtaImage from "./public/images/projects/kuchta-buchta.png";
+import ChatAppImage from "./public/images/projects/chat-app.png";
+import Routist from "./public/images/projects/routist.png";
 
 export const projectData: Array<ProjectType> = [
+	{
+		title: "Routist",
+		colors: ["#313873", "#1462ad", "#f9f9f9"],
+		url: "https://routist.vercel.app/",
+		image: Routist,
+		fonts: ["Titillium Web"],
+		tech: ["Next.js", "Next Auth", "Prisma"],
+	},
+	{
+		title: "Kometa Lužánky",
+		colors: ["#2172DD", "#FFCA0F", "#FEFEFE"],
+		url: "https://kometa-plavani.vercel.app/",
+		image: Kometa,
+		fonts: ["Bebas Neue", "Poppins"],
+		tech: ["Next.js", "Sanity.io"],
+	},
 	{
 		title: "Kuchta Buchta",
 		colors: ["#B0235F", "#FA7268", "#363636"],
@@ -19,19 +36,12 @@ export const projectData: Array<ProjectType> = [
 	{
 		title: "Barbora Nováková",
 		colors: ["#F8F8F8", "#8D0801", "#001427 "],
-		url: "https://barboranovakova.vercel.app/",
+		url: "https://barboranovakova.cz/",
 		image: BarboraNovakovaImage,
 		fonts: ["Roboto", "Righteous"],
 		tech: ["Next.js", "Sanity.io"],
 	},
-	{
-		title: "Dental clinic prototype",
-		colors: ["#FE6246", "#E5568F", "#F6C64E"],
-		url: "https://dental-clinic-prototype.vercel.app/",
-		image: DentalClinicProto,
-		fonts: ["Poppins", "Raleway"],
-		tech: ["Next.js", "Sanity.io"],
-	},
+
 	{
 		title: "Rick and Morty",
 		colors: ["#001427", "#A2F3BC", "#F5BB40"],

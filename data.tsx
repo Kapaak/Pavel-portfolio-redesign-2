@@ -5,22 +5,30 @@ import Kometa from "./public/images/projects/kometa.png";
 import BarboraNovakovaImage from "./public/images/projects/bara-novakova.png";
 import RickAndMortyImage from "./public/images/projects/rick-a-morty.png";
 import KuchtaBuchtaImage from "./public/images/projects/kuchta-buchta.png";
-import ChatAppImage from "./public/images/projects/chat-app.png";
+import Primestak from "./public/images/projects/primestak.png";
 import Routist from "./public/images/projects/routist.png";
 
 export const projectData: Array<ProjectType> = [
   {
     title: "Routist",
-    colors: ["#313873", "#1462ad", "#f9f9f9"],
-    url: "https://routist.vercel.app/",
+    colors: ["#FBB034", "#f9f9f9"],
+    url: "https://www.routist.cz/",
     image: Routist,
-    fonts: ["Titillium Web"],
+    fonts: ["Bebas Neue", "Poppins"],
     tech: ["Next.js", "Next Auth", "Prisma"],
+  },
+  {
+    title: "Tábory Riviéra",
+    colors: ["#2172DD", "#73F0C0", "#FEFEFE"],
+    url: "https://www.primestak-brno.cz/",
+    image: Primestak,
+    fonts: ["Bebas Neue", "Poppins"],
+    tech: ["Next.js", "Sanity.io"],
   },
   {
     title: "Plavání Lužánky",
     colors: ["#2172DD", "#FFCA0F", "#FEFEFE"],
-    url: "https://plavani-luzanky.cz/",
+    url: "https://www.plavani-luzanky.cz/",
     image: Kometa,
     fonts: ["Bebas Neue", "Poppins"],
     tech: ["Next.js", "Sanity.io"],
@@ -49,14 +57,6 @@ export const projectData: Array<ProjectType> = [
     image: RickAndMortyImage,
     fonts: ["Rajdhani"],
     tech: ["Next.js", "Rick and Morty API"],
-  },
-  {
-    title: "Chat app",
-    colors: ["#ececec", "#163cff"],
-    url: "https://chat-app-final.vercel.app/",
-    image: ChatAppImage,
-    fonts: ["Raleway"],
-    tech: ["Next.js", "Pusher"],
   },
 ];
 

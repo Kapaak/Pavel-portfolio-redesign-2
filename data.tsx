@@ -3,12 +3,20 @@ import { ProjectType, FooterType } from "./interfaces/index";
 //images
 import Kometa from "./public/images/projects/kometa.png";
 import BarboraNovakovaImage from "./public/images/projects/bara-novakova.png";
-import RickAndMortyImage from "./public/images/projects/rick-a-morty.png";
+import PetrWalachImage from "./public/images/projects/petr-walach-portfolio.png";
 import KuchtaBuchtaImage from "./public/images/projects/kuchta-buchta.png";
 import Primestak from "./public/images/projects/primestak.png";
 import Routist from "./public/images/projects/routist.png";
 
 export const projectData: Array<ProjectType> = [
+  {
+    title: "Petr Walach",
+    colors: ["#0f2786", "#f75252"],
+    url: "https://www.petrwalach.cz/",
+    image: PetrWalachImage,
+    fonts: ["Bebas Neue", "Karla"],
+    tech: ["Astro.js", "Sanity.io", "Email.js"],
+  },
   {
     title: "Routist",
     colors: ["#FBB034", "#f9f9f9"],
@@ -48,15 +56,6 @@ export const projectData: Array<ProjectType> = [
     image: BarboraNovakovaImage,
     fonts: ["Roboto", "Righteous"],
     tech: ["Next.js", "Sanity.io"],
-  },
-
-  {
-    title: "Rick and Morty",
-    colors: ["#001427", "#A2F3BC", "#F5BB40"],
-    url: "https://rick-a-morty.vercel.app/",
-    image: RickAndMortyImage,
-    fonts: ["Rajdhani"],
-    tech: ["Next.js", "Rick and Morty API"],
   },
 ];
 

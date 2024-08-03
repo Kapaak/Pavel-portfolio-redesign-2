@@ -7,8 +7,17 @@ import PetrWalachImage from "./public/images/projects/petr-walach-portfolio.png"
 import KuchtaBuchtaImage from "./public/images/projects/kuchta-buchta.png";
 import Primestak from "./public/images/projects/primestak.png";
 import Routist from "./public/images/projects/routist.png";
+import KometaSwimmingImage from "./public/images/projects/kometa-plavani.jpeg";
 
 export const projectData: Array<ProjectType> = [
+  {
+    title: "Kometa plavání",
+    colors: ["#014b8b", "#ffca0f"],
+    url: "https://www.kometaplavani.cz/",
+    image: KometaSwimmingImage,
+    fonts: ["Bebas Neue", "Poppins"],
+    tech: ["Next.js", "Sanity.io"],
+  },
   {
     title: "Petr Walach",
     colors: ["#0f2786", "#f75252"],

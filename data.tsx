@@ -17,6 +17,7 @@ export const projectData: Array<ProjectType> = [
     image: KometaSwimmingImage,
     fonts: ["Bebas Neue", "Poppins"],
     tech: ["Next.js", "Sanity.io"],
+    githubLink: "https://github.com/Kapaak/kometa-web",
   },
   {
     title: "Petr Walach",
@@ -25,6 +26,7 @@ export const projectData: Array<ProjectType> = [
     image: PetrWalachImage,
     fonts: ["Bebas Neue", "Karla"],
     tech: ["Astro.js", "Sanity.io", "Email.js"],
+    githubLink: "https://github.com/Kapaak/missile-astro-web",
   },
   {
     title: "Routist",

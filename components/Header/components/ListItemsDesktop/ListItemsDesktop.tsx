@@ -1,28 +1,19 @@
-import { Link as ScrollLink } from "react-scroll";
 import * as S from "./ListItemsDesktop.style";
 
 export function ListItemsDesktop() {
   return (
     <S.ListItemsDesktop>
       <S.ListItem>
-        <ScrollLink to="home-page" smooth={true}>
-          Home
-        </ScrollLink>
+        <a href="#home-page">Home</a>
       </S.ListItem>
       <S.ListItem>
-        <ScrollLink to="about-page" smooth={true}>
-          About
-        </ScrollLink>
+        <a href="#about-page">About</a>
       </S.ListItem>
       <S.ListItem>
-        <ScrollLink to="projects-page" smooth={true}>
-          Projects
-        </ScrollLink>
+        <a href="#projects-page">Projects</a>
       </S.ListItem>
       <S.ListItem>
-        <ScrollLink to="contact-page" smooth={true}>
-          Contact
-        </ScrollLink>
+        <a href="#contact-page">Contact</a>
       </S.ListItem>
     </S.ListItemsDesktop>
   );

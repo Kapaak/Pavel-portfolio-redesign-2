@@ -3,12 +3,16 @@ import { motion } from "framer-motion";
 import styled from "styled-components";
 
 export const ListItem = styled(motion.li)<any>`
-  text-decoration: none;
   list-style: none;
   padding: 0 4rem;
   margin-bottom: var(--text-mb);
   font-size: var(--fosi-nav);
   cursor: pointer;
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
 
   @media ${breakpoints.tablet} {
     padding: 0 4rem;

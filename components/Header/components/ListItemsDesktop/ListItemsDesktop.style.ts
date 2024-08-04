@@ -17,6 +17,7 @@ export const ListItem = styled.li`
   list-style: none;
 
   a {
+    text-decoration: none;
     font-size: var(--f-t);
     color: var(--col1);
     padding: 0.8rem 1.3rem;

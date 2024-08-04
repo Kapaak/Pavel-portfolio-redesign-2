@@ -1,4 +1,3 @@
-import { Link as ScrollLink } from "react-scroll";
 import { listItemsVariants } from "@/animations/variants";
 import * as S from "./ListItems.style";
 
@@ -18,24 +17,24 @@ export function ListItems({ open, onClick }: Props) {
       open={open}
     >
       <S.ListItem variants={nodeV}>
-        <ScrollLink to="home-page" smooth={true} onClick={onClick}>
+        <a href="#home-page" onClick={onClick}>
           Home
-        </ScrollLink>
+        </a>
       </S.ListItem>
       <S.ListItem variants={nodeV}>
-        <ScrollLink to="about-page" smooth={true} onClick={onClick}>
+        <a href="#about-page" onClick={onClick}>
           About
-        </ScrollLink>
+        </a>
       </S.ListItem>
       <S.ListItem variants={nodeV}>
-        <ScrollLink to="projects-page" smooth={true} onClick={onClick}>
+        <a href="#projects-page" onClick={onClick}>
           Projects
-        </ScrollLink>
+        </a>
       </S.ListItem>
       <S.ListItem variants={nodeV}>
-        <ScrollLink to="contact-page" smooth={true} onClick={onClick}>
+        <a href="#contact-page" onClick={onClick}>
           Contact
-        </ScrollLink>
+        </a>
       </S.ListItem>
     </S.ListItems>
   );

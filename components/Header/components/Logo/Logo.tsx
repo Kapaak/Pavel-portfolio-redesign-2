@@ -1,4 +1,3 @@
-import { animateScroll as scroll } from "react-scroll";
 import * as S from "./Logo.style";
 
 interface Props {
@@ -7,7 +6,7 @@ interface Props {
 
 export function Logo({ open }: Props) {
   return (
-    <S.Logo open={open} onClick={() => scroll.scrollToTop()}>
+    <S.Logo open={open} onClick={() => window?.scrollTo(0, 0)}>
       portfolio
     </S.Logo>
   );

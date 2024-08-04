@@ -1,13 +1,14 @@
-//libraries
 import { createGlobalStyle } from "styled-components";
-//breakpoints
-import { breakpoints } from "styles/customs";
+import { styleReset } from "./style-reset";
+import { breakpoints } from "./dimensions";
 
-const GlobalStyles = createGlobalStyle`
-    *,*::before,*::after{
-        margin:0;
-        padding:0;
-        box-sizing:border-box;
+export const GlobalStyle = createGlobalStyle`
+   ${styleReset}
+
+   *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
     }
 
     :root{
@@ -134,5 +135,3 @@ const GlobalStyles = createGlobalStyle`
   
 
 `;
-
-export default GlobalStyles;

@@ -1,7 +1,8 @@
 //libs
 import styled from "styled-components";
-import { breakpoints } from "./Breakpoints";
 import Image from "next/image";
+import { breakpoints } from "../theme";
+import NextLink from "next/link";
 
 interface Props {
   children: React.ReactNode;
@@ -17,24 +18,22 @@ export const Button = ({
   scrollTo = "",
   primaryButton = false,
   src = "",
-  alt,
+  alt = "",
 }: Props) => {
   return (
     <>
       {primaryButton ? (
         <ButtonPrimary>
-          <a href={`#${scrollTo}`}>
-            <p>{children}</p>
+          <NextLink href={`#${scrollTo}`}>
+            <span>{children}</span>
             {src.length !== 0 && (
               <Image src={src} height={18} width={18} alt={alt} />
             )}
-          </a>
+          </NextLink>
         </ButtonPrimary>
       ) : (
         <ButtonSecondary>
-          <a href={`#${scrollTo}`}>
-            <p>{children}</p>
-          </a>
+          <NextLink href={`#${scrollTo}`}>{children}</NextLink>
         </ButtonSecondary>
       )}
     </>
@@ -49,12 +48,17 @@ const ButtonGlobal = styled.button`
 
   a {
     display: flex;
-    padding: 0.8rem 0.9rem;
     justify-content: space-between;
     gap: 1rem;
+    padding: 1.4rem 0 1.4rem 1.2rem;
   }
 
-  p {
+  img {
+    flex-shrink: 0;
+    margin-right: 0.4rem;
+  }
+
+  span {
     color: inherit;
     font-size: var(--f-btn);
   }
@@ -67,10 +71,11 @@ const ButtonSecondary = styled(ButtonGlobal)`
   a {
     text-decoration: none;
     margin: 0 0.5rem;
+    padding: 1.4rem 1.2rem;
     color: inherit;
   }
 
-  p {
+  span {
     color: var(--col1);
   }
 
@@ -88,9 +93,6 @@ const ButtonPrimary = styled(ButtonGlobal)`
 
   span {
     display: inline-block;
-  }
-
-  p {
     color: var(--bg-col);
   }
 

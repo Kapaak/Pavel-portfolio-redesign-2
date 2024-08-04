@@ -1,5 +1,6 @@
-import { breakpoints } from "@/customs/Breakpoints";
-import { Headline } from "@/customs/Headline";
+import { Headline } from "@/ui/components";
+import { breakpoints } from "@/ui/theme";
+import Image from "next/image";
 import styled from "styled-components";
 
 export const FlexContainer = styled.div`
@@ -13,15 +14,20 @@ export const FlexContainer = styled.div`
 
   @media ${breakpoints.desktopX} {
     gap: 5rem;
-
-    img {
-      transform: scale(1.3);
-      margin-left: -5.5rem !important;
-    }
   }
 `;
 
+export const ProfileImage = styled(Image)`
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+  object-position: 0% 30%;
+  transform: scale(1.3);
+  margin-left: -5rem;
+`;
+
 export const ImageContainer = styled.div`
+  position: relative;
   height: 22rem;
   border-radius: 3rem;
   overflow: hidden;
@@ -30,10 +36,6 @@ export const ImageContainer = styled.div`
     flex: 1 1 50%;
     height: auto;
     border-radius: 2rem;
-
-    & > span {
-      height: 100% !important;
-    }
   }
 
   @media ${breakpoints.tablet} {

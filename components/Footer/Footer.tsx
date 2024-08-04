@@ -1,4 +1,4 @@
-import { breakpoints, Text } from "styles/customs";
+import { Text } from "@/ui/components";
 import * as S from "./Footer.style";
 import { footerIcons } from "@/constants";
 import { FooterIcon } from "./parts";

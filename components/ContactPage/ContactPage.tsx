@@ -1,4 +1,4 @@
-import { AnimationRevealDiv, Headline, MaxWidth, Text } from "@/customs/index";
+import { AnimationRevealDiv, Headline, MaxWidth, Text } from "@/ui/components";
 import * as S from "./ContactPage.style";
 
 export function ContactPage() {

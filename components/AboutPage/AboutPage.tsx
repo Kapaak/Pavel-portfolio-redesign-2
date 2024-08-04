@@ -1,4 +1,4 @@
-import { AnimationRevealDiv, MaxWidth, Section } from "styles/customs";
+import { AnimationRevealDiv, MaxWidth } from "@/ui/components";
 import * as S from "./AboutPage.style";
 import { Description } from "./parts";
 

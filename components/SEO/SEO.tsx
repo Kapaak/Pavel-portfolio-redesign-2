@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-export const SEO = () => {
+export function SEO() {
   return (
     <Head>
       <title>Pavel Zapletal | portfolio</title>
@@ -25,4 +25,4 @@ export const SEO = () => {
       />
     </Head>
   );
-};
+}

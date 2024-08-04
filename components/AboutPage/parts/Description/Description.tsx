@@ -1,9 +1,9 @@
 import Image from "next/image";
-import { Headline, Text, breakpoints } from "@/customs/index";
 import ProfileImage from "@/public/images/profile-img.jpg";
 import { getAge } from "@/utils";
 
 import * as S from "./Description.style";
+import { Headline, Text } from "@/ui/components";
 
 export function Description() {
   return (
@@ -11,7 +11,7 @@ export function Description() {
       <Headline>About me</Headline>
       <S.FlexContainer>
         <S.ImageContainer>
-          <Image
+          <S.ProfileImage
             src={ProfileImage}
             objectFit="cover"
             placeholder="blur"

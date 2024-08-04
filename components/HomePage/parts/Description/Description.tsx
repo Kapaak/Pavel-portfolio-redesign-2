@@ -4,7 +4,7 @@ import {
   MainHeadline,
   Line,
   AnimationDiv,
-} from "@/customs/index";
+} from "@/ui/components";
 import {
   fadeInVariant,
   opacityVariant,

@@ -1,4 +1,4 @@
-import { breakpoints } from "@/customs/Breakpoints";
+import { breakpoints } from "@/ui/theme";
 import styled from "styled-components";
 
 export const Footer = styled.footer`

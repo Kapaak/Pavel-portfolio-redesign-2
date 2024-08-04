@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import NextLink from "next/link";
 
-export const FooterIcon = styled.a`
+export const FooterIcon = styled(NextLink)`
   display: inline-flex;
   position: relative;
   padding: 0.65rem;

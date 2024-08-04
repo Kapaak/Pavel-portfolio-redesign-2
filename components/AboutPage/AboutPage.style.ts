@@ -1,5 +1,5 @@
-import { breakpoints } from "@/customs/Breakpoints";
-import { Section } from "@/customs/Section";
+import { Section } from "@/ui/components";
+import { breakpoints } from "@/ui/theme";
 import styled from "styled-components";
 
 export const AboutPage = styled(Section)`

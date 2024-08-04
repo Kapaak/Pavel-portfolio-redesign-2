@@ -1,4 +1,4 @@
-import { breakpoints } from "@/customs/Breakpoints";
+import { breakpoints } from "@/ui/theme";
 import { motion } from "framer-motion";
 import styled from "styled-components";
 

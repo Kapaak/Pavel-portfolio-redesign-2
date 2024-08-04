@@ -20,3 +20,8 @@ export function getRandomNumber(min = 0, max = 0) {
 
   return Math.ceil(randomNumber);
 }
+
+export function scrollTop() {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+  history.replaceState(null, "", window.location.pathname);
+}

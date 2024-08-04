@@ -1,3 +1,4 @@
+import { scrollTop } from "@/utils";
 import * as S from "./Logo.style";
 
 interface Props {
@@ -6,7 +7,7 @@ interface Props {
 
 export function Logo({ open }: Props) {
   return (
-    <S.Logo open={open} onClick={() => window?.scrollTo(0, 0)}>
+    <S.Logo open={open} onClick={scrollTop}>
       portfolio
     </S.Logo>
   );

@@ -1,14 +1,14 @@
 import type { AppProps } from "next/app";
-import GlobalStyles from "../styles/GlobalStyles";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { SEO } from "@/components/SEO";
+import { GlobalStyle } from "@/ui/theme";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <SEO />
-      <GlobalStyles />
+      <GlobalStyle />
       <Header />
       <Component {...pageProps} />
       <Footer />

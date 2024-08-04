@@ -1,10 +1,11 @@
+import { scrollTop } from "@/utils";
 import * as S from "./ListItemsDesktop.style";
 
 export function ListItemsDesktop() {
   return (
     <S.ListItemsDesktop>
       <S.ListItem>
-        <a href="#home-page">Home</a>
+        <a onClick={scrollTop}>Home</a>
       </S.ListItem>
       <S.ListItem>
         <a href="#about-page">About</a>

@@ -1,5 +1,6 @@
 import { listItemsVariants } from "@/animations/variants";
 import * as S from "./ListItems.style";
+import { scrollTop } from "@/utils";
 
 interface Props {
   open: boolean;
@@ -17,7 +18,12 @@ export function ListItems({ open, onClick }: Props) {
       open={open}
     >
       <S.ListItem variants={nodeV}>
-        <a href="#home-page" onClick={onClick}>
+        <a
+          onClick={() => {
+            onClick();
+            scrollTop();
+          }}
+        >
           Home
         </a>
       </S.ListItem>

@@ -23,6 +23,7 @@ export const opacityVariant = {
 export const widthVariant = {
   hidden: {
     scaleX: 0,
+    left: 0,
   },
   visible: (i = 0) => ({
     scaleX: 1,

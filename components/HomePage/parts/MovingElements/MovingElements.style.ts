@@ -1,5 +1,5 @@
-import { AnimationDiv } from "@/customs/AnimationDiv";
-import { breakpoints } from "@/customs/Breakpoints";
+import { AnimationDiv } from "@/ui/components";
+import { breakpoints } from "@/ui/theme";
 import styled from "styled-components";
 
 export const MovingElements = styled(AnimationDiv)`

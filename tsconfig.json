@@ -22,8 +22,8 @@
       "@/animations/*": [
         "animations/*"
       ],
-      "@/customs/*": [
-        "styles/customs/*"
+      "@/ui/*": [
+        "ui/*"
       ],
       "@/public/*":[
         "public/*"
@@ -39,7 +39,10 @@
       ],
       "@/interfaces":[
         "interfaces/index"
-      ]
+      ],
+      "@/interfaces":[
+        "interfaces/index"
+      ],
     },
     "incremental": true
   },

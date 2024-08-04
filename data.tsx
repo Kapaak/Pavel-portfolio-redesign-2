@@ -69,31 +69,3 @@ export const projectData: Array<ProjectType> = [
     tech: ["Next.js", "Sanity.io"],
   },
 ];
-
-export const footerData: Array<FooterType> = [
-  {
-    icon: "/icons/codepen.svg",
-    link: "https://codepen.io/Kapaak",
-    name: "codepen icon",
-  },
-  {
-    icon: "/icons/github.svg",
-    link: "https://github.com/Kapaak",
-    name: "github icon",
-  },
-  {
-    icon: "/icons/linkedin.svg",
-    link: "https://www.linkedin.com/in/pavel-zapletal-903bb2188/",
-    name: "linkedin icon",
-  },
-  {
-    icon: "/icons/instagram.svg",
-    link: "https://www.instagram.com/pavel_kapaak/",
-    name: "instagram icon",
-  },
-  {
-    icon: "/icons/facebook.svg",
-    link: "https://www.facebook.com/pavel.kappa.zapletal",
-    name: "facebook icon",
-  },
-];

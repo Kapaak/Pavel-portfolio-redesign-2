@@ -1,18 +1,17 @@
-//types
 import type { AppProps } from "next/app";
-//components
-import Head from "styles/customs/Head";
-//styles
 import GlobalStyles from "../styles/GlobalStyles";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { SEO } from "@/components/SEO";
 
-function MyApp({ Component, pageProps }: AppProps) {
-	return (
-		<>
-			<Head />
-			<GlobalStyles />
-			<Component {...pageProps} />
-		</>
-	);
+export default function App({ Component, pageProps }: AppProps) {
+  return (
+    <>
+      <SEO />
+      <GlobalStyles />
+      <Header />
+      <Component {...pageProps} />
+      <Footer />
+    </>
+  );
 }
-
-export default MyApp;

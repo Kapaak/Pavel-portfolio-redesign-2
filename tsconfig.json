@@ -30,6 +30,15 @@
       ],
       "@/components/*":[
         "components/*"
+      ],
+      "@/utils":[
+        "utils/index"
+      ],
+      "@/constants":[
+        "constants/index"
+      ],
+      "@/interfaces":[
+        "interfaces/index"
       ]
     },
     "incremental": true

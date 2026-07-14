@@ -32,8 +32,7 @@ export function Description() {
           </Text>
           <Text>
             Besides my passion for front-end development I also like to read
-            about mobile applications and in near future I would like to touch
-            technologies like React Native and SwiftUI.
+            about mobile applications and create mobile applications using Expo.
           </Text>
         </S.TextContainer>
       </S.FlexContainer>

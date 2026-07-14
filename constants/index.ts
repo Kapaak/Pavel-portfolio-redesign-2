@@ -6,13 +6,14 @@ import NextjsIcon from "../public/icons/nextjs.svg";
 import SvelteIcon from "../public/icons/svelte.svg";
 import SanityIcon from "../public/icons/sanity.svg";
 
-import Kometa from "../public/images/projects/kometa.png";
-import BarboraNovakovaImage from "../public/images/projects/bara-novakova.png";
+import BarboraZapletalovaImage from "../public/images/projects/bara-zapletalova.png";
 import PetrWalachImage from "../public/images/projects/petr-walach-portfolio.png";
 import KuchtaBuchtaImage from "../public/images/projects/kuchta-buchta.png";
 import Primestak from "../public/images/projects/primestak.png";
 import Routist from "../public/images/projects/routist.png";
 import KometaSwimmingImage from "../public/images/projects/kometa-plavani.jpeg";
+import ZiroImage from "../public/images/projects/ziro.png";
+import CitraImage from "../public/images/projects/citra.png";
 
 export const footerIcons: Array<FooterType> = [
   {
@@ -53,6 +54,22 @@ export const movingIcons = [
 
 export const projects: Array<ProjectType> = [
   {
+    title: "Citra - Mobile app",
+    colors: ["#01c168", "#6155f5"],
+    url: "https://www.citra.cz/",
+    image: CitraImage,
+    fonts: ["Anybody", "Inter"],
+    tech: ["Expo", "Hono.js", "PostgreSQL"],
+  },
+  {
+    title: "Ziro - Figma plugin",
+    colors: ["#01c168", "#6155f5"],
+    url: "https://www.figma.com/community/plugin/1630578834837133276",
+    image: ZiroImage,
+    fonts: ["Bebas Neue", "Poppins"],
+    tech: ["Vite", "Preact"],
+  },
+  {
     title: "Kometa plavání",
     colors: ["#014b8b", "#ffca0f"],
     url: "https://www.kometaplavani.cz/",
@@ -86,14 +103,7 @@ export const projects: Array<ProjectType> = [
     fonts: ["Bebas Neue", "Poppins"],
     tech: ["Next.js", "Sanity.io"],
   },
-  {
-    title: "Plavání Lužánky",
-    colors: ["#2172DD", "#FFCA0F", "#FEFEFE"],
-    url: "https://www.plavani-luzanky.cz/",
-    image: Kometa,
-    fonts: ["Bebas Neue", "Poppins"],
-    tech: ["Next.js", "Sanity.io"],
-  },
+
   {
     title: "Kuchta Buchta",
     colors: ["#B0235F", "#FA7268", "#363636"],
@@ -103,10 +113,10 @@ export const projects: Array<ProjectType> = [
     tech: ["Next.js", "Sanity.io"],
   },
   {
-    title: "Barbora Nováková",
+    title: "Barbora Zapletalová",
     colors: ["#F8F8F8", "#8D0801", "#001427 "],
-    url: "https://barboranovakova.cz/",
-    image: BarboraNovakovaImage,
+    url: "https://barborazapletalova.cz/",
+    image: BarboraZapletalovaImage,
     fonts: ["Roboto", "Righteous"],
     tech: ["Next.js", "Sanity.io"],
   },

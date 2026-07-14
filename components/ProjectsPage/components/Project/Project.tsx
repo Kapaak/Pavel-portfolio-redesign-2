@@ -24,6 +24,7 @@ export function Project({ project }: Props) {
           src={project.image}
           layout="fill"
           objectFit="cover"
+          objectPosition="left"
           placeholder="blur"
           alt={project.title}
         />

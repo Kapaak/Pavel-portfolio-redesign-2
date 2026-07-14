@@ -1,9 +1,9 @@
-import { AnimationProps, motion } from "framer-motion";
+import { motion, MotionProps } from "framer-motion";
 
 interface Props {
 	children: React.ReactNode;
 	custom?: number;
-	variants: AnimationProps["variants"];
+	variants: MotionProps["variants"];
 }
 
 export const AnimationDiv = ({ children, ...rest }: Props) => {

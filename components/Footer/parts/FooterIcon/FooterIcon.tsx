@@ -9,7 +9,7 @@ interface Props {
 
 export function FooterIcon({ footerIcon }: Props) {
   return (
-    <S.FooterIcon href={footerIcon.link} passHref>
+    <S.FooterIcon href={footerIcon.link}>
       <Image
         src={footerIcon.icon}
         width={20}

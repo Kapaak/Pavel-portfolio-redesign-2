@@ -1,13 +1,13 @@
 import { breakpoints } from "@/ui/theme";
 import styled from "styled-components";
 
-export const Burger = styled.div<{ open: boolean }>`
+export const Burger = styled.div<{ $open: boolean }>`
   position: relative;
   height: 4.2rem;
   width: 4.5rem;
   display: flex;
   flex-direction: column;
-  justify-content: ${({ open }) => (open ? "center" : "space-between")};
+  justify-content: ${({ $open }) => ($open ? "center" : "space-between")};
   margin: 1.4rem var(--horizontal-gap) 1.4rem auto;
   cursor: pointer;
   z-index: 11;
@@ -25,13 +25,13 @@ export const Burger = styled.div<{ open: boolean }>`
     transition: all 0.5s ease;
 
     &:first-child {
-      transform: ${({ open }) => (open ? "rotate(45deg)" : "rotate(0)")};
-      margin-top: ${({ open }) => (open ? "0.1rem" : "0")};
+      transform: ${({ $open }) => ($open ? "rotate(45deg)" : "rotate(0)")};
+      margin-top: ${({ $open }) => ($open ? "0.1rem" : "0")};
     }
 
     &:last-child {
-      margin-top: ${({ open }) => (open ? "-0.1rem" : "0")};
-      transform: ${({ open }) => (open ? "rotate(-45deg)" : "rotate(0)")};
+      margin-top: ${({ $open }) => ($open ? "-0.1rem" : "0")};
+      transform: ${({ $open }) => ($open ? "rotate(-45deg)" : "rotate(0)")};
     }
   }
 

@@ -7,7 +7,7 @@ interface Props {
 
 export function Logo({ open }: Props) {
   return (
-    <S.Logo open={open} onClick={scrollTop}>
+    <S.Logo $open={open} onClick={scrollTop}>
       portfolio
     </S.Logo>
   );

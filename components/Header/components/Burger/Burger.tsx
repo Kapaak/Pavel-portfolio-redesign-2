@@ -12,7 +12,7 @@ export function Burger({ open, onToggle }: BurgerProps) {
   }, [open]);
 
   return (
-    <S.Burger open={open} onClick={handleOpen}>
+    <S.Burger $open={open} onClick={handleOpen}>
       <p />
       {!open && <p />}
       <p />

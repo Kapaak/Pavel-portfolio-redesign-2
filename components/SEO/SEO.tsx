@@ -4,11 +4,6 @@ export function SEO() {
   return (
     <Head>
       <title>Pavel Zapletal | portfolio</title>
-      <link rel="preconnect" href="https://fonts.gstatic.com" />
-      <link
-        href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap"
-        rel="stylesheet"
-      />
       <link rel="canonical" href="https://pavelzapletal.cz/" />
       <meta name="author" content="Pavel Zapletal" />
       <meta

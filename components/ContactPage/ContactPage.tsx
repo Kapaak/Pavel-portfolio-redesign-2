@@ -7,7 +7,7 @@ export function ContactPage() {
       <AnimationRevealDiv>
         <MaxWidth>
           <S.FlexContainer>
-            <Headline invertColors>Contact</Headline>
+            <Headline $invertColors>Contact</Headline>
             <S.TextContainer>
               <Text>
                 I am always available for new challenges. If you want to create

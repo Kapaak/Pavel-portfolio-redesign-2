@@ -13,7 +13,6 @@ export function Description() {
         <S.ImageContainer>
           <S.ProfileImage
             src={ProfileImage}
-            objectFit="cover"
             placeholder="blur"
             alt="my profile picture"
           />

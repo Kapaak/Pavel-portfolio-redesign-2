@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "ES2017",
     "lib": [
       "dom",
       "dom.iterable",
@@ -13,44 +13,45 @@
     "noEmit": true,
     "esModuleInterop": true,
     "module": "esnext",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "baseUrl": ".",
     "paths": {
       "@/animations/*": [
-        "animations/*"
+        "./animations/*"
       ],
       "@/ui/*": [
-        "ui/*"
+        "./ui/*"
       ],
-      "@/public/*":[
-        "public/*"
+      "@/public/*": [
+        "./public/*"
       ],
-      "@/components/*":[
-        "components/*"
+      "@/components/*": [
+        "./components/*"
       ],
-      "@/utils":[
-        "utils/index"
+      "@/utils": [
+        "./utils/index"
       ],
-      "@/constants":[
-        "constants/index"
+      "@/constants": [
+        "./constants/index"
       ],
-      "@/interfaces":[
-        "interfaces/index"
+      "@/interfaces": [
+        "./interfaces/index"
       ],
-      "@/interfaces":[
-        "interfaces/index"
-      ],
+      "interfaces": [
+        "./interfaces/index"
+      ]
     },
-    "incremental": true
+    "incremental": true,
+    "ignoreDeprecations": "5.0"
   },
   "include": [
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "pages/_document.jsx" ],
+    "pages/_document.tsx"
+  ],
   "exclude": [
     "node_modules"
   ]

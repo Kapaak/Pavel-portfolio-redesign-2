@@ -25,8 +25,8 @@ export const DetailRight = styled(FlexWrapper)`
   height: auto;
 `;
 
-export const ProjectDetail = styled.div<{ active: boolean }>`
-  display: ${({ active }) => (active ? "flex" : "none")};
+export const ProjectDetail = styled.div<{ $active: boolean }>`
+  display: ${({ $active }) => ($active ? "flex" : "none")};
   gap: 2rem;
   border-top: 1px solid var(--col4);
   margin-top: 2rem;

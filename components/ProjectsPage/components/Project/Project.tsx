@@ -22,9 +22,8 @@ export function Project({ project }: Props) {
       <S.ImageContainer>
         <Image
           src={project.image}
-          layout="fill"
-          objectFit="cover"
-          objectPosition="left"
+          fill
+          style={{ objectFit: "cover", objectPosition: "left" }}
           placeholder="blur"
           alt={project.title}
         />
@@ -48,7 +47,7 @@ export function Project({ project }: Props) {
       </S.FlexContainer>
       <S.ButtonContainer>
         <Link href={project.url}>
-          <ButtonProject variant={1}>visit website</ButtonProject>
+          <ButtonProject $variant={1}>visit website</ButtonProject>
         </Link>
         <ButtonProject onClick={handleClick}>
           {active ? "hide " : "show "} details

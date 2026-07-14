@@ -7,9 +7,9 @@ export function HomePage() {
     <S.HomePage id="home-page">
       <MaxWidth>
         <S.FlexContainer
-          direction="column-reverse"
-          justify="flex-start"
-          align="center"
+          $direction="column-reverse"
+          $justify="flex-start"
+          $align="center"
         >
           <Description />
           <MovingElements />

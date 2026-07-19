@@ -55,7 +55,7 @@ export const movingIcons = [
 export const projects: Array<ProjectType> = [
   {
     title: "Citra - Mobile app",
-    colors: ["#01c168", "#6155f5"],
+    colors: ["#158e5e", "#f2ee43"],
     url: "https://www.citra.cz/",
     image: CitraImage,
     fonts: ["Anybody", "Inter"],
